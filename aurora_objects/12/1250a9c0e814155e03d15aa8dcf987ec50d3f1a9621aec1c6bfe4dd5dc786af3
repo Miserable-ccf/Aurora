@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>招录类考试常见问答</title>
+<link rel="stylesheet" type="text/css" href="/static/css/info1.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/global1.css" />
+
+<link href="/ztzl/wxrskszl/static/css/style1.css" rel="stylesheet" type="text/css" />
+<link href="/ztzl/wxrskszl/static/css/mobile.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/static/js/jquery.js"></script>
+<script src="//wza.wuxi.gov.cn/wza/wza2.min.js?appid=CNPFfYXbBJZ9OGp"></script>
+<!-- 新检索JS -->
+<script src="//www.wuxi.gov.cn/static_common/js/wzq_search_common.js"></script>
+<script>
+var safeurlsstr = "hrss.wuxi.gov.cn";
+var elsemsg = "\n 您将离开“无锡市人力资源和社会保障局”门户网站。您是否仍要继续？";
+</script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/js_outsite.js"></script>
+</head>
+<body class="special_rsks special rsks_index">
+  
+<div class="banner">无锡人事考试专栏</div>
+<div class="nav w100">
+     <div class="w1001">
+          <ul class="style01">
+           <li><a href="/ztzl/wxrskszl/index.shtml">专栏首页</a></li>
+           <li><a href="/ztzl/wxrskszl/zcwj/index.shtml">政策文件</a></li>
+           <li><a href="/ztzl/wxrskszl/bszn/rskszxjs/index.shtml">办事指南</a></li>
+           <li><a href="/ztzl/wxrskszl/ksfjxz/index.shtml">考试附件下载 </a></li>
+           <li><a style="background:none" href="http://hrss.wuxi.gov.cn/" target="_blank">返回主站</a></li>
+          </ul>
+     </div>
+</div>
+
+
+<div class="cont w100">
+<div class="container">
+  <div class="ConBox">
+    <p class="Pos clearfix"><span class="tit fl">当前位置：<a href="/index.shtml">首页</a> &gt;&gt; <a href="/ztzl/index.shtml">专题专栏</a> &gt;&gt; <a href="/ztzl/wxrskszl/index.shtml">无锡人事考试专栏</a> &gt;&gt; <a href="/ztzl/wxrskszl/zllks/index.shtml">招录类考试</a> </span></p>
+    <div class="mainCont">
+      <h1> 招录类考试常见问答</h1>
+      <p class="explain"> 时间：<em>2026-06-08 16:37</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浏览次数： <span  id="clickCount"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来源： <span></span>
+	  
+	  <script language="javascript" >
+  
+              $.ajax({
+				type : "post",
+                url:"/intertidwebapp/counter/count",
+                data: {
+                  'contentID':4152374,
+                  'siteName':'人力资源和社会保障局',
+                  'siteID':129
+                },
+                success:function(data){
+                    $('#clickCount').html(data);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    
+                }
+            });	
+  </script>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;字号：[ <span class="Big"><font  onClick="Zoom.style.fontSize='16px';" style="cursor:pointer" class="list12s">大</font></span> <span class="Middle"><font onClick="Zoom.style.fontSize='14px';" class="list12s" style="cursor:pointer">中</font></span> <span class="Small"><font onClick="Zoom.style.fontSize='12px';" style="cursor:pointer" class="list12s">小</font></span> ]</p>
+
+      <div id="Zoom"> 
+        <!--<$[CONTENT]>start-->
+<p>　　一、关于信息填写的问题</p>
+
+<p>　　1、姓名、专业等信息填写错误，怎么办？</p>
+
+<p>　　答：考生信息未审核或审核不通过状态下，可以自行修改信息，修改完提交信息即可。审核通过的状态下，任何人不能修改信息。</p>
+
+<p>　　2、姓名中有个生僻字电脑打不出来，怎么办？</p>
+
+<p>　　答：先用同音字替代，考试时到考点考务办登记。</p>
+
+<p>　　3、信息填写完成后，一直无法保存，怎么办？</p>
+
+<p>　　答：请逐个检查信息填写项是否符合规范要求，尤其是信息项的长度不要过长。</p>
+
+<p>　　4、考生填写个人信息时发现手机、邮箱、邮编提交不了的原因是什么？</p>
+
+<p>　　答：考生在填写数字类的信息时，请确保您的输入法在英文状态下。</p>
+
+<p>　　二、关于注册、登录的问题</p>
+
+<p>　　5、考生注册发现身份证被占用怎么办？</p>
+
+<p>　　答：情况一，考生之前已经注册过了，如果忘记密码，可以在登入页面选择&ldquo;找回密码&rdquo;；情况二，被他人注册过了，问问您的家人（配偶、父母）看是否是他们已经帮您注册了。排除上述情况，工作人员通过后台查询注册情况，如确实被人恶意注册的，请携带本人身份证原件到广瑞路2号人力资源市场405办公室办理。</p>
+
+<p>　　6、网报系统登录显示用户名密码错误怎么办？</p>
+
+<p>　　答：（1）登入页面选择&ldquo;找回密码&rdquo;，可以选择&ldquo;邮箱找回密码&rdquo;或&ldquo;手机短信找回密码&rdquo;。</p>
+
+<p>　　如无法找回，可能是未注册，也可能是已注册但邮箱、手机号不正确。（工作人员后台查询邮箱及注册情况）核实邮箱、手机号不正确的，请考生携带本人身份证原件到广瑞路2号人力资源市场405办公室办理&ldquo;密码&rdquo;重置。</p>
+
+<p>　　三、其他问题</p>
+
+<p>　　7、照片上传一直不成功怎么办？怎么知道我的照片上传成功？</p>
+
+<p>　　答：照片上传不成功可能由于照片大小，比例不对。可以经过无锡人事考试专门的照片处理工具处理完再上传。（照片处理工具下载地址：无锡市人力资源和社会保障局官网----无锡人事考试专栏----考试附件下载----人事考试照片编辑工具。）上传成功，考生照片上传页面会显示考生的照片。如考生明确表示不会处理的，可以将照片发送到704748885@qq.com，工作人员处理好后发送给考生，由考生再上传。</p>
+        <!--<$[CONTENT]>end--> 
+      </div>
+      <p class="arc_pages">本篇文章共有<em>1</em>页 当前为第 <em>1</em> 页
+        
+      </p>
+      <div class="others clearfix">
+        <p class="Close"><span>关闭窗口</span></p>
+      </div>
+<script type="text/javascript">
+$(".Big").click(function() {
+	$("#Zoom").css({"font-size": "16px", "line-height": "28px"});
+});
+$(".Middle").click(function() {
+	$("#Zoom").css({"font-size": "14px", "line-height": "24px"});
+});
+$(".Small").click(function() {
+	$("#Zoom").css({"font-size": "12px", "line-height": "22px"});
+});
+$(".Print, .print").click(function(){
+	window.print();
+});
+$(".Close, .close").click(function(){
+	window.close();
+});
+
+</script> 
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+<input type="hidden" id="special" name="special" />
+<link href="/static2022/css/foot2022.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/static2022/js/main.js"></script> 
+<script type="text/javascript" src="https://www.wuxi.gov.cn/static2016/js/Traditionalconversion.js"></script>
+<div class="footer" id="foot">
+  <div class="footer_bot"> <a class="dzjg_ico" target="_blank" href="https://bszs.conac.cn/sitename?method=show&id=09AE5E788EA85E70E053012819AC937C"><img data-bd-imgshare-binded="1" src="http://dcs.conac.cn/image/red.png" id="imgConac" vspace="0" hspace="0" border="0"></a> <a class="jcjcjcjc" href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=3202000043&url=https%3A%2F%2Fhrss.wuxi.gov.cn%2F" target="_blank"><img src="/static2022/images/jiucuo.png"></a>
+    <p class="copyright font14 lh25 white">
+      <a href="/fzlm/wzdt/index.shtml" class="sitemap_t">站点地图</a>  | <a href="/fzlm/lxwm/index.shtml" >联系我们</a> | <a href="http://mail.e.hrss.wuxi.gov.cn/">电子邮局</a><br />
+      无锡市人力资源和社会保障局版权所有   无锡市人力资源和社会保障局主办   联系电话：12333<br />
+      <span id="ym"></span> &nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32021102000707" target="_blank">公安备案号：32021102000707</a> &nbsp;&nbsp;网站标识码：3202000043</p>
+  </div>
+
+</div>
+
+<script>
+$(function(){
+  var href="";
+  var str_ym = "";
+  href = window.location.href;
+  //苏ICP备05047216号
+  if(href.indexOf("hrss.wuxi.gov.cn") != -1){
+    str_ym = '  <a href="http://beian.miit.gov.cn" target="_blank">苏ICP备09024546号</a>';
+  }else{
+    str_ym = '  <a href="http://beian.miit.gov.cn" target="_blank">苏ICP备10046515号-2</a>';
+  }
+  $('#ym').html(str_ym); 
+}); 
+</script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ab8bdc755f448a81a67dc2c08ebcf138";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/website_group_wza.js"></script> 
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/hotkeys.js"></script> 
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/jquery.cookies.js"></script> 
+<script type="text/javascript" src="/static_older/older_special.js"></script> 
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/hotkeys.js"></script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/jquery.cookies.js"></script>
+<script type="text/javascript" src="/static_older/older_special.js"></script>
+</body>
+</html>

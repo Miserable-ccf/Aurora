@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>江苏人社网办大厅</title>
+	<link rel="icon" href="../web/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Cache" content="no-cache">
+<body>
+
+<style type="text/css">
+	#cjcx{ width:998px; border:1px solid #dfdfdf;margin-left:auto; margin-right:auto; height:auto;}
+	.cjcx-bt{ width:960px; height:45px; line-height:45px; padding:0 10px 0 28px;color:#398fd7; font-family:"微软雅黑"; font-size:20px; font-weight:bold}
+	.cjcx-nr{ padding:10px 0 0px 0px; font-size:13px;}
+	.cjcx-tab3{ float:left; margin:0 0px 0 20px; width:350px; padding:0 50px 0 0}
+	.cjcx-tab3 td {line-height:32px;font-size:13px;}
+	.cjcx-tab3-td1{text-align:left;  padding:10px 0 0 0}
+	.cjcx-tab3-td2{padding:10px 0px 0 0px; height:50px;}
+	.cjcx-tab3-td3{text-align:left; color:#cc0000; line-height:32px}
+	.cjcx-tab3-td3 a{color:#4f8fd1;}
+	.cjcx-tab3-wb{width:306px; height:32px; border:1px solid #bfbfbf; font-size:12px; padding:0 0 0 5px ; color:#8e8e8e; line-height:32px; float:left; margin:0 5px 0 0px}
+	.cjcx-tab3-wb2{width:142px; height:32px; border:1px solid #bfbfbf; font-size:12px; padding:0 0 0 5px ; color:#8e8e8e; line-height:32px;float:left; margin:0 5px 0 0px}
+	.cjcx-tab3-td3 img{width:70px; height:34px;}
+	.cjcx-tab3-an{font-size: 15px;width:202px; color: #fff;height:34px; background-color:rgb(57, 143, 215);border:0px; cursor:pointer}
+	.cjcx-nr-right{float:left; line-height:30px;padding:20px 0px 0 50px; width:500px}
+	.cjcx-nr-right1{float:left; line-height:30px;width:998px}
+
+	.cjcx-nr-tab1{ line-height:40px; margin:0 0 0px 20px}
+	.cjcx-nr-tab1-td{ text-align:right !important; width:120px; padding:10px 10px 10px 0; color:#4f8fd1; }
+	.cjcx-nr-tab1-td-wb{ width:220px; height:32px; border:1px solid #bfbfbf; font-size:12px; padding:0 0 0 5px ; color:#464646; line-height:32px; float:left; margin:0 5px 0 0px}
+	.cjcx-nr-tab2{ line-height:40px; color:#e47504; border-collapse:collapse; }
+	.cjcx-nr-tab2 td{border-top:1px solid #d5d5d5; border-left:0px; border-bottom:0px; border-right:0px; text-align:center; color:#373737;}
+	.cjcx-nr-tab2 th{color:#4f8fd1; border-top:1px solid #d5d5d5; border-left:0px; border-right:0px; border-bottom:0px; text-align:center}
+</style>
+
+<!--列表-->
+<div style="clear:both"></div>
+<div id="center-bj">
+	<div style="position: relative;margin: -8px;">
+		<iframe οnlοad="this.height=iFrame1.document.body.scrollHeight" frameborder="0" width="100%" height="460px;"
+				src="https://jshrss.jiangsu.gov.cn/col/col80164/index.html" ></iframe>
+	</div>
+
+	<div id="cjcx" style="margin-top: -180px;position: relative;">
+		<div class="cjcx-bt">江苏省2024年高校毕业生“三支一扶”计划笔试成绩查询</div>
+		<div id="search" class="cjcx-nr" style=" height:500px" >
+			<form name="searchForm" action="<%=request.getContextPath()%>/ggfw-basic-center/captcha/render" target="_blank" method="post">
+				<table  border="0" cellpadding="0" cellspacing="0" class="cjcx-tab3"  >
+					<tr><td colspan="2" class="cjcx-tab3-td1">身份证号：</td></tr>
+					<tr><td colspan="2" class="cjcx-tab3-td3"><input type="text" class="cjcx-tab3-wb" id="yxzjhm" name="gwyInfoVO.yxzjhm" maxlength="18"></td></tr>
+					<tr><td colspan="2" class="cjcx-tab3-td1">准考证号：</td></tr>
+					<tr><td colspan="2" class="cjcx-tab3-td3"><input type="text" class="cjcx-tab3-wb" id="zkzh" name="gwyInfoVO.zkzh"></td></tr>
+					<tr><td colspan="2" class="cjcx-tab3-td1">验证码：</td></tr>
+					<tr><td colspan="2" class="cjcx-tab3-td3"><input type="text" class="cjcx-tab3-wb2" id="yzm" name="gwyInfoVO.yzm" maxlength="4"><img id="yzmtp" src="" alt="如果看不清，请点击切换"  ><a onclick="refresh()">看不清，换一张</a></td></tr>
+					<tr><td colspan="2" class="cjcx-tab3-td2"><input type="button" class="cjcx-tab3-an" onclick="searchInfo()" value="查询"></td></tr>
+				</table>
+			</form>
+			<div class="cjcx-nr-right">
+				<div class="cjcx-nr-right">
+					<strong>经省“三支一扶”工作领导小组研究决定，2024年江苏省高校毕业生“三支一扶”计划招募面试考察合格分数线为：</strong> <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.支教岗位面试考察合格分数线为笔试成绩47.5分；<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.支农岗位面试考察合格分数线为笔试成绩50分；<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.支医岗位面试考察合格分数线为笔试成绩47分；<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.帮扶乡村振兴岗位面试考察合格分数线为笔试成绩62分；<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.水利岗位面试考察合格分数线为笔试成绩63分；<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.就业和社会保障服务岗位面试考察合格分数线为笔试成绩65.5分。<br>
+					<strong>成绩复查时间：</strong>  2024年7月10日-7月12日。<br>
+<!--					<strong>成绩复查说明：</strong>  <a href="http://jshrss.jiangsu.gov.cn/art/2013/3/18/art_57259_6839190.html" target="_blank">点击查看</a><br/>-->
+
+				</div>
+			</div>
+		</div>
+
+		<div id="result" class="cjcx-nr" hidden style=" height:500px">
+			<table  border="0" width="95%" cellpadding="0" cellspacing="0" class="cjcx-nr-tab1">
+				<tr>
+					<td class="cjcx-nr-tab1-td">姓&nbsp;&nbsp;名</td>
+					<td><input type="text" class="cjcx-nr-tab1-td-wb" readonly="readonly" name="ksxm"></td>
+					<td class="cjcx-nr-tab1-td">证件号码</td>
+					<td><input type="text" class="cjcx-nr-tab1-td-wb" readonly="readonly" name="yxzjhm"></td>
+				</tr>
+				<tr>
+					<td class="cjcx-nr-tab1-td">职位名称</td>
+					<td><input type="text" class="cjcx-nr-tab1-td-wb" readonly="readonly" name="zwmc"></td>
+					<td class="cjcx-nr-tab1-td">准考证号</td>
+					<td><input type="text" class="cjcx-nr-tab1-td-wb" readonly="readonly" name="zkzh"></td>
+				</tr>
+				<tr>
+					<td class="cjcx-nr-tab1-td">总分</td>
+					<td><input type="text" class="cjcx-nr-tab1-td-wb" readonly="readonly" name="zf"></td>
+				</tr>
+
+				<div class="cjcx-nr-right">
+
+				</div>
+			</table>
+		</div>
+	</div>
+
+	<div style="position: relative;margin: -8px;">
+		<iframe οnlοad="this.height=iFrame1.document.body.scrollHeight" frameborder="0" width="100%" height="220px;"
+				src="https://jshrss.jiangsu.gov.cn/col/col81679/index.html"> </iframe>
+	</div>
+</div>
+</body>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/progovern.js"></script>
+<script>
+	var time = 0; var verification = null;
+	$(function(){
+		//获取图形验证码
+		commonRequestNoData(captchaUrl, showCaptcha);
+	});
+
+	//刷新图形验证码
+	function refresh(){ commonRequestNoData(captchaUrl, showCaptcha); }
+
+	//展示图形验证码
+	function showCaptcha(data){ var jqEle = $("#yzmtp"); jqEle.attr("src", data.map.captcha.img); verification = data.map.captcha.verification;}
+
+	function searchInfo(){
+		if(time != 0){alert("操作太频繁,请于"+time+"秒后重试");return false;}
+		var zkzh=document.getElementById('zkzh').value;var yxzjhm=document.getElementById('yxzjhm').value;var yzm=document.getElementById('yzm').value;
+		if(yxzjhm==""){alert("身份证号不能为空");document.getElementById('yxzjhm').focus();return false;}
+		if(zkzh==""){alert("准考证号不能为空");document.getElementById('zkzh').focus();return false;}
+		if(yzm==""){alert("验证码不能为空");document.getElementById('yzm').focus();return false;}
+		if (!(/(^\d{15}$)|(^\d{17}([0-9]|X|x)$)/.test(yxzjhm))){alert("身份证号格式错误");document.getElementById('yxzjhm').focus();return false;}
+		if(yzm.length != 4){alert("验证码格式错误");return;}
+		var cjcxInfoVO = new Object();
+		cjcxInfoVO.verification = verification;
+		cjcxInfoVO.yxzjhm = yxzjhm;
+		cjcxInfoVO.zkzh = zkzh;
+		cjcxInfoVO.captchaCode = yzm;
+		cjcxInfoVO.type = "36";
+		commonRequest(getCommonUrl, cjcxInfoVO, showInfo);
+
+		time = 5;
+		var timer = setInterval(function(){
+			if(time > 1){
+				time = time - 1;
+			}else{
+				commonRequestNoData(captchaUrl, showCaptcha);
+				time = 0;
+				clearInterval(timer);
+			}
+		}, 1000);
+	}
+
+	function showInfo(data){ $("#search").hide(); $("#result").show(); setFormData(data.map.data, "result"); if(data.map.data.pm == null ||data.map.data == ""){ $("#pm_td1").hide(); $("#pm_td2").hide(); }
+	}
+</script>
+</html>

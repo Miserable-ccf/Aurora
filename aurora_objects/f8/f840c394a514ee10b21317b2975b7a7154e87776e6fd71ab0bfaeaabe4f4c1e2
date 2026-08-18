@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/style.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/scripttype.js" type="text/javascript"></script>
+    <title>第六届“公仆杯”全市机关公文写作大赛  </title>
+    
+    <script type="text/javascript">
+        function stringToHex(str){
+            if(str === "")
+                return "";
+            var hexCharCode = [];
+            //hexCharCode.push("0x"); 
+            for(var i = 0; i < str.length; i++) {
+                hexCharCode.push((str.charCodeAt(i)).toString(16));
+            }
+            return hexCharCode.join("").toUpperCase();
+        }
+        $(document).ready(function () {
+            $(':text').keypress(trimkeyup);
+            $("#login_submit").click(function(){
+                var a = $("#Password").val();
+                //$("#Password").val()
+                $("#Password").val(stringToHex(a));
+                //var b = $("#PIN").val();
+                //$("#PIN").val(stringToHex(b));
+                //console.log(stringToHex(a));
+                
+                //return false;
+            });
+        });
+        function trimkeyup(e) {
+            if (e.keyCode == 32) {
+                return false;
+            }
+        } 
+    </script>
+    
+</head>
+<body>
+    <div class="exam_main">
+        <div class="e_banner">
+            <div class="e_baanertitle">
+                <div class="e_bannertname">
+                    第六届“公仆杯”全市机关公文写作大赛</div>
+
+                <label class="e_bannertarea">
+                    当前报名地区：南通市</label>
+            </div>
+        </div>
+        <div class="e_box">
+            <div class="e_back">
+                <div>
+
+
+<div class="e_rback">
+    <div class="e_left">
+        <div class="e_login">
+            
+<form action="/Account/Login?examid=06260707172221" method="post"><input name="__RequestVerificationToken" type="hidden" value="v2rUM1CUIpupRUk5euUxB1KncL4ns7SW1pWHQl+CJj0RSWSh7Aqe37D6I+cGY8ixK1RRwSSQOa8CL7gLSCvpSWKysXTz++QrL3HmDwPxaMmE+R66fNu9GFC4gFzL2rdOmiKkc7d+lrYgj8wAPIXkd91Y/a4sSBIh3eHK3uYnUTQ=" />                <table width="652" border="0" cellpadding="0">
+                    <tr>
+                        <td valign="top">
+                            <table border="0" cellpadding="3">
+                                    <tr>
+                                        <th width="94" align="right" valign="top" scope="col">证件类别
+                                        </th>
+                                        <th width="252" align="left" valign="top"><select id="PINType" name="PINType" style="width:200px;"><option value="1">身份证号</option>
+<option value="2">军官证</option>
+<option value="3">士兵证</option>
+</select>
+                                        </th>
+                                    </tr>
+                                <tr>
+                                    <th width="94" align="right" valign="top" scope="row">
+                                        身份证号
+                                    </th>
+                                    <td width="252" align="left" valign="top">
+                                        
+                                        <input autocomplete="off" data-val="true" data-val-required="用户名不能为空" id="PIN" name="PIN" style="width:200px;" type="text" value="" />
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th align="right" valign="top" scope="row">
+                                        密码
+                                    </th>
+                                    <td align="left" valign="top">
+                                        <input autocomplete="off" id="Password" name="Password" style="width:200px;" type="password" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th align="right" valign="top" scope="row">
+                                        <label for="ValidateCode">验证码</label>
+                                    </th>
+                                    <td align="left" valign="top">
+                                        <input autocomplete="off" id="ValidateCode" maxlength="4" name="ValidateCode" style="width:140px;" type="text" value="" />
+                                        <img alt="点击图片重新获取验证码" src="/ValidateCode/ValidateCode?examid=06260707172221&amp;r=1554343218" onclick="this.src=this.src+'&'" style="cursor: hand" height="25px" align="absmiddle" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="66" valign="top" align="right" style=" ">
+                                    
+                                       <a class="backpwd" href="/Account/RetrievePassword?examid=06260707172221" style="margin:0px">忘记密码?</a>
+                                     </td>
+                                    <td align="left" valign="top">
+                                        <input type="submit" value="登录" id="login_submit" class="lgbtn" />
+<input type="button" value="注册" class="lgbtn" onclick="window.location='/Account/Reg?examid=06260707172221'"/>
+                                        &nbsp;&nbsp;
+<a class="btn_reg_browse" href="/Home/RegBrowse?examid=06260707172221" style="margin-left:0px;margin-top:8px;" target="_blank">报名情况浏览</a>                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td valign="top">
+                            <div style="width: 280px; height: 150px; margin: auto; padding: 0px; overflow: hidden;">
+                                <span style="white-space:normal;word-spacing:0px;text-transform:none;color:#ff0000;font:12px Arial, Helvetica, sans-serif;orphans:2;widows:2;letter-spacing:normal;text-indent:0px;font-size-adjust:none;font-stretch:normal;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px;"><span style="font-size:x-small;"> 
+<p style="white-space:normal;word-spacing:0px;text-transform:none;color:#000000;font:16px sans-serif;margin:5px 0px;widows:1;letter-spacing:normal;text-indent:0em;-webkit-text-stroke-width:0px;">
+	<span style="font-size:14px;color:#e53333;">考生注意：</span> 
+</p>
+<p style="white-space:normal;word-spacing:0px;text-transform:none;color:#000000;font:16px sans-serif;margin:5px 0px;widows:1;letter-spacing:normal;text-indent:2em;-webkit-text-stroke-width:0px;">
+	<span style="font-size:14px;">1、所有报名的考生须点击”注册新用户“按钮进行注册，注册成功后才可以使用本系统。</span> 
+</p>
+<p style="white-space:normal;word-spacing:0px;text-transform:none;color:#000000;font:16px sans-serif;margin:5px 0px;widows:1;letter-spacing:normal;text-indent:2em;-webkit-text-stroke-width:0px;">
+	<span style="font-size:14px;">2、再次登陆时，输入身份证号、密码、验证码，点击”登录“按钮即可使用和操作本系统。</span> 
+</p>
+<p>
+	<br />
+</p>
+</span></span></div>
+                        </td>
+                    </tr>
+                </table>
+</form>        </div>
+    </div>
+    <div class="e_right">
+        <div class="e_rtitle">
+        </div>
+        <div class="e_rbodybox">
+            <div class="e_rbody">
+                </div>
+        </div>
+    </div>
+    <div style="clear: both">
+    </div>
+</div>
+</div>
+            </div>
+            <div class="e_bottom">
+                <div class="e_bottombody">
+                    <p style="text-align:center;">
+	&nbsp;<span style="font-size:smaller;"><span style="font-family:Arial;">江苏省人事考试中心 &nbsp; 版权所有</span></span>&nbsp;
+</p>
+<p style="text-align:center;">
+	<span style="font-size:smaller;"><span style="font-family:Arial;">&nbsp;&nbsp;&nbsp;吉 林 科 飞 公 司&nbsp;&nbsp;&nbsp;&nbsp; 技术支持</span></span> 
+</p>
+<!--
+<script src="http://s14.cnzz.com/stat.php?id=5017425&web_id=5017425&show=pic1" language="JavaScript"></script>
+-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

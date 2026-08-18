@@ -1,0 +1,159 @@
+# 这是来源登记模板，不是已验证的生产 URL。
+# 填写前需人工确认域名归属、栏目、robots/公开接口规则和最近一次抓取结果。
+
+policy:
+  keyword_policy: gov_recruitment_jiangsu_v1
+  default_check_interval_sec: 21600
+  school_check_interval_sec: 86400
+  max_response_bytes: 20971520
+  allowed_content_types: [text/html, application/pdf, application/vnd.ms-excel,
+                          application/vnd.openxmlformats-officedocument.spreadsheetml.sheet]
+
+institution_registry:
+  # 用户提供的白名单是公办属性的权威来源；系统不自行推断学校性质。
+  # 每所学校可在 sources 中登记人事处、组织部或通知公告多个栏目。
+  whitelist_file: "<用户提供的白名单文件>"
+  whitelist_batch_id: "<导入时生成>"
+  ownership_required: public
+  school_level_allowed: [junior_college, vocational]
+  cities: [南京, 无锡, 徐州, 常州, 苏州, 南通, 连云港, 淮安, 盐城, 扬州, 镇江, 泰州, 宿迁]
+
+sources:
+  - id: js_province_hrss
+    source_group: jiangsu_province_hrss
+    region: 江苏
+    source_level: official
+    publisher: 江苏省人力资源和社会保障部门
+    entry_url: "https://jshrss.jiangsu.gov.cn/col/col93343/index.html"
+    discovery_type: html_list
+    adapter: generic_html_v1
+    max_pages: 3
+
+  - id: js_province_recruitment
+    source_group: jiangsu_province_recruitment
+    region: 江苏
+    source_level: official
+    publisher: 江苏省事业单位招聘官方入口
+    entry_url: "https://rs.jshrss.jiangsu.gov.cn/index/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  # 13 个地级市：以下是人社/人事考试入口槽位。
+  # 每个城市还应复制一份对应的 *_recruitment 配置，登记事业单位招聘官方入口。
+  - id: js_nanjing_hrss
+    source_group: jiangsu_city_hrss
+    region: 南京
+    source_level: official
+    publisher: 南京市人社/人事考试部门
+    entry_url: "https://www.njrsks.net/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_wuxi_hrss
+    source_group: jiangsu_city_hrss
+    region: 无锡
+    source_level: official
+    publisher: 无锡市人社/人事考试部门
+    entry_url: "https://hrss.wuxi.gov.cn/ztzl/wxrskszl/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_xuzhou_hrss
+    source_group: jiangsu_city_hrss
+    region: 徐州
+    source_level: official
+    publisher: 徐州市人社/人事考试部门
+    entry_url: "https://hrss.xz.gov.cn/rsks"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_changzhou_hrss
+    source_group: jiangsu_city_hrss
+    region: 常州
+    source_level: official
+    publisher: 常州市人社/人事考试部门
+    entry_url: "http://czks.czrsj.cn/info.do?op=ks_index"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_suzhou_hrss
+    source_group: jiangsu_city_hrss
+    region: 苏州
+    source_level: official
+    publisher: 苏州市人社/人事考试部门
+    entry_url: "https://hrss.suzhou.gov.cn/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_nantong_hrss
+    source_group: jiangsu_city_hrss
+    region: 南通
+    source_level: official
+    publisher: 南通市人社/人事考试部门
+    entry_url: "https://rsj.nantong.gov.cn/ntsrsj/rsks/rsks.html"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_lianyungang_hrss
+    source_group: jiangsu_city_hrss
+    region: 连云港
+    source_level: official
+    publisher: 连云港市人社/人事考试部门
+    entry_url: "http://rsj.lyg.gov.cn/hrzxzx/kwwj/kwwj.html"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_huai_an_hrss
+    source_group: jiangsu_city_hrss
+    region: 淮安
+    source_level: official
+    publisher: 淮安市人社/人事考试部门
+    entry_url: "https://rsj.huaian.gov.cn/col/4587_383646/index.html"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_yancheng_hrss
+    source_group: jiangsu_city_hrss
+    region: 盐城
+    source_level: official
+    publisher: 盐城市人社/人事考试部门
+    entry_url: "https://jsychrss.yancheng.gov.cn/col/col21905/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_yangzhou_hrss
+    source_group: jiangsu_city_hrss
+    region: 扬州
+    source_level: official
+    publisher: 扬州市人社/人事考试部门
+    entry_url: "https://hrss.yangzhou.gov.cn/yzrsks/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_zhenjiang_hrss
+    source_group: jiangsu_city_hrss
+    region: 镇江
+    source_level: official
+    publisher: 镇江市人社/人事考试部门
+    entry_url: "https://hrss.zhenjiang.gov.cn/hrss/kskg/ztzl_ks.shtml"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_taizhou_hrss
+    source_group: jiangsu_city_hrss
+    region: 泰州
+    source_level: official
+    publisher: 泰州市人社/人事考试部门
+    entry_url: "https://rsj.taizhou.gov.cn/ztzl/tzsrsksfwpt/index.html"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_suqian_hrss
+    source_group: jiangsu_city_hrss
+    region: 宿迁
+    source_level: official
+    publisher: 宿迁市人社/人事考试部门
+    entry_url: "https://sqhrss.suqian.gov.cn/rlzyj/ksjdzx/index_1.shtml"
+    discovery_type: html_list
+    adapter: generic_html_v1
+

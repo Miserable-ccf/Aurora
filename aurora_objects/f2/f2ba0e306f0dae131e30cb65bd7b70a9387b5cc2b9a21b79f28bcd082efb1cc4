@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<meta name="SiteName" content="镇江市人力资源和社会保障局"/>
+<meta name="SiteDomain" content="http://hrss.zhenjiang.gov.cn"/>
+<meta name="SiteIDCode" content="3211000001"/>
+<meta name="ColumnName" content="面试通知单打印" />
+<meta name="ColumnDescription" content=""/>
+<meta name="ColumnKeywords" content=""/>
+<meta name="ColumnType" content=""/>
+
+<meta name="others" content="页面生成时间 2026-08-13 09:26:47" />
+<title>面试通知单打印 | 镇江市人力资源和社会保障局</title>
+<link rel="stylesheet" type="text/css" href="/default/xhtml/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/default/xhtml/css/common_responsive.css" />
+<link rel="stylesheet" type="text/css" href="/default/xhtml/css/column_pages.css" />
+<script type="text/javascript" src="/default/xhtml/js/jquery.min.js"></script>
+<script type="text/javascript" src="/default/xhtml/js/sidebar.js"></script>
+<script type="text/javascript">
+  var websiteId= "fdd33d02b08240dabf3ab6f77be9b2e4",
+      codeName = "mstzddy",
+      channelId = "012609afba1d47088f012dcee452a573";
+</script>
+</head>
+
+<body>
+<!--header Start-->
+<meta charset="utf-8">
+<div class="header">
+  <div class="header-t">
+    <div class="container">
+      <div class="header-link"><a target="_blank" href="http://www.zhenjiang.gov.cn/">镇江市人民政府</a></div>
+      <ul class="header-iconMenu transition" id="header-choose-toggle">
+        <div class="li" id="header-login"></div>
+        <li class="li-icon wza"> <a href="javascript:;" onclick="aria.start()">无障碍版</a></li>
+        <li class="li-icon older"><a href="javascript:;" onclick="aria.oldFixedStart()">适老化</a></li>
+        
+      </ul>
+      <div class="header-choose-btn" id="header-btn-toggle">
+        <div>
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-banner">
+    <div class="container">
+      <div class="header-logo">
+        <div class="header-emblems"><img src="/default/xhtml/images/logo_emblems.png" alt=""></div>
+        <h1>
+          <strong>
+            镇江市人力资源和社会保障局
+          </strong>
+          <em id="domain">http://hrss.zhenjiang.gov.cn</em>
+        </h1>
+      </div>
+      <div class="header-search">
+        <form action="http://hrss.zhenjiang.gov.cn/search4/s" method="post" name="searchForm" target="_blank" id="searchForm">
+          <input name="searchWord" type="text" class="s-txt" id="ss_title" size="50" />
+          <input name="uc" type="hidden" id="uc" value="1" />
+          <input name="siteCode" type="hidden" id="siteCode" size="50" value="3211000001" />
+          <input name="column" type="hidden" size="50" value="全部" />
+          <input type="button" name="button" class="s-btn" id="searchBtn" onclick="headerSearch()" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="header-mainNav">
+    <div class="container">
+      <ul class="mainNav mainNav-hrss clearfix">
+        <li><a href="/hrss/index.shtml"><span>网站首页</span></a></li>
+          <li><a href="/hrss/xwzx/jump.shtml"><span>
+                新闻中心
+              </span></a></li>
+          <li><a href="/hrss/zwgk/list.shtml"><span>
+                政务公开
+              </span></a></li>
+          <li><a href="http://zj.jszwfw.gov.cn/jszwfw/qlqd/deptlist.do?webId=25&type=&deptId=11321100014467082E#fw_jump"><span>
+                政务服务
+              </span></a></li>
+          <li><a href="/hrss/hdjl/jump.shtml"><span>
+                政民互动
+              </span></a></li>
+        <!--li id="hrssks" style="display:none;"><span>镇江市人事考试考工服务平台</span></li-->
+      </ul>
+    </div>
+  </div>
+</div>
+<script defer async type="text/javascript" src="//www.zhenjiang.gov.cn/zjgovwza/dist/aria.js?appid=9021842b87dc42848e996105a18661a3"  charset="utf-8"></script>
+<script type="text/javascript" src="/default/xhtml/js/header.js"></script>
+<script src="/default/xhtml/js/WXA11Y/WXA11yInit.js" id="WXA11Y" c="/default/xhtml/js/WXA11Y/" u="/hrss/wzasm/ott.shtml" y="http://hrss.zhenjiang.gov.cn" b="wzalink" ignoreapd="true"></script>
+<!--header End-->
+<!-- crumb -->
+<div class="crumb container">
+  <h2>
+    您当前所在位置：
+<a href='/hrss/index.shtml'  target="_self">首页</a>&nbsp;>&nbsp;<a href='/hrss/xwzx/jump.shtml'  target="_self">新闻中心</a>&nbsp;>&nbsp;<a href='/hrss/ztzl/list2.shtml'  target="_self">业务专栏</a>&nbsp;>&nbsp;<a href='/hrss/rszl/list2.shtml'  target="_self">专栏</a>&nbsp;>&nbsp;<a href='/hrss/kskg/ztzl_ks.shtml'  target="_self">镇江市人事考试考工服务平台</a>&nbsp;>&nbsp;<span>面试通知单打印</span>
+
+  </h2>
+</div>
+<!-- crumb End -->
+<div class="container pb">
+  <div class="sideBar mobile-sideBar">
+    <div class="in_box mobile-sideBar-over">
+      <div class="mobile-sideBar-scroll">
+        <div class="parentName">
+          <font id="sideTitle">网站栏目</font>
+        </div>
+        <ul class="sideMenu transition clearfix" id="sidemenu0" style="display:none">
+          <li><a href="/hrss/ksksjh/list.shtml" title="考试计划" id="menuId_ksksjh">考试计划</a></li>
+          <li><a href="/hrss/kswsbm/list.shtml" title="网上报名" id="menuId_kswsbm">网上报名</a></li>
+          <li><a href="/hrss/kszkzdy/list.shtml" title="准考证打印" id="menuId_kszkzdy">准考证打印</a></li>
+          <li><a href="/hrss/mstzddy/list.shtml" title="面试通知单打印" id="menuId_mstzddy">面试通知单打印</a></li>
+          <li><a href="/hrss/kscjcx/list.shtml" title="成绩查询" id="menuId_kscjcx">成绩查询</a></li>
+          <li><a href="/hrss/kszsff/list.shtml" title="证书领取" id="menuId_kszsff">证书领取</a></li>
+          <li><a href="/hrss/kskddt/list.shtml" title="考点地图" id="menuId_kskddt">考点地图</a></li>
+          <li><a href="/hrss/ksbszn/list.shtml" title="办事指南" id="menuId_ksbszn">办事指南</a></li>
+          <li><a href="/hrss/kslxwm/jump_firstArticle.shtml" title="联系我们" id="menuId_kslxwm">联系我们</a></li>
+          <li><a href="/hrss/kszcfg/list.shtml" title="政策法规" id="menuId_kszcfg">政策法规</a></li>
+          <li><a href="/hrss/kszyjslkszl/list.shtml" title="专业技术类考试专栏" id="menuId_kszyjslkszl">专业技术类考试专栏</a></li>
+          <li><a href="/hrss/ksjgsydwgqjngwzl/list.shtml" title="机关事业单位工勤技能岗位专栏" id="menuId_ksjgsydwgqjngwzl">机关事业单位工勤技能岗位专栏</a></li>
+          <li><a href="/hrss/ksqtkszl/list.shtml" title="其他考试专栏" id="menuId_ksqtkszl">其他考试专栏</a></li>
+          <li><a href="/hrss/kssydwkszl/list.shtml" title="事业单位考试专栏" id="menuId_kssydwkszl">事业单位考试专栏</a></li>
+          <li><a href="/hrss/ksgwykszl/list.shtml" title="公务员考试专栏" id="menuId_ksgwykszl">公务员考试专栏</a></li>
+        </ul>
+        <ul class="sideMenu transition clearfix" id="sidemenu1" style="display:none">
+        </ul>
+        <script type="text/javascript" src="/default/xhtml/js/sidemenu.js"></script>
+        <script language="javascript">
+            var parentChnlName="镇江市人事考试考工服务平台";
+            var currentChnlName="面试通知单打印";
+                setLeftChnlTitle("sideTitle","sidemenu1");
+                setLeftChnlListDivStyle("sidemenu0","sidemenu1");
+        </script>
+      </div>
+    </div>
+    <!-- 展开侧边导航按钮 -->
+    <div class="mobile-sideBar-icon"></div>
+    <div class="mobile-sideBar-mark"></div>
+    <!-- 展开侧边导航按钮 End -->
+  </div>
+  <div class="mainContent">
+    <div class="inBox">
+      <!-- head -->
+      <div class="page-title clearfix">
+        <h2>
+          <font>面试通知单打印</font>
+        </h2>
+      </div>
+      <!-- head End -->
+      <!-- list -->
+      <div class="pageList">
+        <ul>
+
+            <li><a href="http://ks.zjrsks.cn/Home/ExamHome?examid=11260612144439" title="镇江市京口区和润州区2026年公开招聘社区工作者面试通知单打印" target="_blank">镇江市京口区和润州区2026年公开招聘社区工作者面试通知单打印</a><span class="time">2026-08-13</span></li>
+
+            <li><a href="http://ks.zjrsks.cn/Home/ExamHome?examid=11260710091554" title="镇江市直教育系统2026年第二批教师招聘面试通知单打印" target="_blank">镇江市直教育系统2026年第二批教师招聘面试通知单打印</a><span class="time">2026-08-06</span></li>
+<script type="text/javascript" src="/default/xhtml/js/page.js"></script><script>createPageHTML('page_div',1, 1,'list','shtml',2);</script>
+        </ul>
+      </div>
+      <!-- list End -->
+      
+      <!--page Start-->
+      <div class="pagediv" id="page_div"></div>
+      <!--page end-->
+    </div>
+  </div>
+</div>
+<!--footer Start-->
+<meta charset="utf-8">
+<div class="footer">
+  <div class="container">
+    <div class="footer-links clearfix">
+      
+    </div>
+    <div class="footer-cont">
+      <div class="footer-copyright">
+
+          主办单位：镇江市人力资源和社会保障局&ensp;&ensp;&ensp;<a href="http://beian.miit.gov.cn" target="_blank">苏ICP备12045533号-3</a><br>
+政府网站标识码：3211000001&ensp;&ensp;&ensp;<span class="beian"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32111102000558" target="_blank">苏公网安备32111102000558</a></span><br>
+<a href="/hrss/wzdt/wzdt.shtml">网站地图</a>&ensp;&ensp;&ensp;<a target="_blank" href="/hrss/xxgklxfs/xxgk_tt.shtml">联系我们</a>&ensp;&ensp;&ensp;&ensp;<strong>网站支持IPV6</strong>
+
+      </div>
+      <div class="footer-wzbs">
+
+          <a href="http://bszs.conac.cn/sitename?method=show&id=0A7557F5585B2849E053022819AC6863" target="_blank">
+<img src="/hrss/wzdb/2020-11/09/ef5978e7176f4c089bdd927cfc6321aa/images/d161e7154a3a457facebca3a51deef31.png" style=" border:0px "></a>
+
+        <script id="_jiucuo_" sitecode="3211000001" src="https://zfwzgl.www.gov.cn/exposure/jiucuo.js"></script>
+       <img src="/default/xhtml/images/dbwza.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/default/xhtml/js/common.js"></script>
+<!--footer End-->
+</body>
+</html>

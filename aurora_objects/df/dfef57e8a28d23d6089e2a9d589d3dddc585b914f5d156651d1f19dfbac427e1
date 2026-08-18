@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<meta name="SiteName" content="镇江市人力资源和社会保障局"/>
+<meta name="SiteDomain" content="http://hrss.zhenjiang.gov.cn"/>
+<meta name="SiteIDCode" content="3211000001"/>
+<meta name="ColumnName" content="办事指南" />
+<meta name="ColumnDescription" content="办事指南"/>
+<meta name="ColumnKeywords" content="办事指南"/>
+<meta name="ColumnType" content="领导信息"/>
+<meta name="ArticleTitle" content="网上报名信息更改申请表"/>
+<meta name="PubDate" content="2026-07-14 17:36:10"/>
+<meta name="ContentSource" content="镇江市人力资源和社会保障局"/>
+<meta name="Keywords" content="网上报名信息更改申请表,"/>
+<meta name="Description" content=""/>
+
+<meta name="others" content="页面生成时间 2026-07-14 17:36:10" />
+<meta name="template,templategroup,version" content="64e296c692cf4599874e0be88879d86d,default,2.5" />
+<title>网上报名信息更改申请表 | 镇江市人力资源和社会保障局</title>
+<link rel="stylesheet" href="/default/xhtml/layui/css/layui.css" media="all">
+<link rel="stylesheet" type="text/css" href="/default/xhtml/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/default/xhtml/css/common_responsive.css" />
+<link rel="stylesheet" type="text/css" href="/default/xhtml/css/content.css" />
+<script type="text/javascript" src="/default/xhtml/js/jquery.min.js"></script>
+<script type="text/javascript">
+  var websiteId= "fdd33d02b08240dabf3ab6f77be9b2e4",
+      webSiteCode = "hrss",
+      manuscriptId= "ca2fe6ac6ceb41308eccb54ccc37b3dd";
+</script>
+</head>
+
+<body>
+<!--header Start-->
+<meta charset="utf-8">
+<div class="header">
+  <div class="header-t">
+    <div class="container">
+      <div class="header-link"><a target="_blank" href="http://www.zhenjiang.gov.cn/">镇江市人民政府</a></div>
+      <ul class="header-iconMenu transition" id="header-choose-toggle">
+        <div class="li" id="header-login"></div>
+        <li class="li-icon wza"> <a href="javascript:;" onclick="aria.start()">无障碍版</a></li>
+        <li class="li-icon older"><a href="javascript:;" onclick="aria.oldFixedStart()">适老化</a></li>
+        
+      </ul>
+      <div class="header-choose-btn" id="header-btn-toggle">
+        <div>
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-banner">
+    <div class="container">
+      <div class="header-logo">
+        <div class="header-emblems"><img src="/default/xhtml/images/logo_emblems.png" alt=""></div>
+        <h1>
+          <strong>
+            镇江市人力资源和社会保障局
+          </strong>
+          <em id="domain">http://hrss.zhenjiang.gov.cn</em>
+        </h1>
+      </div>
+      <div class="header-search">
+        <form action="http://hrss.zhenjiang.gov.cn/search4/s" method="post" name="searchForm" target="_blank" id="searchForm">
+          <input name="searchWord" type="text" class="s-txt" id="ss_title" size="50" />
+          <input name="uc" type="hidden" id="uc" value="1" />
+          <input name="siteCode" type="hidden" id="siteCode" size="50" value="3211000001" />
+          <input name="column" type="hidden" size="50" value="全部" />
+          <input type="button" name="button" class="s-btn" id="searchBtn" onclick="headerSearch()" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="header-mainNav">
+    <div class="container">
+      <ul class="mainNav mainNav-hrss clearfix">
+        <li><a href="/hrss/index.shtml"><span>网站首页</span></a></li>
+          <li><a href="/hrss/xwzx/jump.shtml"><span>
+                新闻中心
+              </span></a></li>
+          <li><a href="/hrss/zwgk/list.shtml"><span>
+                政务公开
+              </span></a></li>
+          <li><a href="http://zj.jszwfw.gov.cn/jszwfw/qlqd/deptlist.do?webId=25&type=&deptId=11321100014467082E#fw_jump"><span>
+                政务服务
+              </span></a></li>
+          <li><a href="/hrss/hdjl/jump.shtml"><span>
+                政民互动
+              </span></a></li>
+        <!--li id="hrssks" style="display:none;"><span>镇江市人事考试考工服务平台</span></li-->
+      </ul>
+    </div>
+  </div>
+</div>
+<script defer async type="text/javascript" src="//www.zhenjiang.gov.cn/zjgovwza/dist/aria.js?appid=9021842b87dc42848e996105a18661a3"  charset="utf-8"></script>
+<script type="text/javascript" src="/default/xhtml/js/header.js"></script>
+<script src="/default/xhtml/js/WXA11Y/WXA11yInit.js" id="WXA11Y" c="/default/xhtml/js/WXA11Y/" u="/hrss/wzasm/ott.shtml" y="http://hrss.zhenjiang.gov.cn" b="wzalink" ignoreapd="true"></script>
+<!--header End-->
+<!-- crumb -->
+<div class="crumb container">
+  <h2>
+    您当前所在位置：
+<a href='/hrss/index.shtml'  target="_self">首页</a>&nbsp;>&nbsp;<a href='/hrss/xwzx/jump.shtml'  target="_self">新闻中心</a>&nbsp;>&nbsp;<a href='/hrss/ztzl/list2.shtml'  target="_self">业务专栏</a>&nbsp;>&nbsp;<a href='/hrss/rszl/list2.shtml'  target="_self">专栏</a>&nbsp;>&nbsp;<a href='/hrss/kskg/ztzl_ks.shtml'  target="_self">镇江市人事考试考工服务平台</a>&nbsp;>&nbsp;<a href='/hrss/ksbszn/list.shtml'  target="_self"><span>办事指南</span></a>
+
+  </h2>
+</div>
+<!-- crumb End -->
+<!-- detail -->
+<div class="container detail clearfix">
+  <h1 class="article-title"><UCAPTITLE>网上报名信息更改申请表</UCAPTITLE></h1>
+  <h2 class="article-subtitle"></h2>
+  <div class="article-attr clearfix">
+    <span class="ly">来源：<b>镇江市人力资源和社会保障局</b></span>
+    <span class="llcs">访问量：<b id="view"></b></span>
+    <span class="date">发布日期：<b><PUBLISHTIME>2026-07-14 09:12</PUBLISHTIME></b></span>
+    <meta charset="utf-8">
+<span class="article-icon fontsize">
+  <i class="favorite" title="添加收藏"></i>
+  <i class="print" title="打印" onclick="javascript:window.print();"></i>
+  <i class="l" id="f-add" title="字体大"></i>
+  <i class="s" id="f-dec" title="字体小"></i>
+</span>
+  </div>
+  
+  <div class="article-content article-content-body" id="zoomcon">
+    <UCAPCONTENT>&ensp;<img border="0" src="ca2fe6ac6ceb41308eccb54ccc37b3dd/images/7f60bb84c76440e9ade5dc172da9065a.gif"><a href="ca2fe6ac6ceb41308eccb54ccc37b3dd/files/d60c1063468d4565b610f379e6fe9cfd.doc" target="_blank">网上报名信息更改申请表</a></UCAPCONTENT>
+  </div>
+  <div class="article-reldocuments">
+
+    <ul class="newsList-h4 clearfix">
+
+    </ul>
+  </div>
+  <!-- content_extend -->
+  <input type="hidden" name="cmsproTags" id="cmsproTags" value='网上报名信息更改申请表,'>
+  <meta charset="utf-8">
+<div class="article-extended clearfix">
+  <div class="article-keyword">
+    <b>文章关键词：</b>
+    <span id="showTags"></span>
+  </div>
+  <meta charset="utf-8">
+<span class="article-icon fontsize">
+  <i class="favorite" title="添加收藏"></i>
+  <i class="print" title="打印" onclick="javascript:window.print();"></i>
+  <i class="l" id="f-add" title="字体大"></i>
+  <i class="s" id="f-dec" title="字体小"></i>
+</span>
+  <form method="post" name="gjzForm" target="_blank" id="keyForm" style="display: none;">
+    <input name="searchWord" type="hidden" id="gjz_title" />
+    <input name="uc" type="hidden" id="uc" value="1" />
+    <input name="siteCode" id="gjz_siteCode" type="hidden" value="" />
+    <input name="column" type="hidden" value="站群" />
+  </form>
+</div>
+<!-- 分享 -->
+<div class="article-share" id="content-share"></div>
+<!-- 分享 End -->
+  <!-- content_extend End -->
+  <div class="article-appendixs rel-appendixs">
+<h3><span>相关附件</span></h3>    <ul class="newsList-h4 clearfix">
+<li><h4><a href="ca2fe6ac6ceb41308eccb54ccc37b3dd/files/9474bf0058e0494bb56df13b0dd1fdd4.doc" target="_blank" title="P0201802093353248041351.doc"  >P0201802093353248041351.doc</a>
+</h4></li>    </ul>
+  </div>
+</div>
+<!-- detail End -->
+<!--footer Start-->
+<meta charset="utf-8">
+<div class="footer">
+  <div class="container">
+    <div class="footer-links clearfix">
+      
+    </div>
+    <div class="footer-cont">
+      <div class="footer-copyright">
+
+          主办单位：镇江市人力资源和社会保障局&ensp;&ensp;&ensp;<a href="http://beian.miit.gov.cn" target="_blank">苏ICP备12045533号-3</a><br>
+政府网站标识码：3211000001&ensp;&ensp;&ensp;<span class="beian"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32111102000558" target="_blank">苏公网安备32111102000558</a></span><br>
+<a href="/hrss/wzdt/wzdt.shtml">网站地图</a>&ensp;&ensp;&ensp;<a target="_blank" href="/hrss/xxgklxfs/xxgk_tt.shtml">联系我们</a>&ensp;&ensp;&ensp;&ensp;<strong>网站支持IPV6</strong>
+
+      </div>
+      <div class="footer-wzbs">
+
+          <a href="http://bszs.conac.cn/sitename?method=show&id=0A7557F5585B2849E053022819AC6863" target="_blank">
+<img src="/hrss/wzdb/2020-11/09/ef5978e7176f4c089bdd927cfc6321aa/images/d161e7154a3a457facebca3a51deef31.png" style=" border:0px "></a>
+
+        <script id="_jiucuo_" sitecode="3211000001" src="https://zfwzgl.www.gov.cn/exposure/jiucuo.js"></script>
+       <img src="/default/xhtml/images/dbwza.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/default/xhtml/js/common.js"></script>
+<!--footer End-->
+<script src="/default/xhtml/layui/layui.js"></script>
+<script type="text/javascript" src="/default/xhtml/js/content_ordinary.js"></script>
+<script type="text/javascript" src="/default/xhtml/js/clipboard.min.js"></script>
+<script type="text/javascript" src="/default/xhtml/js/wxqrcode.js"></script>
+<script type="text/javascript" src="/default/xhtml/js/content.js"></script>
+</body>
+</html>

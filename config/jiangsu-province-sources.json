@@ -1,0 +1,17 @@
+[
+  {
+    "id": "js_province_exam_001",
+    "source_group": "jiangsu_province_hrss",
+    "region_code": "JS",
+    "publisher": "江苏省人力资源和社会保障厅",
+    "source_level": "official",
+    "entry_url": "https://jshrss.jiangsu.gov.cn/col/col57253/",
+    "allowed_domains": ["jshrss.jiangsu.gov.cn"],
+    "discovery_type": "html_list",
+    "adapter": "generic_html_v1",
+    "keyword_policy_id": "gov_recruitment_jiangsu_v1",
+    "keyword_policy_version": 1,
+    "status": "enabled",
+    "max_pages": 3
+  }
+]

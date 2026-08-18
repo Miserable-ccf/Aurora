@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurora 招考信息工作台</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Aurora 招考信息工作台</h1>
+      <p id="systemStatus">正在连接本地数据...</p>
+    </div>
+    <span class="mode-badge" id="llmStatus">规则整理</span>
+  </header>
+
+  <main class="workspace">
+    <aside class="profile-panel" aria-labelledby="profileTitle">
+      <div class="section-heading">
+        <h2 id="profileTitle">我的报考条件</h2>
+        <span>自动保存</span>
+      </div>
+      <form id="profileForm">
+        <fieldset>
+          <legend>招考类型</legend>
+          <label class="check-row"><input type="checkbox" name="examType" value="civil_service">公务员</label>
+          <label class="check-row"><input type="checkbox" name="examType" value="public_institution">事业单位</label>
+          <label class="check-row"><input type="checkbox" name="examType" value="public_college">公办大专</label>
+        </fieldset>
+
+        <label>目标地区
+          <select id="regionCode">
+            <option value="JS">江苏全省</option>
+          </select>
+        </label>
+
+        <div class="two-column">
+          <label>招考年份<input id="year" type="number" min="2020" max="2100"></label>
+          <label>学历
+            <select id="education">
+              <option value="">未填写</option>
+              <option>专科</option><option>本科</option><option>硕士研究生</option><option>博士研究生</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="two-column">
+          <label>学位
+            <select id="degree">
+              <option value="">未填写</option>
+              <option>无学位</option><option>学士</option><option>硕士</option><option>博士</option>
+            </select>
+          </label>
+          <label>应届身份
+            <select id="graduateStatus">
+              <option value="unknown">待确认</option>
+              <option value="fresh">应届</option>
+              <option value="non_fresh">非应届</option>
+            </select>
+          </label>
+        </div>
+
+        <label>专业<input id="major" placeholder="例如：计算机科学与技术"></label>
+        <label>偏好岗位<input id="preferredRoles" placeholder="教师、辅导员、专业技术岗"></label>
+        <label>必须包含<input id="includeKeywords" placeholder="多个关键词用逗号分隔"></label>
+        <label>排除关键词<input id="excludeKeywords" placeholder="例如：编外、劳务派遣"></label>
+        <label class="check-row process-toggle"><input id="includeProcessUpdates" type="checkbox">包含成绩、资格复审等流程通知</label>
+
+        <label>最多返回
+          <select id="maxResults"><option>10</option><option selected>20</option><option>30</option><option>50</option></select>
+        </label>
+        <button class="primary-button" type="submit" id="submitButton">生成整理结果</button>
+      </form>
+    </aside>
+
+    <section class="results-panel" aria-live="polite">
+      <div class="results-toolbar">
+        <div>
+          <h2>相关招考公告</h2>
+          <p id="resultMeta">填写条件后，从已有监控数据中筛选。</p>
+        </div>
+        <button class="secondary-button" id="refreshButton" type="button">重新生成</button>
+      </div>
+
+      <section class="overview" id="overview">
+        <h3>整理说明</h3>
+        <p>系统只使用详情已抓取成功的官方公告。结果是公告级相关性整理，不代表已经通过岗位资格审查。</p>
+      </section>
+
+      <div id="loadingState" class="state-panel" hidden>正在检索公告并整理证据...</div>
+      <div id="errorState" class="state-panel error" hidden></div>
+      <div id="emptyState" class="state-panel">尚未生成结果</div>
+      <div id="resultList" class="result-list"></div>
+
+      <section class="warnings" id="warnings" hidden>
+        <h3>报名前需注意</h3>
+        <ul id="warningList"></ul>
+      </section>
+    </section>
+  </main>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

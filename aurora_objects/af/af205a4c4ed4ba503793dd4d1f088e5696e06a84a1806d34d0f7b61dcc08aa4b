@@ -1,0 +1,2260 @@
+<!-- 内容详情页 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>【成绩查询】2026年事业单位统一公开招聘人员（含定向招聘退役大学生士兵）笔试</title>
+        <link rel="icon" href="https://hrss.xz.gov.cn/rsks/img/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/content.css" />
+        <link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/footer.css" />
+        <!--<link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/homeIndex.css" />-->
+        <script src="https://hrss.xz.gov.cn/rsks/js/html-docx.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+        <script src="https://awp-assets.meituan.net/thh/thh_feb_web_portal/js/jquery-3.6.0.min.js"></script>
+        
+        <script src="https://s4.zstatic.net/npm/pizzip@3.1.8/dist/pizzip.min.js"></script>
+        <script src="https://s4.zstatic.net/npm/pizzip@3.1.8/dist/pizzip-utils.js"></script>
+        <script src="https://s4.zstatic.net/npm/docxtemplater@3.60.0/build/docxtemplater.min.js"></script>
+        <script src="https://s4.zstatic.net/npm/docxtemplater-html@1.0.0/build/html-module.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                console.log("DOM 加载完毕！");
+                $(".nav-642071527968837").addClass("active");
+                console.log("class更新完毕");
+            });
+        </script>
+        
+        <!-- ueditor_style start -->
+<style id="tablesort">
+    table.sortEnabled tr.firstRow th,
+    table.sortEnabled tr.firstRow td {
+      padding-right: 20px;
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-image: url(/UEditorPlus/themes/default/images/sortable.png);
+    }
+  </style>
+  <style id="table">
+    .selectTdClass {
+      background-color: #edf5fa !important;
+    }
+    table.noBorderTable td,
+    table.noBorderTable th,
+    table.noBorderTable caption {
+      border: 1px dashed #ddd !important;
+    }
+    table {
+      margin-bottom: 10px;
+      border-collapse: collapse;
+      display: table;
+    }
+    td,
+    th {
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+    }
+    caption {
+      border: 1px dashed #ddd;
+      border-bottom: 0;
+      padding: 3px;
+      text-align: center;
+    }
+    th {
+      border-top: 1px solid #bbb;
+      background-color: #f7f7f7;
+    }
+    table tr.firstRow th {
+      border-top-width: 2px;
+    }
+    .ue-table-interlace-color-single {
+      background-color: #fcfcfc;
+    }
+    .ue-table-interlace-color-double {
+      background-color: #f7faff;
+    }
+    td p {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <style id="list">
+    ol,
+    ul {
+      margin: 0;
+      pading: 0;
+      width: 95%;
+    }
+    li {
+      clear: both;
+    }
+    li.list-cn-1-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-0.gif);
+    }
+    li.list-cn-1-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-1.gif);
+    }
+    li.list-cn-1-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-2.gif);
+    }
+    li.list-cn-1-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-3.gif);
+    }
+    li.list-cn-1-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-4.gif);
+    }
+    li.list-cn-1-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-5.gif);
+    }
+    li.list-cn-1-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-6.gif);
+    }
+    li.list-cn-1-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-7.gif);
+    }
+    li.list-cn-1-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-8.gif);
+    }
+    li.list-cn-1-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-9.gif);
+    }
+    li.list-cn-1-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-10.gif);
+    }
+    li.list-cn-1-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-11.gif);
+    }
+    li.list-cn-1-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-12.gif);
+    }
+    li.list-cn-1-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-13.gif);
+    }
+    li.list-cn-1-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-14.gif);
+    }
+    li.list-cn-1-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-15.gif);
+    }
+    li.list-cn-1-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-16.gif);
+    }
+    li.list-cn-1-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-17.gif);
+    }
+    li.list-cn-1-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-18.gif);
+    }
+    li.list-cn-1-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-19.gif);
+    }
+    li.list-cn-1-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-20.gif);
+    }
+    li.list-cn-1-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-21.gif);
+    }
+    li.list-cn-1-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-22.gif);
+    }
+    li.list-cn-1-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-23.gif);
+    }
+    li.list-cn-1-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-24.gif);
+    }
+    li.list-cn-1-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-25.gif);
+    }
+    li.list-cn-1-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-26.gif);
+    }
+    li.list-cn-1-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-27.gif);
+    }
+    li.list-cn-1-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-28.gif);
+    }
+    li.list-cn-1-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-29.gif);
+    }
+    li.list-cn-1-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-30.gif);
+    }
+    li.list-cn-1-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-31.gif);
+    }
+    li.list-cn-1-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-32.gif);
+    }
+    li.list-cn-1-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-33.gif);
+    }
+    li.list-cn-1-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-34.gif);
+    }
+    li.list-cn-1-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-35.gif);
+    }
+    li.list-cn-1-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-36.gif);
+    }
+    li.list-cn-1-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-37.gif);
+    }
+    li.list-cn-1-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-38.gif);
+    }
+    li.list-cn-1-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-39.gif);
+    }
+    li.list-cn-1-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-40.gif);
+    }
+    li.list-cn-1-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-41.gif);
+    }
+    li.list-cn-1-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-42.gif);
+    }
+    li.list-cn-1-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-43.gif);
+    }
+    li.list-cn-1-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-44.gif);
+    }
+    li.list-cn-1-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-45.gif);
+    }
+    li.list-cn-1-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-46.gif);
+    }
+    li.list-cn-1-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-47.gif);
+    }
+    li.list-cn-1-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-48.gif);
+    }
+    li.list-cn-1-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-49.gif);
+    }
+    li.list-cn-1-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-50.gif);
+    }
+    li.list-cn-1-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-51.gif);
+    }
+    li.list-cn-1-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-52.gif);
+    }
+    li.list-cn-1-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-53.gif);
+    }
+    li.list-cn-1-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-54.gif);
+    }
+    li.list-cn-1-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-55.gif);
+    }
+    li.list-cn-1-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-56.gif);
+    }
+    li.list-cn-1-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-57.gif);
+    }
+    li.list-cn-1-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-58.gif);
+    }
+    li.list-cn-1-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-59.gif);
+    }
+    li.list-cn-1-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-60.gif);
+    }
+    li.list-cn-1-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-61.gif);
+    }
+    li.list-cn-1-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-62.gif);
+    }
+    li.list-cn-1-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-63.gif);
+    }
+    li.list-cn-1-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-64.gif);
+    }
+    li.list-cn-1-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-65.gif);
+    }
+    li.list-cn-1-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-66.gif);
+    }
+    li.list-cn-1-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-67.gif);
+    }
+    li.list-cn-1-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-68.gif);
+    }
+    li.list-cn-1-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-69.gif);
+    }
+    li.list-cn-1-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-70.gif);
+    }
+    li.list-cn-1-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-71.gif);
+    }
+    li.list-cn-1-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-72.gif);
+    }
+    li.list-cn-1-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-73.gif);
+    }
+    li.list-cn-1-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-74.gif);
+    }
+    li.list-cn-1-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-75.gif);
+    }
+    li.list-cn-1-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-76.gif);
+    }
+    li.list-cn-1-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-77.gif);
+    }
+    li.list-cn-1-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-78.gif);
+    }
+    li.list-cn-1-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-79.gif);
+    }
+    li.list-cn-1-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-80.gif);
+    }
+    li.list-cn-1-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-81.gif);
+    }
+    li.list-cn-1-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-82.gif);
+    }
+    li.list-cn-1-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-83.gif);
+    }
+    li.list-cn-1-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-84.gif);
+    }
+    li.list-cn-1-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-85.gif);
+    }
+    li.list-cn-1-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-86.gif);
+    }
+    li.list-cn-1-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-87.gif);
+    }
+    li.list-cn-1-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-88.gif);
+    }
+    li.list-cn-1-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-89.gif);
+    }
+    li.list-cn-1-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-90.gif);
+    }
+    li.list-cn-1-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-91.gif);
+    }
+    li.list-cn-1-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-92.gif);
+    }
+    li.list-cn-1-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-93.gif);
+    }
+    li.list-cn-1-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-94.gif);
+    }
+    li.list-cn-1-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-95.gif);
+    }
+    li.list-cn-1-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-96.gif);
+    }
+    li.list-cn-1-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-97.gif);
+    }
+    li.list-cn-1-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-98.gif);
+    }
+    ol.custom_cn {
+      list-style: none;
+    }
+    ol.custom_cn li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-cn-paddingleft-1 {
+      padding-left: 25px;
+    }
+    li.list-cn-paddingleft-2 {
+      padding-left: 40px;
+    }
+    li.list-cn-paddingleft-3 {
+      padding-left: 55px;
+    }
+    li.list-cn-2-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-0.gif);
+    }
+    li.list-cn-2-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-1.gif);
+    }
+    li.list-cn-2-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-2.gif);
+    }
+    li.list-cn-2-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-3.gif);
+    }
+    li.list-cn-2-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-4.gif);
+    }
+    li.list-cn-2-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-5.gif);
+    }
+    li.list-cn-2-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-6.gif);
+    }
+    li.list-cn-2-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-7.gif);
+    }
+    li.list-cn-2-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-8.gif);
+    }
+    li.list-cn-2-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-9.gif);
+    }
+    li.list-cn-2-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-10.gif);
+    }
+    li.list-cn-2-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-11.gif);
+    }
+    li.list-cn-2-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-12.gif);
+    }
+    li.list-cn-2-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-13.gif);
+    }
+    li.list-cn-2-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-14.gif);
+    }
+    li.list-cn-2-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-15.gif);
+    }
+    li.list-cn-2-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-16.gif);
+    }
+    li.list-cn-2-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-17.gif);
+    }
+    li.list-cn-2-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-18.gif);
+    }
+    li.list-cn-2-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-19.gif);
+    }
+    li.list-cn-2-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-20.gif);
+    }
+    li.list-cn-2-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-21.gif);
+    }
+    li.list-cn-2-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-22.gif);
+    }
+    li.list-cn-2-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-23.gif);
+    }
+    li.list-cn-2-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-24.gif);
+    }
+    li.list-cn-2-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-25.gif);
+    }
+    li.list-cn-2-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-26.gif);
+    }
+    li.list-cn-2-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-27.gif);
+    }
+    li.list-cn-2-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-28.gif);
+    }
+    li.list-cn-2-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-29.gif);
+    }
+    li.list-cn-2-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-30.gif);
+    }
+    li.list-cn-2-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-31.gif);
+    }
+    li.list-cn-2-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-32.gif);
+    }
+    li.list-cn-2-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-33.gif);
+    }
+    li.list-cn-2-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-34.gif);
+    }
+    li.list-cn-2-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-35.gif);
+    }
+    li.list-cn-2-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-36.gif);
+    }
+    li.list-cn-2-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-37.gif);
+    }
+    li.list-cn-2-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-38.gif);
+    }
+    li.list-cn-2-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-39.gif);
+    }
+    li.list-cn-2-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-40.gif);
+    }
+    li.list-cn-2-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-41.gif);
+    }
+    li.list-cn-2-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-42.gif);
+    }
+    li.list-cn-2-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-43.gif);
+    }
+    li.list-cn-2-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-44.gif);
+    }
+    li.list-cn-2-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-45.gif);
+    }
+    li.list-cn-2-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-46.gif);
+    }
+    li.list-cn-2-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-47.gif);
+    }
+    li.list-cn-2-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-48.gif);
+    }
+    li.list-cn-2-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-49.gif);
+    }
+    li.list-cn-2-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-50.gif);
+    }
+    li.list-cn-2-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-51.gif);
+    }
+    li.list-cn-2-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-52.gif);
+    }
+    li.list-cn-2-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-53.gif);
+    }
+    li.list-cn-2-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-54.gif);
+    }
+    li.list-cn-2-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-55.gif);
+    }
+    li.list-cn-2-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-56.gif);
+    }
+    li.list-cn-2-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-57.gif);
+    }
+    li.list-cn-2-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-58.gif);
+    }
+    li.list-cn-2-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-59.gif);
+    }
+    li.list-cn-2-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-60.gif);
+    }
+    li.list-cn-2-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-61.gif);
+    }
+    li.list-cn-2-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-62.gif);
+    }
+    li.list-cn-2-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-63.gif);
+    }
+    li.list-cn-2-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-64.gif);
+    }
+    li.list-cn-2-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-65.gif);
+    }
+    li.list-cn-2-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-66.gif);
+    }
+    li.list-cn-2-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-67.gif);
+    }
+    li.list-cn-2-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-68.gif);
+    }
+    li.list-cn-2-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-69.gif);
+    }
+    li.list-cn-2-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-70.gif);
+    }
+    li.list-cn-2-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-71.gif);
+    }
+    li.list-cn-2-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-72.gif);
+    }
+    li.list-cn-2-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-73.gif);
+    }
+    li.list-cn-2-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-74.gif);
+    }
+    li.list-cn-2-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-75.gif);
+    }
+    li.list-cn-2-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-76.gif);
+    }
+    li.list-cn-2-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-77.gif);
+    }
+    li.list-cn-2-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-78.gif);
+    }
+    li.list-cn-2-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-79.gif);
+    }
+    li.list-cn-2-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-80.gif);
+    }
+    li.list-cn-2-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-81.gif);
+    }
+    li.list-cn-2-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-82.gif);
+    }
+    li.list-cn-2-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-83.gif);
+    }
+    li.list-cn-2-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-84.gif);
+    }
+    li.list-cn-2-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-85.gif);
+    }
+    li.list-cn-2-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-86.gif);
+    }
+    li.list-cn-2-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-87.gif);
+    }
+    li.list-cn-2-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-88.gif);
+    }
+    li.list-cn-2-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-89.gif);
+    }
+    li.list-cn-2-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-90.gif);
+    }
+    li.list-cn-2-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-91.gif);
+    }
+    li.list-cn-2-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-92.gif);
+    }
+    li.list-cn-2-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-93.gif);
+    }
+    li.list-cn-2-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-94.gif);
+    }
+    li.list-cn-2-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-95.gif);
+    }
+    li.list-cn-2-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-96.gif);
+    }
+    li.list-cn-2-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-97.gif);
+    }
+    li.list-cn-2-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-98.gif);
+    }
+    ol.custom_cn1 {
+      list-style: none;
+    }
+    ol.custom_cn1 li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-cn1-paddingleft-1 {
+      padding-left: 30px;
+    }
+    li.list-cn1-paddingleft-2 {
+      padding-left: 40px;
+    }
+    li.list-cn1-paddingleft-3 {
+      padding-left: 55px;
+    }
+    li.list-cn-3-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-0.gif);
+    }
+    li.list-cn-3-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-1.gif);
+    }
+    li.list-cn-3-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-2.gif);
+    }
+    li.list-cn-3-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-3.gif);
+    }
+    li.list-cn-3-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-4.gif);
+    }
+    li.list-cn-3-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-5.gif);
+    }
+    li.list-cn-3-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-6.gif);
+    }
+    li.list-cn-3-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-7.gif);
+    }
+    li.list-cn-3-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-8.gif);
+    }
+    li.list-cn-3-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-9.gif);
+    }
+    li.list-cn-3-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-10.gif);
+    }
+    li.list-cn-3-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-11.gif);
+    }
+    li.list-cn-3-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-12.gif);
+    }
+    li.list-cn-3-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-13.gif);
+    }
+    li.list-cn-3-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-14.gif);
+    }
+    li.list-cn-3-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-15.gif);
+    }
+    li.list-cn-3-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-16.gif);
+    }
+    li.list-cn-3-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-17.gif);
+    }
+    li.list-cn-3-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-18.gif);
+    }
+    li.list-cn-3-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-19.gif);
+    }
+    li.list-cn-3-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-20.gif);
+    }
+    li.list-cn-3-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-21.gif);
+    }
+    li.list-cn-3-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-22.gif);
+    }
+    li.list-cn-3-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-23.gif);
+    }
+    li.list-cn-3-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-24.gif);
+    }
+    li.list-cn-3-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-25.gif);
+    }
+    li.list-cn-3-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-26.gif);
+    }
+    li.list-cn-3-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-27.gif);
+    }
+    li.list-cn-3-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-28.gif);
+    }
+    li.list-cn-3-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-29.gif);
+    }
+    li.list-cn-3-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-30.gif);
+    }
+    li.list-cn-3-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-31.gif);
+    }
+    li.list-cn-3-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-32.gif);
+    }
+    li.list-cn-3-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-33.gif);
+    }
+    li.list-cn-3-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-34.gif);
+    }
+    li.list-cn-3-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-35.gif);
+    }
+    li.list-cn-3-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-36.gif);
+    }
+    li.list-cn-3-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-37.gif);
+    }
+    li.list-cn-3-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-38.gif);
+    }
+    li.list-cn-3-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-39.gif);
+    }
+    li.list-cn-3-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-40.gif);
+    }
+    li.list-cn-3-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-41.gif);
+    }
+    li.list-cn-3-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-42.gif);
+    }
+    li.list-cn-3-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-43.gif);
+    }
+    li.list-cn-3-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-44.gif);
+    }
+    li.list-cn-3-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-45.gif);
+    }
+    li.list-cn-3-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-46.gif);
+    }
+    li.list-cn-3-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-47.gif);
+    }
+    li.list-cn-3-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-48.gif);
+    }
+    li.list-cn-3-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-49.gif);
+    }
+    li.list-cn-3-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-50.gif);
+    }
+    li.list-cn-3-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-51.gif);
+    }
+    li.list-cn-3-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-52.gif);
+    }
+    li.list-cn-3-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-53.gif);
+    }
+    li.list-cn-3-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-54.gif);
+    }
+    li.list-cn-3-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-55.gif);
+    }
+    li.list-cn-3-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-56.gif);
+    }
+    li.list-cn-3-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-57.gif);
+    }
+    li.list-cn-3-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-58.gif);
+    }
+    li.list-cn-3-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-59.gif);
+    }
+    li.list-cn-3-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-60.gif);
+    }
+    li.list-cn-3-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-61.gif);
+    }
+    li.list-cn-3-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-62.gif);
+    }
+    li.list-cn-3-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-63.gif);
+    }
+    li.list-cn-3-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-64.gif);
+    }
+    li.list-cn-3-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-65.gif);
+    }
+    li.list-cn-3-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-66.gif);
+    }
+    li.list-cn-3-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-67.gif);
+    }
+    li.list-cn-3-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-68.gif);
+    }
+    li.list-cn-3-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-69.gif);
+    }
+    li.list-cn-3-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-70.gif);
+    }
+    li.list-cn-3-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-71.gif);
+    }
+    li.list-cn-3-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-72.gif);
+    }
+    li.list-cn-3-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-73.gif);
+    }
+    li.list-cn-3-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-74.gif);
+    }
+    li.list-cn-3-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-75.gif);
+    }
+    li.list-cn-3-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-76.gif);
+    }
+    li.list-cn-3-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-77.gif);
+    }
+    li.list-cn-3-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-78.gif);
+    }
+    li.list-cn-3-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-79.gif);
+    }
+    li.list-cn-3-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-80.gif);
+    }
+    li.list-cn-3-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-81.gif);
+    }
+    li.list-cn-3-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-82.gif);
+    }
+    li.list-cn-3-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-83.gif);
+    }
+    li.list-cn-3-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-84.gif);
+    }
+    li.list-cn-3-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-85.gif);
+    }
+    li.list-cn-3-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-86.gif);
+    }
+    li.list-cn-3-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-87.gif);
+    }
+    li.list-cn-3-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-88.gif);
+    }
+    li.list-cn-3-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-89.gif);
+    }
+    li.list-cn-3-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-90.gif);
+    }
+    li.list-cn-3-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-91.gif);
+    }
+    li.list-cn-3-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-92.gif);
+    }
+    li.list-cn-3-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-93.gif);
+    }
+    li.list-cn-3-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-94.gif);
+    }
+    li.list-cn-3-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-95.gif);
+    }
+    li.list-cn-3-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-96.gif);
+    }
+    li.list-cn-3-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-97.gif);
+    }
+    li.list-cn-3-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-98.gif);
+    }
+    ol.custom_cn2 {
+      list-style: none;
+    }
+    ol.custom_cn2 li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-cn2-paddingleft-1 {
+      padding-left: 40px;
+    }
+    li.list-cn2-paddingleft-2 {
+      padding-left: 55px;
+    }
+    li.list-cn2-paddingleft-3 {
+      padding-left: 68px;
+    }
+    li.list-num-1-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-0.gif);
+    }
+    li.list-num-1-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-1.gif);
+    }
+    li.list-num-1-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-2.gif);
+    }
+    li.list-num-1-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-3.gif);
+    }
+    li.list-num-1-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-4.gif);
+    }
+    li.list-num-1-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-5.gif);
+    }
+    li.list-num-1-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-6.gif);
+    }
+    li.list-num-1-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-7.gif);
+    }
+    li.list-num-1-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-8.gif);
+    }
+    li.list-num-1-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-9.gif);
+    }
+    li.list-num-1-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-10.gif);
+    }
+    li.list-num-1-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-11.gif);
+    }
+    li.list-num-1-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-12.gif);
+    }
+    li.list-num-1-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-13.gif);
+    }
+    li.list-num-1-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-14.gif);
+    }
+    li.list-num-1-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-15.gif);
+    }
+    li.list-num-1-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-16.gif);
+    }
+    li.list-num-1-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-17.gif);
+    }
+    li.list-num-1-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-18.gif);
+    }
+    li.list-num-1-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-19.gif);
+    }
+    li.list-num-1-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-20.gif);
+    }
+    li.list-num-1-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-21.gif);
+    }
+    li.list-num-1-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-22.gif);
+    }
+    li.list-num-1-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-23.gif);
+    }
+    li.list-num-1-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-24.gif);
+    }
+    li.list-num-1-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-25.gif);
+    }
+    li.list-num-1-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-26.gif);
+    }
+    li.list-num-1-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-27.gif);
+    }
+    li.list-num-1-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-28.gif);
+    }
+    li.list-num-1-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-29.gif);
+    }
+    li.list-num-1-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-30.gif);
+    }
+    li.list-num-1-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-31.gif);
+    }
+    li.list-num-1-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-32.gif);
+    }
+    li.list-num-1-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-33.gif);
+    }
+    li.list-num-1-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-34.gif);
+    }
+    li.list-num-1-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-35.gif);
+    }
+    li.list-num-1-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-36.gif);
+    }
+    li.list-num-1-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-37.gif);
+    }
+    li.list-num-1-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-38.gif);
+    }
+    li.list-num-1-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-39.gif);
+    }
+    li.list-num-1-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-40.gif);
+    }
+    li.list-num-1-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-41.gif);
+    }
+    li.list-num-1-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-42.gif);
+    }
+    li.list-num-1-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-43.gif);
+    }
+    li.list-num-1-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-44.gif);
+    }
+    li.list-num-1-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-45.gif);
+    }
+    li.list-num-1-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-46.gif);
+    }
+    li.list-num-1-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-47.gif);
+    }
+    li.list-num-1-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-48.gif);
+    }
+    li.list-num-1-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-49.gif);
+    }
+    li.list-num-1-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-50.gif);
+    }
+    li.list-num-1-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-51.gif);
+    }
+    li.list-num-1-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-52.gif);
+    }
+    li.list-num-1-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-53.gif);
+    }
+    li.list-num-1-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-54.gif);
+    }
+    li.list-num-1-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-55.gif);
+    }
+    li.list-num-1-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-56.gif);
+    }
+    li.list-num-1-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-57.gif);
+    }
+    li.list-num-1-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-58.gif);
+    }
+    li.list-num-1-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-59.gif);
+    }
+    li.list-num-1-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-60.gif);
+    }
+    li.list-num-1-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-61.gif);
+    }
+    li.list-num-1-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-62.gif);
+    }
+    li.list-num-1-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-63.gif);
+    }
+    li.list-num-1-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-64.gif);
+    }
+    li.list-num-1-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-65.gif);
+    }
+    li.list-num-1-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-66.gif);
+    }
+    li.list-num-1-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-67.gif);
+    }
+    li.list-num-1-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-68.gif);
+    }
+    li.list-num-1-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-69.gif);
+    }
+    li.list-num-1-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-70.gif);
+    }
+    li.list-num-1-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-71.gif);
+    }
+    li.list-num-1-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-72.gif);
+    }
+    li.list-num-1-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-73.gif);
+    }
+    li.list-num-1-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-74.gif);
+    }
+    li.list-num-1-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-75.gif);
+    }
+    li.list-num-1-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-76.gif);
+    }
+    li.list-num-1-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-77.gif);
+    }
+    li.list-num-1-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-78.gif);
+    }
+    li.list-num-1-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-79.gif);
+    }
+    li.list-num-1-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-80.gif);
+    }
+    li.list-num-1-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-81.gif);
+    }
+    li.list-num-1-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-82.gif);
+    }
+    li.list-num-1-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-83.gif);
+    }
+    li.list-num-1-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-84.gif);
+    }
+    li.list-num-1-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-85.gif);
+    }
+    li.list-num-1-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-86.gif);
+    }
+    li.list-num-1-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-87.gif);
+    }
+    li.list-num-1-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-88.gif);
+    }
+    li.list-num-1-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-89.gif);
+    }
+    li.list-num-1-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-90.gif);
+    }
+    li.list-num-1-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-91.gif);
+    }
+    li.list-num-1-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-92.gif);
+    }
+    li.list-num-1-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-93.gif);
+    }
+    li.list-num-1-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-94.gif);
+    }
+    li.list-num-1-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-95.gif);
+    }
+    li.list-num-1-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-96.gif);
+    }
+    li.list-num-1-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-97.gif);
+    }
+    li.list-num-1-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-98.gif);
+    }
+    ol.custom_num {
+      list-style: none;
+    }
+    ol.custom_num li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-num-paddingleft-1 {
+      padding-left: 25px;
+    }
+    li.list-num-2-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-0.gif);
+    }
+    li.list-num-2-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-1.gif);
+    }
+    li.list-num-2-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-2.gif);
+    }
+    li.list-num-2-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-3.gif);
+    }
+    li.list-num-2-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-4.gif);
+    }
+    li.list-num-2-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-5.gif);
+    }
+    li.list-num-2-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-6.gif);
+    }
+    li.list-num-2-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-7.gif);
+    }
+    li.list-num-2-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-8.gif);
+    }
+    li.list-num-2-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-9.gif);
+    }
+    li.list-num-2-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-10.gif);
+    }
+    li.list-num-2-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-11.gif);
+    }
+    li.list-num-2-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-12.gif);
+    }
+    li.list-num-2-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-13.gif);
+    }
+    li.list-num-2-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-14.gif);
+    }
+    li.list-num-2-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-15.gif);
+    }
+    li.list-num-2-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-16.gif);
+    }
+    li.list-num-2-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-17.gif);
+    }
+    li.list-num-2-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-18.gif);
+    }
+    li.list-num-2-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-19.gif);
+    }
+    li.list-num-2-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-20.gif);
+    }
+    li.list-num-2-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-21.gif);
+    }
+    li.list-num-2-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-22.gif);
+    }
+    li.list-num-2-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-23.gif);
+    }
+    li.list-num-2-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-24.gif);
+    }
+    li.list-num-2-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-25.gif);
+    }
+    li.list-num-2-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-26.gif);
+    }
+    li.list-num-2-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-27.gif);
+    }
+    li.list-num-2-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-28.gif);
+    }
+    li.list-num-2-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-29.gif);
+    }
+    li.list-num-2-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-30.gif);
+    }
+    li.list-num-2-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-31.gif);
+    }
+    li.list-num-2-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-32.gif);
+    }
+    li.list-num-2-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-33.gif);
+    }
+    li.list-num-2-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-34.gif);
+    }
+    li.list-num-2-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-35.gif);
+    }
+    li.list-num-2-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-36.gif);
+    }
+    li.list-num-2-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-37.gif);
+    }
+    li.list-num-2-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-38.gif);
+    }
+    li.list-num-2-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-39.gif);
+    }
+    li.list-num-2-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-40.gif);
+    }
+    li.list-num-2-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-41.gif);
+    }
+    li.list-num-2-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-42.gif);
+    }
+    li.list-num-2-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-43.gif);
+    }
+    li.list-num-2-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-44.gif);
+    }
+    li.list-num-2-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-45.gif);
+    }
+    li.list-num-2-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-46.gif);
+    }
+    li.list-num-2-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-47.gif);
+    }
+    li.list-num-2-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-48.gif);
+    }
+    li.list-num-2-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-49.gif);
+    }
+    li.list-num-2-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-50.gif);
+    }
+    li.list-num-2-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-51.gif);
+    }
+    li.list-num-2-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-52.gif);
+    }
+    li.list-num-2-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-53.gif);
+    }
+    li.list-num-2-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-54.gif);
+    }
+    li.list-num-2-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-55.gif);
+    }
+    li.list-num-2-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-56.gif);
+    }
+    li.list-num-2-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-57.gif);
+    }
+    li.list-num-2-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-58.gif);
+    }
+    li.list-num-2-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-59.gif);
+    }
+    li.list-num-2-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-60.gif);
+    }
+    li.list-num-2-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-61.gif);
+    }
+    li.list-num-2-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-62.gif);
+    }
+    li.list-num-2-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-63.gif);
+    }
+    li.list-num-2-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-64.gif);
+    }
+    li.list-num-2-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-65.gif);
+    }
+    li.list-num-2-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-66.gif);
+    }
+    li.list-num-2-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-67.gif);
+    }
+    li.list-num-2-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-68.gif);
+    }
+    li.list-num-2-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-69.gif);
+    }
+    li.list-num-2-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-70.gif);
+    }
+    li.list-num-2-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-71.gif);
+    }
+    li.list-num-2-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-72.gif);
+    }
+    li.list-num-2-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-73.gif);
+    }
+    li.list-num-2-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-74.gif);
+    }
+    li.list-num-2-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-75.gif);
+    }
+    li.list-num-2-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-76.gif);
+    }
+    li.list-num-2-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-77.gif);
+    }
+    li.list-num-2-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-78.gif);
+    }
+    li.list-num-2-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-79.gif);
+    }
+    li.list-num-2-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-80.gif);
+    }
+    li.list-num-2-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-81.gif);
+    }
+    li.list-num-2-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-82.gif);
+    }
+    li.list-num-2-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-83.gif);
+    }
+    li.list-num-2-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-84.gif);
+    }
+    li.list-num-2-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-85.gif);
+    }
+    li.list-num-2-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-86.gif);
+    }
+    li.list-num-2-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-87.gif);
+    }
+    li.list-num-2-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-88.gif);
+    }
+    li.list-num-2-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-89.gif);
+    }
+    li.list-num-2-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-90.gif);
+    }
+    li.list-num-2-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-91.gif);
+    }
+    li.list-num-2-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-92.gif);
+    }
+    li.list-num-2-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-93.gif);
+    }
+    li.list-num-2-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-94.gif);
+    }
+    li.list-num-2-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-95.gif);
+    }
+    li.list-num-2-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-96.gif);
+    }
+    li.list-num-2-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-97.gif);
+    }
+    li.list-num-2-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-98.gif);
+    }
+    ol.custom_num1 {
+      list-style: none;
+    }
+    ol.custom_num1 li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-num1-paddingleft-1 {
+      padding-left: 25px;
+    }
+    li.list-num-3-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-0.gif);
+    }
+    li.list-num-3-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-1.gif);
+    }
+    li.list-num-3-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-2.gif);
+    }
+    li.list-num-3-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-3.gif);
+    }
+    li.list-num-3-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-4.gif);
+    }
+    li.list-num-3-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-5.gif);
+    }
+    li.list-num-3-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-6.gif);
+    }
+    li.list-num-3-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-7.gif);
+    }
+    li.list-num-3-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-8.gif);
+    }
+    li.list-num-3-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-9.gif);
+    }
+    li.list-num-3-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-10.gif);
+    }
+    li.list-num-3-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-11.gif);
+    }
+    li.list-num-3-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-12.gif);
+    }
+    li.list-num-3-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-13.gif);
+    }
+    li.list-num-3-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-14.gif);
+    }
+    li.list-num-3-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-15.gif);
+    }
+    li.list-num-3-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-16.gif);
+    }
+    li.list-num-3-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-17.gif);
+    }
+    li.list-num-3-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-18.gif);
+    }
+    li.list-num-3-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-19.gif);
+    }
+    li.list-num-3-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-20.gif);
+    }
+    li.list-num-3-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-21.gif);
+    }
+    li.list-num-3-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-22.gif);
+    }
+    li.list-num-3-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-23.gif);
+    }
+    li.list-num-3-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-24.gif);
+    }
+    li.list-num-3-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-25.gif);
+    }
+    li.list-num-3-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-26.gif);
+    }
+    li.list-num-3-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-27.gif);
+    }
+    li.list-num-3-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-28.gif);
+    }
+    li.list-num-3-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-29.gif);
+    }
+    li.list-num-3-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-30.gif);
+    }
+    li.list-num-3-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-31.gif);
+    }
+    li.list-num-3-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-32.gif);
+    }
+    li.list-num-3-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-33.gif);
+    }
+    li.list-num-3-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-34.gif);
+    }
+    li.list-num-3-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-35.gif);
+    }
+    li.list-num-3-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-36.gif);
+    }
+    li.list-num-3-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-37.gif);
+    }
+    li.list-num-3-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-38.gif);
+    }
+    li.list-num-3-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-39.gif);
+    }
+    li.list-num-3-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-40.gif);
+    }
+    li.list-num-3-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-41.gif);
+    }
+    li.list-num-3-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-42.gif);
+    }
+    li.list-num-3-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-43.gif);
+    }
+    li.list-num-3-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-44.gif);
+    }
+    li.list-num-3-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-45.gif);
+    }
+    li.list-num-3-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-46.gif);
+    }
+    li.list-num-3-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-47.gif);
+    }
+    li.list-num-3-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-48.gif);
+    }
+    li.list-num-3-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-49.gif);
+    }
+    li.list-num-3-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-50.gif);
+    }
+    li.list-num-3-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-51.gif);
+    }
+    li.list-num-3-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-52.gif);
+    }
+    li.list-num-3-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-53.gif);
+    }
+    li.list-num-3-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-54.gif);
+    }
+    li.list-num-3-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-55.gif);
+    }
+    li.list-num-3-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-56.gif);
+    }
+    li.list-num-3-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-57.gif);
+    }
+    li.list-num-3-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-58.gif);
+    }
+    li.list-num-3-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-59.gif);
+    }
+    li.list-num-3-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-60.gif);
+    }
+    li.list-num-3-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-61.gif);
+    }
+    li.list-num-3-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-62.gif);
+    }
+    li.list-num-3-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-63.gif);
+    }
+    li.list-num-3-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-64.gif);
+    }
+    li.list-num-3-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-65.gif);
+    }
+    li.list-num-3-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-66.gif);
+    }
+    li.list-num-3-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-67.gif);
+    }
+    li.list-num-3-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-68.gif);
+    }
+    li.list-num-3-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-69.gif);
+    }
+    li.list-num-3-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-70.gif);
+    }
+    li.list-num-3-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-71.gif);
+    }
+    li.list-num-3-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-72.gif);
+    }
+    li.list-num-3-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-73.gif);
+    }
+    li.list-num-3-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-74.gif);
+    }
+    li.list-num-3-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-75.gif);
+    }
+    li.list-num-3-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-76.gif);
+    }
+    li.list-num-3-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-77.gif);
+    }
+    li.list-num-3-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-78.gif);
+    }
+    li.list-num-3-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-79.gif);
+    }
+    li.list-num-3-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-80.gif);
+    }
+    li.list-num-3-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-81.gif);
+    }
+    li.list-num-3-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-82.gif);
+    }
+    li.list-num-3-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-83.gif);
+    }
+    li.list-num-3-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-84.gif);
+    }
+    li.list-num-3-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-85.gif);
+    }
+    li.list-num-3-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-86.gif);
+    }
+    li.list-num-3-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-87.gif);
+    }
+    li.list-num-3-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-88.gif);
+    }
+    li.list-num-3-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-89.gif);
+    }
+    li.list-num-3-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-90.gif);
+    }
+    li.list-num-3-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-91.gif);
+    }
+    li.list-num-3-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-92.gif);
+    }
+    li.list-num-3-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-93.gif);
+    }
+    li.list-num-3-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-94.gif);
+    }
+    li.list-num-3-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-95.gif);
+    }
+    li.list-num-3-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-96.gif);
+    }
+    li.list-num-3-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-97.gif);
+    }
+    li.list-num-3-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-98.gif);
+    }
+    ol.custom_num2 {
+      list-style: none;
+    }
+    ol.custom_num2 li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-num2-paddingleft-1 {
+      padding-left: 35px;
+    }
+    li.list-num2-paddingleft-2 {
+      padding-left: 40px;
+    }
+    li.list-dash {
+      background-image: url(http://bs.baidu.com/listicon/dash.gif);
+    }
+    ul.custom_dash {
+      list-style: none;
+    }
+    ul.custom_dash li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-dash-paddingleft {
+      padding-left: 35px;
+    }
+    li.list-dot {
+      background-image: url(http://bs.baidu.com/listicon/dot.gif);
+    }
+    ul.custom_dot {
+      list-style: none;
+    }
+    ul.custom_dot li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-dot-paddingleft {
+      padding-left: 20px;
+    }
+    .list-paddingleft-1 {
+      padding-left: 0;
+    }
+    .list-paddingleft-2 {
+      padding-left: 30px;
+    }
+    .list-paddingleft-3 {
+      padding-left: 60px;
+    }
+  </style>
+  <style id="pagebreak">
+    .pagebreak {
+      display: block;
+      clear: both !important;
+      cursor: default !important;
+      width: 100% !important;
+      margin: 0;
+    }
+  </style>
+  <style id="loading">
+    .loadingclass {
+      display: inline-block;
+      cursor: default;
+      background: url("/UEditorPlus/themes/default/images/loading.gif")
+        no-repeat center center transparent;
+      border-radius: 3px;
+      outline: 1px solid #eee;
+      margin-left: 1px;
+      height: 22px;
+      width: 22px;
+    }
+    .loaderrorclass {
+      display: inline-block;
+      cursor: default;
+      background: url("/UEditorPlus/themes/default/images/loaderror.png")
+        no-repeat center center transparent;
+      border-radius: 3px;
+      outline: 1px solid #eee;
+      margin-right: 1px;
+      height: 22px;
+      width: 22px;
+    }
+  </style>
+  <style id="anchor">
+    .anchorclass {
+      background: url("/UEditorPlus/themes/default/images/anchor.gif")
+        no-repeat scroll left center transparent;
+      cursor: auto;
+      display: inline-block;
+      height: 16px;
+      width: 15px;
+    }
+  </style>        <!-- ueditor_style end -->
+<script type="text/javascript">(function(){var s=document.createElement("script");s.src="https://hrss.xz.gov.cn/rsks/api/stat/visit?sid=642071464194117&cid=642071527968837&id=803566749859909";(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(s);})();</script>    </head>
+    <body>
+        <div class="page flex-col">
+            <div class="section_4 flex-row">
+                
+                <div class="box_8 flex-col" style="margin-left:0px;">
+                    <!-- header start -->
+<header class="header">
+    <div class="header-content">
+        <img src="https://hrss.xz.gov.cn/rsks/img/xzrsImg.webp" 
+        style=" margin-right: -192px;
+                width: 220.51px;
+                height: 41.03px;">
+        <button class="text-btn" id="toggleBtn">返回网站首页</button>
+        <div class="search-bar">
+            <!--<form method="get" action="https://cms-admin.xztv.tv/prod-api/_search?&sid=642071464194117&pp=pc">-->
+            <input name="cid" type="hidden" value="">
+            <input id="_query" stype="text" name="q" placeholder="请输入关键字">
+            <button onclick="performSearch()"></button>
+        </div>
+    </div>
+        <script>
+        $(document).ready(function() {
+        $('#toggleBtn').on('click', function() {
+            // $(this).addClass('active');
+            setTimeout(function() {
+                window.location.href = 'http://hrss.xz.gov.cn/';
+            }, 100);
+        });
+    });
+        // JavaScript部分
+    // document.addEventListener('DOMContentLoaded', function() {
+    //   const btn = document.getElementById('toggleBtn');
+    //   console.log("按钮元素:", btn); // 确认是否获取到元素
+      
+    //   // 条件判断显示按钮
+    //   if ("cjcx" != "sy") {
+    //     btn.classList.add('visible');
+        
+    //  }
+    //  
+    //     
+    //     // 按钮点击事件
+    //     $("#toggleBtn").on("click", function() {
+    //         // 先添加active类以确保视觉反馈
+    //         $(this).addClass("active");
+    //         // 使用setTimeout确保样式应用后再跳转
+    //         setTimeout(function() {
+    //             window.location.href = "https://hrss.xz.gov.cn/rsks/sy/";
+    //         }, 100);
+    //     });
+    //     
+    //     
+    //   }
+    // );
+    </script>
+</header>
+<div class="navigation"  id="mainNav">
+    <div class="xzrsLogo">
+        <img src="https://hrss.xz.gov.cn/rsks/img/xzrsLogo.png" style="width :  38px;        height :  38.57px;">
+    </div>
+    <ul class="navbar-nav">
+      <!-- navbar start -->
+            <li>
+                <a id="link" href="https://hrss.xz.gov.cn/rsks/sy/" class="navigation-title nav-642071527276613">专栏首页</a>
+
+            </li>
+            <li>
+                <a id="link" href="https://hrss.xz.gov.cn/rsks/ksjh/" class="navigation-title nav-642071527772229">考试计划</a>
+
+            </li>
+            <li>
+                <a id="link" href="https://hrss.xz.gov.cn/rsks/wsbm/" class="navigation-title nav-642071527854149">报名通知</a>
+
+            </li>
+            <li>
+                <a id="link" href="https://hrss.xz.gov.cn/rsks/zkzdy/" class="navigation-title nav-642071527915589">准考证打印</a>
+
+            </li>
+            <li>
+                <a id="link" href="https://hrss.xz.gov.cn/rsks/cjcx/" class="navigation-title nav-642071527968837">成绩查询</a>
+
+            </li>
+            <li>
+                <a id="link" href="https://hrss.xz.gov.cn/rsks/khsh/" class="navigation-title nav-642071528030277">考后审核</a>
+
+            </li>
+            <li>
+                <a id="link" href="https://hrss.xz.gov.cn/rsks/zsgl/" class="navigation-title nav-649503032483909">证书管理</a>
+
+            </li>
+            <li>
+                <a id="link" href="https://hrss.xz.gov.cn/rsks/fwzn/" class="navigation-title nav-642071528144965">服务指南</a>
+
+            </li>
+        <!-- navbar end -->
+    </ul>
+</div>
+<script>
+    function performSearch() {
+        var link = "https://cms-admin.xztv.tv/prod-api/";
+        link += "_search?q=" + $('#_query').val() + "&sid=642071464194117&pp=pc";
+        window.location.href = link;
+      };
+    window.onload = function() {
+		document.getElementById('_query').addEventListener('keyup', function(event) {
+		  if (event.key === 'Enter') {
+			var link = "https://cms-admin.xztv.tv/prod-api/";		
+      link += "_search?q=" + $('#_query').val() + "&sid=642071464194117&pp=pc";
+			window.location.href = link;
+		  }
+		});
+	};
+</script>
+
+                    <!-- header end -->  
+                    <div class="text-wrapper_6">
+                        <span class="text_11">
+                            当前位置：
+                        </span>
+                        <span class="text_11">&gt;</span>
+                            <a class="text_12" href="https://hrss.xz.gov.cn/rsks/cjcx/">成绩查询</a> <span class="text-split">&gt;</span> 
+                        <!-- <span class="text_12">成绩查询</span> -->
+                    </div>
+                    <!--article start-->
+                                        
+                    <!-- 标题 & 时间 -->
+                    <!-- <div class="text-group_4 flex-col justify-center"> -->
+                    <div class="text-group_4" justify-between>
+                        <span class="text_13">【成绩查询】2026年事业单位统一公开招聘人员（含定向招聘退役大学生士兵）笔试</span>
+                        <span class="text_14">2026-05-09 17:43:23</span>
+                    </div>
+                    <span class="text_23">-------------------------------------------------------------------------------------------------------------------------------
+                    </span>
+                    <!-- 内容 -->
+                    <div class="scroll-container" style="position: relative;left:0;height:40%; overflow: hidden;">
+                        <div id="scrollContent" class="scroll-content">
+                                <span id="download" class="paragraph_1">
+                                    <p style="text-align: center;"><a href="http://218.3.167.180:8001/" target="_self" style="font-size: 20px; text-decoration: underline;"><span style="font-size: 20px;">点击查询</span></a></p>
+                                </span>
+                        </div>
+                    </div>
+                    <style>
+                            /* 要滑动的内容区域样式，设置绝对定位等 */
+                           .scroll-content {
+                                width: 100%;            /* 设置宽度 */
+                              height: 100%;         /* 设置固定高度 */
+                              
+                              padding: 20px;
+                              border: 0px solid #ccc;
+                              margin: 0 auto;
+                            }
+                    
+                        </style>
+                    
+                    
+                    <!-- 翻页 start -->
+                    
+                        <ul class="handover">
+                            <li>
+                                <a href="http://jshrss.jiangsu.gov.cn/art/2026/1/12/art_59205_11715082.html" target="_self">上一篇：江苏省2026年公务员招录笔试成绩查询</a>
+                            </li>
+                            <li>
+                            </li>
+                        </ul>
+                    
+                    
+                    <!-- 翻页 end -->
+
+                    <!--article end -->
+<div class="image-links" data-v-922e3332="">
+    <a href="http://jshrss.jiangsu.gov.cn/col/col57253/index.html" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/组 12194@2x.png" alt="" data-v-922e3332=""></a>
+    <a href="http://www.cpta.com.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/蒙版组 686@2x.png" style="height:66.42px" alt="" data-v-922e3332=""></a>
+    <a href="http://hrss.xz.gov.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/徐州人力资源.png" alt="" data-v-922e3332=""></a>
+    <a href="https://www.mohrss.gov.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/组 12201@2x.png" alt="" data-v-922e3332=""></a>
+    <a href="http://jshrss.jiangsu.gov.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/组 12199@2x.png" alt="" data-v-922e3332=""></a>
+</div>                    
+                    
+                </div>
+            </div>
+        </div>
+<!-- footer start -->
+<!-- footer -->
+<div id="footer">
+    
+<div class="ewb-footer">
+    <div class="footer-line"></div>
+    <div class="footer-cont container">
+        <p class="footer-map">
+			
+					<a target="_blank">网站地图</a>
+					<span>|</span>
+			
+					<a target="_blank">网站联系</a>
+					<span>|</span>
+			
+					<a target="_blank">网站数据报表</a>
+					<span>|</span>
+			
+					<a target="_blank">网站声明</a>
+					</p>
+        <p class="footer-copyright">
+            <a href="https://hrss.xz.gov.cn/" target="_blank">版权所有：徐州市人力资源和社会保障局</a>
+            <a href="https://hrss.xz.gov.cn/" target="_blank">主办单位：徐州市人力资源和社会保障局</a>
+            <!--<span>总访问量：<span id="siteViewCount">30531392</span></span>-->
+        </p>
+        <p class="footer-ab">
+            <a href="https://beian.miit.gov.cn" target="_blank">苏ICP备16047411号-1</a>
+	        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32039302000170" target="_blank">
+            <img src="https://hrss.xz.gov.cn/rsks/img/galogo.png" style="margin-top: 6px;">苏公网安备32039302000170号</a>
+            <a>网站识别码：3200000033</a>
+        </p>
+        <a class="footer-zc" href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=3203000060&url=https%3A%2F%2Fhrss.xz.gov.cn%2F" style="cursor: pointer;"></a>
+        <a class="footer-dzjg" href="https://bszs.conac.cn/sitename?method=show&id=0C098980ED71172FE053022819AC9E05" target="_blank"></a>
+    </div>
+</div>
+</div>
+<!-- footer -->        <!-- footer end -->
+    </body>
+</html>

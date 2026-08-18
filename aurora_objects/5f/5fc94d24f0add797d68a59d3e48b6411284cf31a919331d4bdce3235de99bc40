@@ -1,0 +1,2155 @@
+<!-- 内容详情页 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>江苏省2026年度考试录用公务员笔试徐州考区准考证打印通知及考前提醒</title>
+        <link rel="icon" href="https://hrss.xz.gov.cn/rsks/img/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/content.css" />
+        <link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/footer.css" />
+        <!--<link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/homeIndex.css" />-->
+        <script src="https://hrss.xz.gov.cn/rsks/js/html-docx.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+        <script src="https://awp-assets.meituan.net/thh/thh_feb_web_portal/js/jquery-3.6.0.min.js"></script>
+        
+        <script src="https://s4.zstatic.net/npm/pizzip@3.1.8/dist/pizzip.min.js"></script>
+        <script src="https://s4.zstatic.net/npm/pizzip@3.1.8/dist/pizzip-utils.js"></script>
+        <script src="https://s4.zstatic.net/npm/docxtemplater@3.60.0/build/docxtemplater.min.js"></script>
+        <script src="https://s4.zstatic.net/npm/docxtemplater-html@1.0.0/build/html-module.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                console.log("DOM 加载完毕！");
+                $(".nav-642071527915589").addClass("active");
+                console.log("class更新完毕");
+            });
+        </script>
+        
+        <!-- ueditor_style start -->
+<style id="tablesort">
+    table.sortEnabled tr.firstRow th,
+    table.sortEnabled tr.firstRow td {
+      padding-right: 20px;
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-image: url(/UEditorPlus/themes/default/images/sortable.png);
+    }
+  </style>
+  <style id="table">
+    .selectTdClass {
+      background-color: #edf5fa !important;
+    }
+    table.noBorderTable td,
+    table.noBorderTable th,
+    table.noBorderTable caption {
+      border: 1px dashed #ddd !important;
+    }
+    table {
+      margin-bottom: 10px;
+      border-collapse: collapse;
+      display: table;
+    }
+    td,
+    th {
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+    }
+    caption {
+      border: 1px dashed #ddd;
+      border-bottom: 0;
+      padding: 3px;
+      text-align: center;
+    }
+    th {
+      border-top: 1px solid #bbb;
+      background-color: #f7f7f7;
+    }
+    table tr.firstRow th {
+      border-top-width: 2px;
+    }
+    .ue-table-interlace-color-single {
+      background-color: #fcfcfc;
+    }
+    .ue-table-interlace-color-double {
+      background-color: #f7faff;
+    }
+    td p {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <style id="list">
+    ol,
+    ul {
+      margin: 0;
+      pading: 0;
+      width: 95%;
+    }
+    li {
+      clear: both;
+    }
+    li.list-cn-1-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-0.gif);
+    }
+    li.list-cn-1-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-1.gif);
+    }
+    li.list-cn-1-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-2.gif);
+    }
+    li.list-cn-1-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-3.gif);
+    }
+    li.list-cn-1-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-4.gif);
+    }
+    li.list-cn-1-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-5.gif);
+    }
+    li.list-cn-1-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-6.gif);
+    }
+    li.list-cn-1-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-7.gif);
+    }
+    li.list-cn-1-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-8.gif);
+    }
+    li.list-cn-1-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-9.gif);
+    }
+    li.list-cn-1-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-10.gif);
+    }
+    li.list-cn-1-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-11.gif);
+    }
+    li.list-cn-1-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-12.gif);
+    }
+    li.list-cn-1-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-13.gif);
+    }
+    li.list-cn-1-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-14.gif);
+    }
+    li.list-cn-1-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-15.gif);
+    }
+    li.list-cn-1-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-16.gif);
+    }
+    li.list-cn-1-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-17.gif);
+    }
+    li.list-cn-1-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-18.gif);
+    }
+    li.list-cn-1-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-19.gif);
+    }
+    li.list-cn-1-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-20.gif);
+    }
+    li.list-cn-1-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-21.gif);
+    }
+    li.list-cn-1-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-22.gif);
+    }
+    li.list-cn-1-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-23.gif);
+    }
+    li.list-cn-1-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-24.gif);
+    }
+    li.list-cn-1-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-25.gif);
+    }
+    li.list-cn-1-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-26.gif);
+    }
+    li.list-cn-1-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-27.gif);
+    }
+    li.list-cn-1-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-28.gif);
+    }
+    li.list-cn-1-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-29.gif);
+    }
+    li.list-cn-1-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-30.gif);
+    }
+    li.list-cn-1-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-31.gif);
+    }
+    li.list-cn-1-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-32.gif);
+    }
+    li.list-cn-1-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-33.gif);
+    }
+    li.list-cn-1-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-34.gif);
+    }
+    li.list-cn-1-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-35.gif);
+    }
+    li.list-cn-1-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-36.gif);
+    }
+    li.list-cn-1-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-37.gif);
+    }
+    li.list-cn-1-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-38.gif);
+    }
+    li.list-cn-1-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-39.gif);
+    }
+    li.list-cn-1-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-40.gif);
+    }
+    li.list-cn-1-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-41.gif);
+    }
+    li.list-cn-1-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-42.gif);
+    }
+    li.list-cn-1-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-43.gif);
+    }
+    li.list-cn-1-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-44.gif);
+    }
+    li.list-cn-1-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-45.gif);
+    }
+    li.list-cn-1-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-46.gif);
+    }
+    li.list-cn-1-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-47.gif);
+    }
+    li.list-cn-1-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-48.gif);
+    }
+    li.list-cn-1-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-49.gif);
+    }
+    li.list-cn-1-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-50.gif);
+    }
+    li.list-cn-1-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-51.gif);
+    }
+    li.list-cn-1-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-52.gif);
+    }
+    li.list-cn-1-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-53.gif);
+    }
+    li.list-cn-1-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-54.gif);
+    }
+    li.list-cn-1-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-55.gif);
+    }
+    li.list-cn-1-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-56.gif);
+    }
+    li.list-cn-1-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-57.gif);
+    }
+    li.list-cn-1-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-58.gif);
+    }
+    li.list-cn-1-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-59.gif);
+    }
+    li.list-cn-1-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-60.gif);
+    }
+    li.list-cn-1-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-61.gif);
+    }
+    li.list-cn-1-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-62.gif);
+    }
+    li.list-cn-1-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-63.gif);
+    }
+    li.list-cn-1-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-64.gif);
+    }
+    li.list-cn-1-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-65.gif);
+    }
+    li.list-cn-1-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-66.gif);
+    }
+    li.list-cn-1-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-67.gif);
+    }
+    li.list-cn-1-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-68.gif);
+    }
+    li.list-cn-1-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-69.gif);
+    }
+    li.list-cn-1-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-70.gif);
+    }
+    li.list-cn-1-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-71.gif);
+    }
+    li.list-cn-1-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-72.gif);
+    }
+    li.list-cn-1-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-73.gif);
+    }
+    li.list-cn-1-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-74.gif);
+    }
+    li.list-cn-1-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-75.gif);
+    }
+    li.list-cn-1-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-76.gif);
+    }
+    li.list-cn-1-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-77.gif);
+    }
+    li.list-cn-1-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-78.gif);
+    }
+    li.list-cn-1-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-79.gif);
+    }
+    li.list-cn-1-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-80.gif);
+    }
+    li.list-cn-1-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-81.gif);
+    }
+    li.list-cn-1-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-82.gif);
+    }
+    li.list-cn-1-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-83.gif);
+    }
+    li.list-cn-1-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-84.gif);
+    }
+    li.list-cn-1-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-85.gif);
+    }
+    li.list-cn-1-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-86.gif);
+    }
+    li.list-cn-1-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-87.gif);
+    }
+    li.list-cn-1-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-88.gif);
+    }
+    li.list-cn-1-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-89.gif);
+    }
+    li.list-cn-1-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-90.gif);
+    }
+    li.list-cn-1-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-91.gif);
+    }
+    li.list-cn-1-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-92.gif);
+    }
+    li.list-cn-1-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-93.gif);
+    }
+    li.list-cn-1-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-94.gif);
+    }
+    li.list-cn-1-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-95.gif);
+    }
+    li.list-cn-1-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-96.gif);
+    }
+    li.list-cn-1-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-97.gif);
+    }
+    li.list-cn-1-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-1-98.gif);
+    }
+    ol.custom_cn {
+      list-style: none;
+    }
+    ol.custom_cn li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-cn-paddingleft-1 {
+      padding-left: 25px;
+    }
+    li.list-cn-paddingleft-2 {
+      padding-left: 40px;
+    }
+    li.list-cn-paddingleft-3 {
+      padding-left: 55px;
+    }
+    li.list-cn-2-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-0.gif);
+    }
+    li.list-cn-2-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-1.gif);
+    }
+    li.list-cn-2-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-2.gif);
+    }
+    li.list-cn-2-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-3.gif);
+    }
+    li.list-cn-2-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-4.gif);
+    }
+    li.list-cn-2-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-5.gif);
+    }
+    li.list-cn-2-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-6.gif);
+    }
+    li.list-cn-2-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-7.gif);
+    }
+    li.list-cn-2-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-8.gif);
+    }
+    li.list-cn-2-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-9.gif);
+    }
+    li.list-cn-2-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-10.gif);
+    }
+    li.list-cn-2-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-11.gif);
+    }
+    li.list-cn-2-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-12.gif);
+    }
+    li.list-cn-2-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-13.gif);
+    }
+    li.list-cn-2-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-14.gif);
+    }
+    li.list-cn-2-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-15.gif);
+    }
+    li.list-cn-2-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-16.gif);
+    }
+    li.list-cn-2-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-17.gif);
+    }
+    li.list-cn-2-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-18.gif);
+    }
+    li.list-cn-2-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-19.gif);
+    }
+    li.list-cn-2-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-20.gif);
+    }
+    li.list-cn-2-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-21.gif);
+    }
+    li.list-cn-2-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-22.gif);
+    }
+    li.list-cn-2-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-23.gif);
+    }
+    li.list-cn-2-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-24.gif);
+    }
+    li.list-cn-2-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-25.gif);
+    }
+    li.list-cn-2-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-26.gif);
+    }
+    li.list-cn-2-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-27.gif);
+    }
+    li.list-cn-2-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-28.gif);
+    }
+    li.list-cn-2-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-29.gif);
+    }
+    li.list-cn-2-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-30.gif);
+    }
+    li.list-cn-2-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-31.gif);
+    }
+    li.list-cn-2-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-32.gif);
+    }
+    li.list-cn-2-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-33.gif);
+    }
+    li.list-cn-2-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-34.gif);
+    }
+    li.list-cn-2-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-35.gif);
+    }
+    li.list-cn-2-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-36.gif);
+    }
+    li.list-cn-2-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-37.gif);
+    }
+    li.list-cn-2-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-38.gif);
+    }
+    li.list-cn-2-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-39.gif);
+    }
+    li.list-cn-2-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-40.gif);
+    }
+    li.list-cn-2-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-41.gif);
+    }
+    li.list-cn-2-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-42.gif);
+    }
+    li.list-cn-2-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-43.gif);
+    }
+    li.list-cn-2-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-44.gif);
+    }
+    li.list-cn-2-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-45.gif);
+    }
+    li.list-cn-2-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-46.gif);
+    }
+    li.list-cn-2-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-47.gif);
+    }
+    li.list-cn-2-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-48.gif);
+    }
+    li.list-cn-2-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-49.gif);
+    }
+    li.list-cn-2-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-50.gif);
+    }
+    li.list-cn-2-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-51.gif);
+    }
+    li.list-cn-2-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-52.gif);
+    }
+    li.list-cn-2-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-53.gif);
+    }
+    li.list-cn-2-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-54.gif);
+    }
+    li.list-cn-2-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-55.gif);
+    }
+    li.list-cn-2-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-56.gif);
+    }
+    li.list-cn-2-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-57.gif);
+    }
+    li.list-cn-2-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-58.gif);
+    }
+    li.list-cn-2-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-59.gif);
+    }
+    li.list-cn-2-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-60.gif);
+    }
+    li.list-cn-2-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-61.gif);
+    }
+    li.list-cn-2-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-62.gif);
+    }
+    li.list-cn-2-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-63.gif);
+    }
+    li.list-cn-2-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-64.gif);
+    }
+    li.list-cn-2-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-65.gif);
+    }
+    li.list-cn-2-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-66.gif);
+    }
+    li.list-cn-2-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-67.gif);
+    }
+    li.list-cn-2-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-68.gif);
+    }
+    li.list-cn-2-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-69.gif);
+    }
+    li.list-cn-2-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-70.gif);
+    }
+    li.list-cn-2-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-71.gif);
+    }
+    li.list-cn-2-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-72.gif);
+    }
+    li.list-cn-2-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-73.gif);
+    }
+    li.list-cn-2-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-74.gif);
+    }
+    li.list-cn-2-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-75.gif);
+    }
+    li.list-cn-2-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-76.gif);
+    }
+    li.list-cn-2-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-77.gif);
+    }
+    li.list-cn-2-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-78.gif);
+    }
+    li.list-cn-2-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-79.gif);
+    }
+    li.list-cn-2-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-80.gif);
+    }
+    li.list-cn-2-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-81.gif);
+    }
+    li.list-cn-2-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-82.gif);
+    }
+    li.list-cn-2-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-83.gif);
+    }
+    li.list-cn-2-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-84.gif);
+    }
+    li.list-cn-2-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-85.gif);
+    }
+    li.list-cn-2-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-86.gif);
+    }
+    li.list-cn-2-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-87.gif);
+    }
+    li.list-cn-2-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-88.gif);
+    }
+    li.list-cn-2-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-89.gif);
+    }
+    li.list-cn-2-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-90.gif);
+    }
+    li.list-cn-2-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-91.gif);
+    }
+    li.list-cn-2-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-92.gif);
+    }
+    li.list-cn-2-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-93.gif);
+    }
+    li.list-cn-2-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-94.gif);
+    }
+    li.list-cn-2-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-95.gif);
+    }
+    li.list-cn-2-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-96.gif);
+    }
+    li.list-cn-2-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-97.gif);
+    }
+    li.list-cn-2-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-2-98.gif);
+    }
+    ol.custom_cn1 {
+      list-style: none;
+    }
+    ol.custom_cn1 li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-cn1-paddingleft-1 {
+      padding-left: 30px;
+    }
+    li.list-cn1-paddingleft-2 {
+      padding-left: 40px;
+    }
+    li.list-cn1-paddingleft-3 {
+      padding-left: 55px;
+    }
+    li.list-cn-3-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-0.gif);
+    }
+    li.list-cn-3-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-1.gif);
+    }
+    li.list-cn-3-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-2.gif);
+    }
+    li.list-cn-3-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-3.gif);
+    }
+    li.list-cn-3-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-4.gif);
+    }
+    li.list-cn-3-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-5.gif);
+    }
+    li.list-cn-3-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-6.gif);
+    }
+    li.list-cn-3-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-7.gif);
+    }
+    li.list-cn-3-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-8.gif);
+    }
+    li.list-cn-3-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-9.gif);
+    }
+    li.list-cn-3-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-10.gif);
+    }
+    li.list-cn-3-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-11.gif);
+    }
+    li.list-cn-3-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-12.gif);
+    }
+    li.list-cn-3-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-13.gif);
+    }
+    li.list-cn-3-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-14.gif);
+    }
+    li.list-cn-3-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-15.gif);
+    }
+    li.list-cn-3-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-16.gif);
+    }
+    li.list-cn-3-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-17.gif);
+    }
+    li.list-cn-3-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-18.gif);
+    }
+    li.list-cn-3-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-19.gif);
+    }
+    li.list-cn-3-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-20.gif);
+    }
+    li.list-cn-3-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-21.gif);
+    }
+    li.list-cn-3-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-22.gif);
+    }
+    li.list-cn-3-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-23.gif);
+    }
+    li.list-cn-3-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-24.gif);
+    }
+    li.list-cn-3-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-25.gif);
+    }
+    li.list-cn-3-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-26.gif);
+    }
+    li.list-cn-3-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-27.gif);
+    }
+    li.list-cn-3-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-28.gif);
+    }
+    li.list-cn-3-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-29.gif);
+    }
+    li.list-cn-3-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-30.gif);
+    }
+    li.list-cn-3-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-31.gif);
+    }
+    li.list-cn-3-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-32.gif);
+    }
+    li.list-cn-3-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-33.gif);
+    }
+    li.list-cn-3-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-34.gif);
+    }
+    li.list-cn-3-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-35.gif);
+    }
+    li.list-cn-3-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-36.gif);
+    }
+    li.list-cn-3-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-37.gif);
+    }
+    li.list-cn-3-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-38.gif);
+    }
+    li.list-cn-3-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-39.gif);
+    }
+    li.list-cn-3-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-40.gif);
+    }
+    li.list-cn-3-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-41.gif);
+    }
+    li.list-cn-3-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-42.gif);
+    }
+    li.list-cn-3-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-43.gif);
+    }
+    li.list-cn-3-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-44.gif);
+    }
+    li.list-cn-3-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-45.gif);
+    }
+    li.list-cn-3-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-46.gif);
+    }
+    li.list-cn-3-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-47.gif);
+    }
+    li.list-cn-3-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-48.gif);
+    }
+    li.list-cn-3-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-49.gif);
+    }
+    li.list-cn-3-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-50.gif);
+    }
+    li.list-cn-3-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-51.gif);
+    }
+    li.list-cn-3-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-52.gif);
+    }
+    li.list-cn-3-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-53.gif);
+    }
+    li.list-cn-3-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-54.gif);
+    }
+    li.list-cn-3-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-55.gif);
+    }
+    li.list-cn-3-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-56.gif);
+    }
+    li.list-cn-3-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-57.gif);
+    }
+    li.list-cn-3-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-58.gif);
+    }
+    li.list-cn-3-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-59.gif);
+    }
+    li.list-cn-3-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-60.gif);
+    }
+    li.list-cn-3-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-61.gif);
+    }
+    li.list-cn-3-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-62.gif);
+    }
+    li.list-cn-3-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-63.gif);
+    }
+    li.list-cn-3-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-64.gif);
+    }
+    li.list-cn-3-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-65.gif);
+    }
+    li.list-cn-3-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-66.gif);
+    }
+    li.list-cn-3-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-67.gif);
+    }
+    li.list-cn-3-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-68.gif);
+    }
+    li.list-cn-3-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-69.gif);
+    }
+    li.list-cn-3-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-70.gif);
+    }
+    li.list-cn-3-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-71.gif);
+    }
+    li.list-cn-3-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-72.gif);
+    }
+    li.list-cn-3-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-73.gif);
+    }
+    li.list-cn-3-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-74.gif);
+    }
+    li.list-cn-3-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-75.gif);
+    }
+    li.list-cn-3-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-76.gif);
+    }
+    li.list-cn-3-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-77.gif);
+    }
+    li.list-cn-3-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-78.gif);
+    }
+    li.list-cn-3-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-79.gif);
+    }
+    li.list-cn-3-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-80.gif);
+    }
+    li.list-cn-3-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-81.gif);
+    }
+    li.list-cn-3-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-82.gif);
+    }
+    li.list-cn-3-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-83.gif);
+    }
+    li.list-cn-3-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-84.gif);
+    }
+    li.list-cn-3-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-85.gif);
+    }
+    li.list-cn-3-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-86.gif);
+    }
+    li.list-cn-3-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-87.gif);
+    }
+    li.list-cn-3-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-88.gif);
+    }
+    li.list-cn-3-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-89.gif);
+    }
+    li.list-cn-3-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-90.gif);
+    }
+    li.list-cn-3-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-91.gif);
+    }
+    li.list-cn-3-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-92.gif);
+    }
+    li.list-cn-3-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-93.gif);
+    }
+    li.list-cn-3-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-94.gif);
+    }
+    li.list-cn-3-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-95.gif);
+    }
+    li.list-cn-3-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-96.gif);
+    }
+    li.list-cn-3-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-97.gif);
+    }
+    li.list-cn-3-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-cn-3-98.gif);
+    }
+    ol.custom_cn2 {
+      list-style: none;
+    }
+    ol.custom_cn2 li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-cn2-paddingleft-1 {
+      padding-left: 40px;
+    }
+    li.list-cn2-paddingleft-2 {
+      padding-left: 55px;
+    }
+    li.list-cn2-paddingleft-3 {
+      padding-left: 68px;
+    }
+    li.list-num-1-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-0.gif);
+    }
+    li.list-num-1-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-1.gif);
+    }
+    li.list-num-1-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-2.gif);
+    }
+    li.list-num-1-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-3.gif);
+    }
+    li.list-num-1-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-4.gif);
+    }
+    li.list-num-1-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-5.gif);
+    }
+    li.list-num-1-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-6.gif);
+    }
+    li.list-num-1-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-7.gif);
+    }
+    li.list-num-1-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-8.gif);
+    }
+    li.list-num-1-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-9.gif);
+    }
+    li.list-num-1-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-10.gif);
+    }
+    li.list-num-1-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-11.gif);
+    }
+    li.list-num-1-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-12.gif);
+    }
+    li.list-num-1-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-13.gif);
+    }
+    li.list-num-1-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-14.gif);
+    }
+    li.list-num-1-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-15.gif);
+    }
+    li.list-num-1-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-16.gif);
+    }
+    li.list-num-1-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-17.gif);
+    }
+    li.list-num-1-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-18.gif);
+    }
+    li.list-num-1-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-19.gif);
+    }
+    li.list-num-1-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-20.gif);
+    }
+    li.list-num-1-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-21.gif);
+    }
+    li.list-num-1-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-22.gif);
+    }
+    li.list-num-1-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-23.gif);
+    }
+    li.list-num-1-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-24.gif);
+    }
+    li.list-num-1-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-25.gif);
+    }
+    li.list-num-1-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-26.gif);
+    }
+    li.list-num-1-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-27.gif);
+    }
+    li.list-num-1-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-28.gif);
+    }
+    li.list-num-1-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-29.gif);
+    }
+    li.list-num-1-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-30.gif);
+    }
+    li.list-num-1-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-31.gif);
+    }
+    li.list-num-1-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-32.gif);
+    }
+    li.list-num-1-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-33.gif);
+    }
+    li.list-num-1-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-34.gif);
+    }
+    li.list-num-1-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-35.gif);
+    }
+    li.list-num-1-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-36.gif);
+    }
+    li.list-num-1-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-37.gif);
+    }
+    li.list-num-1-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-38.gif);
+    }
+    li.list-num-1-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-39.gif);
+    }
+    li.list-num-1-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-40.gif);
+    }
+    li.list-num-1-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-41.gif);
+    }
+    li.list-num-1-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-42.gif);
+    }
+    li.list-num-1-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-43.gif);
+    }
+    li.list-num-1-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-44.gif);
+    }
+    li.list-num-1-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-45.gif);
+    }
+    li.list-num-1-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-46.gif);
+    }
+    li.list-num-1-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-47.gif);
+    }
+    li.list-num-1-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-48.gif);
+    }
+    li.list-num-1-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-49.gif);
+    }
+    li.list-num-1-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-50.gif);
+    }
+    li.list-num-1-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-51.gif);
+    }
+    li.list-num-1-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-52.gif);
+    }
+    li.list-num-1-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-53.gif);
+    }
+    li.list-num-1-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-54.gif);
+    }
+    li.list-num-1-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-55.gif);
+    }
+    li.list-num-1-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-56.gif);
+    }
+    li.list-num-1-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-57.gif);
+    }
+    li.list-num-1-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-58.gif);
+    }
+    li.list-num-1-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-59.gif);
+    }
+    li.list-num-1-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-60.gif);
+    }
+    li.list-num-1-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-61.gif);
+    }
+    li.list-num-1-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-62.gif);
+    }
+    li.list-num-1-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-63.gif);
+    }
+    li.list-num-1-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-64.gif);
+    }
+    li.list-num-1-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-65.gif);
+    }
+    li.list-num-1-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-66.gif);
+    }
+    li.list-num-1-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-67.gif);
+    }
+    li.list-num-1-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-68.gif);
+    }
+    li.list-num-1-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-69.gif);
+    }
+    li.list-num-1-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-70.gif);
+    }
+    li.list-num-1-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-71.gif);
+    }
+    li.list-num-1-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-72.gif);
+    }
+    li.list-num-1-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-73.gif);
+    }
+    li.list-num-1-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-74.gif);
+    }
+    li.list-num-1-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-75.gif);
+    }
+    li.list-num-1-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-76.gif);
+    }
+    li.list-num-1-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-77.gif);
+    }
+    li.list-num-1-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-78.gif);
+    }
+    li.list-num-1-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-79.gif);
+    }
+    li.list-num-1-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-80.gif);
+    }
+    li.list-num-1-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-81.gif);
+    }
+    li.list-num-1-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-82.gif);
+    }
+    li.list-num-1-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-83.gif);
+    }
+    li.list-num-1-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-84.gif);
+    }
+    li.list-num-1-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-85.gif);
+    }
+    li.list-num-1-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-86.gif);
+    }
+    li.list-num-1-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-87.gif);
+    }
+    li.list-num-1-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-88.gif);
+    }
+    li.list-num-1-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-89.gif);
+    }
+    li.list-num-1-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-90.gif);
+    }
+    li.list-num-1-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-91.gif);
+    }
+    li.list-num-1-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-92.gif);
+    }
+    li.list-num-1-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-93.gif);
+    }
+    li.list-num-1-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-94.gif);
+    }
+    li.list-num-1-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-95.gif);
+    }
+    li.list-num-1-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-96.gif);
+    }
+    li.list-num-1-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-97.gif);
+    }
+    li.list-num-1-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-1-98.gif);
+    }
+    ol.custom_num {
+      list-style: none;
+    }
+    ol.custom_num li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-num-paddingleft-1 {
+      padding-left: 25px;
+    }
+    li.list-num-2-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-0.gif);
+    }
+    li.list-num-2-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-1.gif);
+    }
+    li.list-num-2-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-2.gif);
+    }
+    li.list-num-2-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-3.gif);
+    }
+    li.list-num-2-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-4.gif);
+    }
+    li.list-num-2-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-5.gif);
+    }
+    li.list-num-2-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-6.gif);
+    }
+    li.list-num-2-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-7.gif);
+    }
+    li.list-num-2-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-8.gif);
+    }
+    li.list-num-2-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-9.gif);
+    }
+    li.list-num-2-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-10.gif);
+    }
+    li.list-num-2-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-11.gif);
+    }
+    li.list-num-2-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-12.gif);
+    }
+    li.list-num-2-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-13.gif);
+    }
+    li.list-num-2-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-14.gif);
+    }
+    li.list-num-2-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-15.gif);
+    }
+    li.list-num-2-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-16.gif);
+    }
+    li.list-num-2-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-17.gif);
+    }
+    li.list-num-2-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-18.gif);
+    }
+    li.list-num-2-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-19.gif);
+    }
+    li.list-num-2-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-20.gif);
+    }
+    li.list-num-2-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-21.gif);
+    }
+    li.list-num-2-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-22.gif);
+    }
+    li.list-num-2-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-23.gif);
+    }
+    li.list-num-2-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-24.gif);
+    }
+    li.list-num-2-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-25.gif);
+    }
+    li.list-num-2-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-26.gif);
+    }
+    li.list-num-2-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-27.gif);
+    }
+    li.list-num-2-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-28.gif);
+    }
+    li.list-num-2-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-29.gif);
+    }
+    li.list-num-2-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-30.gif);
+    }
+    li.list-num-2-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-31.gif);
+    }
+    li.list-num-2-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-32.gif);
+    }
+    li.list-num-2-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-33.gif);
+    }
+    li.list-num-2-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-34.gif);
+    }
+    li.list-num-2-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-35.gif);
+    }
+    li.list-num-2-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-36.gif);
+    }
+    li.list-num-2-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-37.gif);
+    }
+    li.list-num-2-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-38.gif);
+    }
+    li.list-num-2-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-39.gif);
+    }
+    li.list-num-2-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-40.gif);
+    }
+    li.list-num-2-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-41.gif);
+    }
+    li.list-num-2-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-42.gif);
+    }
+    li.list-num-2-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-43.gif);
+    }
+    li.list-num-2-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-44.gif);
+    }
+    li.list-num-2-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-45.gif);
+    }
+    li.list-num-2-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-46.gif);
+    }
+    li.list-num-2-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-47.gif);
+    }
+    li.list-num-2-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-48.gif);
+    }
+    li.list-num-2-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-49.gif);
+    }
+    li.list-num-2-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-50.gif);
+    }
+    li.list-num-2-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-51.gif);
+    }
+    li.list-num-2-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-52.gif);
+    }
+    li.list-num-2-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-53.gif);
+    }
+    li.list-num-2-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-54.gif);
+    }
+    li.list-num-2-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-55.gif);
+    }
+    li.list-num-2-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-56.gif);
+    }
+    li.list-num-2-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-57.gif);
+    }
+    li.list-num-2-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-58.gif);
+    }
+    li.list-num-2-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-59.gif);
+    }
+    li.list-num-2-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-60.gif);
+    }
+    li.list-num-2-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-61.gif);
+    }
+    li.list-num-2-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-62.gif);
+    }
+    li.list-num-2-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-63.gif);
+    }
+    li.list-num-2-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-64.gif);
+    }
+    li.list-num-2-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-65.gif);
+    }
+    li.list-num-2-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-66.gif);
+    }
+    li.list-num-2-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-67.gif);
+    }
+    li.list-num-2-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-68.gif);
+    }
+    li.list-num-2-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-69.gif);
+    }
+    li.list-num-2-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-70.gif);
+    }
+    li.list-num-2-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-71.gif);
+    }
+    li.list-num-2-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-72.gif);
+    }
+    li.list-num-2-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-73.gif);
+    }
+    li.list-num-2-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-74.gif);
+    }
+    li.list-num-2-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-75.gif);
+    }
+    li.list-num-2-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-76.gif);
+    }
+    li.list-num-2-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-77.gif);
+    }
+    li.list-num-2-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-78.gif);
+    }
+    li.list-num-2-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-79.gif);
+    }
+    li.list-num-2-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-80.gif);
+    }
+    li.list-num-2-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-81.gif);
+    }
+    li.list-num-2-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-82.gif);
+    }
+    li.list-num-2-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-83.gif);
+    }
+    li.list-num-2-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-84.gif);
+    }
+    li.list-num-2-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-85.gif);
+    }
+    li.list-num-2-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-86.gif);
+    }
+    li.list-num-2-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-87.gif);
+    }
+    li.list-num-2-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-88.gif);
+    }
+    li.list-num-2-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-89.gif);
+    }
+    li.list-num-2-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-90.gif);
+    }
+    li.list-num-2-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-91.gif);
+    }
+    li.list-num-2-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-92.gif);
+    }
+    li.list-num-2-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-93.gif);
+    }
+    li.list-num-2-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-94.gif);
+    }
+    li.list-num-2-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-95.gif);
+    }
+    li.list-num-2-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-96.gif);
+    }
+    li.list-num-2-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-97.gif);
+    }
+    li.list-num-2-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-2-98.gif);
+    }
+    ol.custom_num1 {
+      list-style: none;
+    }
+    ol.custom_num1 li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-num1-paddingleft-1 {
+      padding-left: 25px;
+    }
+    li.list-num-3-0 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-0.gif);
+    }
+    li.list-num-3-1 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-1.gif);
+    }
+    li.list-num-3-2 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-2.gif);
+    }
+    li.list-num-3-3 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-3.gif);
+    }
+    li.list-num-3-4 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-4.gif);
+    }
+    li.list-num-3-5 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-5.gif);
+    }
+    li.list-num-3-6 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-6.gif);
+    }
+    li.list-num-3-7 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-7.gif);
+    }
+    li.list-num-3-8 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-8.gif);
+    }
+    li.list-num-3-9 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-9.gif);
+    }
+    li.list-num-3-10 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-10.gif);
+    }
+    li.list-num-3-11 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-11.gif);
+    }
+    li.list-num-3-12 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-12.gif);
+    }
+    li.list-num-3-13 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-13.gif);
+    }
+    li.list-num-3-14 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-14.gif);
+    }
+    li.list-num-3-15 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-15.gif);
+    }
+    li.list-num-3-16 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-16.gif);
+    }
+    li.list-num-3-17 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-17.gif);
+    }
+    li.list-num-3-18 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-18.gif);
+    }
+    li.list-num-3-19 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-19.gif);
+    }
+    li.list-num-3-20 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-20.gif);
+    }
+    li.list-num-3-21 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-21.gif);
+    }
+    li.list-num-3-22 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-22.gif);
+    }
+    li.list-num-3-23 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-23.gif);
+    }
+    li.list-num-3-24 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-24.gif);
+    }
+    li.list-num-3-25 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-25.gif);
+    }
+    li.list-num-3-26 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-26.gif);
+    }
+    li.list-num-3-27 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-27.gif);
+    }
+    li.list-num-3-28 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-28.gif);
+    }
+    li.list-num-3-29 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-29.gif);
+    }
+    li.list-num-3-30 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-30.gif);
+    }
+    li.list-num-3-31 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-31.gif);
+    }
+    li.list-num-3-32 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-32.gif);
+    }
+    li.list-num-3-33 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-33.gif);
+    }
+    li.list-num-3-34 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-34.gif);
+    }
+    li.list-num-3-35 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-35.gif);
+    }
+    li.list-num-3-36 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-36.gif);
+    }
+    li.list-num-3-37 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-37.gif);
+    }
+    li.list-num-3-38 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-38.gif);
+    }
+    li.list-num-3-39 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-39.gif);
+    }
+    li.list-num-3-40 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-40.gif);
+    }
+    li.list-num-3-41 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-41.gif);
+    }
+    li.list-num-3-42 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-42.gif);
+    }
+    li.list-num-3-43 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-43.gif);
+    }
+    li.list-num-3-44 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-44.gif);
+    }
+    li.list-num-3-45 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-45.gif);
+    }
+    li.list-num-3-46 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-46.gif);
+    }
+    li.list-num-3-47 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-47.gif);
+    }
+    li.list-num-3-48 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-48.gif);
+    }
+    li.list-num-3-49 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-49.gif);
+    }
+    li.list-num-3-50 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-50.gif);
+    }
+    li.list-num-3-51 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-51.gif);
+    }
+    li.list-num-3-52 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-52.gif);
+    }
+    li.list-num-3-53 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-53.gif);
+    }
+    li.list-num-3-54 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-54.gif);
+    }
+    li.list-num-3-55 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-55.gif);
+    }
+    li.list-num-3-56 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-56.gif);
+    }
+    li.list-num-3-57 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-57.gif);
+    }
+    li.list-num-3-58 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-58.gif);
+    }
+    li.list-num-3-59 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-59.gif);
+    }
+    li.list-num-3-60 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-60.gif);
+    }
+    li.list-num-3-61 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-61.gif);
+    }
+    li.list-num-3-62 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-62.gif);
+    }
+    li.list-num-3-63 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-63.gif);
+    }
+    li.list-num-3-64 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-64.gif);
+    }
+    li.list-num-3-65 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-65.gif);
+    }
+    li.list-num-3-66 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-66.gif);
+    }
+    li.list-num-3-67 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-67.gif);
+    }
+    li.list-num-3-68 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-68.gif);
+    }
+    li.list-num-3-69 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-69.gif);
+    }
+    li.list-num-3-70 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-70.gif);
+    }
+    li.list-num-3-71 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-71.gif);
+    }
+    li.list-num-3-72 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-72.gif);
+    }
+    li.list-num-3-73 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-73.gif);
+    }
+    li.list-num-3-74 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-74.gif);
+    }
+    li.list-num-3-75 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-75.gif);
+    }
+    li.list-num-3-76 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-76.gif);
+    }
+    li.list-num-3-77 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-77.gif);
+    }
+    li.list-num-3-78 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-78.gif);
+    }
+    li.list-num-3-79 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-79.gif);
+    }
+    li.list-num-3-80 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-80.gif);
+    }
+    li.list-num-3-81 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-81.gif);
+    }
+    li.list-num-3-82 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-82.gif);
+    }
+    li.list-num-3-83 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-83.gif);
+    }
+    li.list-num-3-84 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-84.gif);
+    }
+    li.list-num-3-85 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-85.gif);
+    }
+    li.list-num-3-86 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-86.gif);
+    }
+    li.list-num-3-87 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-87.gif);
+    }
+    li.list-num-3-88 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-88.gif);
+    }
+    li.list-num-3-89 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-89.gif);
+    }
+    li.list-num-3-90 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-90.gif);
+    }
+    li.list-num-3-91 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-91.gif);
+    }
+    li.list-num-3-92 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-92.gif);
+    }
+    li.list-num-3-93 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-93.gif);
+    }
+    li.list-num-3-94 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-94.gif);
+    }
+    li.list-num-3-95 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-95.gif);
+    }
+    li.list-num-3-96 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-96.gif);
+    }
+    li.list-num-3-97 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-97.gif);
+    }
+    li.list-num-3-98 {
+      background-image: url(http://bs.baidu.com/listicon/list-num-3-98.gif);
+    }
+    ol.custom_num2 {
+      list-style: none;
+    }
+    ol.custom_num2 li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-num2-paddingleft-1 {
+      padding-left: 35px;
+    }
+    li.list-num2-paddingleft-2 {
+      padding-left: 40px;
+    }
+    li.list-dash {
+      background-image: url(http://bs.baidu.com/listicon/dash.gif);
+    }
+    ul.custom_dash {
+      list-style: none;
+    }
+    ul.custom_dash li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-dash-paddingleft {
+      padding-left: 35px;
+    }
+    li.list-dot {
+      background-image: url(http://bs.baidu.com/listicon/dot.gif);
+    }
+    ul.custom_dot {
+      list-style: none;
+    }
+    ul.custom_dot li {
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+    }
+    li.list-dot-paddingleft {
+      padding-left: 20px;
+    }
+    .list-paddingleft-1 {
+      padding-left: 0;
+    }
+    .list-paddingleft-2 {
+      padding-left: 30px;
+    }
+    .list-paddingleft-3 {
+      padding-left: 60px;
+    }
+  </style>
+  <style id="pagebreak">
+    .pagebreak {
+      display: block;
+      clear: both !important;
+      cursor: default !important;
+      width: 100% !important;
+      margin: 0;
+    }
+  </style>
+  <style id="loading">
+    .loadingclass {
+      display: inline-block;
+      cursor: default;
+      background: url("/UEditorPlus/themes/default/images/loading.gif")
+        no-repeat center center transparent;
+      border-radius: 3px;
+      outline: 1px solid #eee;
+      margin-left: 1px;
+      height: 22px;
+      width: 22px;
+    }
+    .loaderrorclass {
+      display: inline-block;
+      cursor: default;
+      background: url("/UEditorPlus/themes/default/images/loaderror.png")
+        no-repeat center center transparent;
+      border-radius: 3px;
+      outline: 1px solid #eee;
+      margin-right: 1px;
+      height: 22px;
+      width: 22px;
+    }
+  </style>
+  <style id="anchor">
+    .anchorclass {
+      background: url("/UEditorPlus/themes/default/images/anchor.gif")
+        no-repeat scroll left center transparent;
+      cursor: auto;
+      display: inline-block;
+      height: 16px;
+      width: 15px;
+    }
+  </style>        <!-- ueditor_style end -->
+<script type="text/javascript">(function(){var s=document.createElement("script");s.src="https://hrss.xz.gov.cn/rsks/api/stat/visit?sid=642071464194117&cid=642071527915589&id=747986310877253";(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(s);})();</script>    </head>
+    <body>
+        <div class="page flex-col">
+            <div class="section_4 flex-row">
+                
+                <div class="box_8 flex-col" style="margin-left:0px;">
+                    
+                    <header class="">
+                        <div class="header-content"></div>
+                    </header>
+                    
+                    <div class="text-wrapper_6">
+                        <span class="text_11">
+                            当前位置：
+                        </span>
+                        <span class="text_11">&gt;</span>
+                            <a class="text_12" href="https://hrss.xz.gov.cn/rsks/zkzdy/">准考证打印</a> <span class="text-split">&gt;</span> 
+                        <!-- <span class="text_12">准考证打印</span> -->
+                    </div>
+                    <!--article start-->
+                                        
+                    <!-- 标题 & 时间 -->
+                    <!-- <div class="text-group_4 flex-col justify-center"> -->
+                    <div class="text-group_4" justify-between>
+                        <span class="text_13">江苏省2026年度考试录用公务员笔试徐州考区准考证打印通知及考前提醒</span>
+                        <span class="text_14">2025-12-03 16:24:36</span>
+                    </div>
+                    <span class="text_23">-------------------------------------------------------------------------------------------------------------------------------
+                    </span>
+                    <!-- 内容 -->
+                    <div class="scroll-container" style="position: relative;left:0;height:40%; overflow: hidden;">
+                        <div id="scrollContent" class="scroll-content">
+                                <span id="download" class="paragraph_1">
+                                    <p style=";text-align:center;line-height:40px"><br/></p><p style=";text-align:center;line-height:40px"><span style=";font-family:方正小标宋_GBK;font-size:29px"><span style="font-family:方正小标宋_GBK">江苏省</span><span style="font-family:Times New Roman">2026</span><span style="font-family:方正小标宋_GBK">年度考试录用公务员笔试</span></span></p><p style=";text-align:center;line-height:40px"><span style=";font-family:方正小标宋_GBK;font-size:29px">徐州考区准考证打印通知及考前提醒</span></p><p style=";text-align:center;line-height:40px"><span style=";font-family:方正小标宋_GBK;font-size:29px">&nbsp;</span></p><p style="margin-bottom:0;margin-left:0;text-indent:0;text-autospace:ideograph-numeric;text-align:center;line-height:40px"><strong><span style="font-family: 仿宋;color: #FF0000;font-size: 21px">（准考证打印入口在通知末尾）</span></strong></p><p style="margin-bottom:0;margin-left:0;text-indent:43px;text-autospace:ideograph-numeric;line-height:40px"><span style=";font-family:仿宋;font-size:21px"><span style="font-family:仿宋">江苏省</span><span style="font-family:仿宋">2026年度考试录用公务员笔试将于12月6日、7日举行。徐州市人事考试中心提醒广大考生：</span></span></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><span style="font-family: 黑体;font-size: 21px">一、及时打印准考证，按时参考</span></p><p style="text-indent: 43px;line-height: 40px"><span style=";font-family:仿宋;font-size:21px">请考生于</span><span style=";font-family:仿宋;font-size:21px">2025</span><span style=";font-family:仿宋;font-size:21px">年</span><span style=";font-family:仿宋;font-size:21px">12</span><span style=";font-family:仿宋;font-size:21px">月</span><span style=";font-family:仿宋;font-size:21px">3</span><span style=";font-family:仿宋;font-size:21px"><span style="font-family:仿宋">日</span><span style="font-family:仿宋">9：</span></span><span style=";font-family:仿宋;font-size:21px">00</span><span style=";font-family:仿宋;font-size:21px">－</span><span style=";font-family:仿宋;font-size:21px">12</span><span style=";font-family:仿宋;font-size:21px">月</span><span style=";font-family:仿宋;font-size:21px">7</span><span style=";font-family:仿宋;font-size:21px">日</span><span style=";font-family:仿宋;font-size:21px">15</span><span style=";font-family:仿宋;font-size:21px">：</span><span style=";font-family:仿宋;font-size:21px">00</span><span style=";font-family:仿宋;font-size:21px"><span style="font-family:仿宋">登录报名网站自行下载并打印准考证。仔细阅读准考证上的</span><span style="font-family:仿宋">“注意事项”和“重要提示”。准考证打印咨询电话：0516-80800325。</span></span></p><table cellspacing="0" align="center"><tbody><tr style="height:43px" class="firstRow"><td width="156" valign="center" style="padding: 0px 7px; border-width: 1px; border-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:Calibri;font-size:16px"><span style="font-family:方正黑体_GBK">日期</span></span></p></td><td width="230" valign="center" style="padding: 0px 7px; border-width: 1px; border-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:Calibri;font-size:16px"><span style="font-family:方正黑体_GBK">科目名称</span></span></p></td><td width="182" valign="center" style="padding: 0px 7px; border-width: 1px; border-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:Calibri;font-size:16px"><span style="font-family:方正黑体_GBK">考试时间</span></span></p></td></tr><tr style="height:57px"><td width="156" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:&#39;Times New Roman&#39;;font-size:19px">20</span><span style="font-family:方正仿宋_GB2312;font-size:19px"><span style="font-family:Times New Roman">2</span></span><span style="font-family:方正仿宋_GB2312;font-size:19px"><span style="font-family:Times New Roman">5</span></span><span style="font-family:&#39;Times New Roman&#39;;font-size:19px"><span style="font-family:方正仿宋_GB2312">年</span></span><span style="font-family:方正仿宋_GB2312;font-size:19px"><span style="font-family:Times New Roman">12</span></span><span style="font-family:&#39;Times New Roman&#39;;font-size:19px"><span style="font-family:方正仿宋_GB2312">月</span></span><span style="font-family:方正仿宋_GB2312;font-size:19px"><span style="font-family:Times New Roman">6</span></span><span style="font-family:&#39;Times New Roman&#39;;font-size:19px"><span style="font-family:方正仿宋_GB2312">日</span></span></p></td><td width="230" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:&#39;Times New Roman&#39;;font-size:19px"><span style="font-family:方正仿宋_GB2312">公安专业科目</span></span></p></td><td width="182" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:&#39;Times New Roman&#39;;font-size:19px">14∶00<span style="font-family:方正仿宋_GB2312">～</span><span style="font-family:Times New Roman">16∶00</span></span></p></td></tr><tr style="height:54px"><td width="156" valign="center" rowspan="2" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:&#39;Times New Roman&#39;;font-size:19px">20</span><span style="font-family:方正仿宋_GB2312;font-size:19px"><span style="font-family:Times New Roman">2</span></span><span style="font-family:方正仿宋_GB2312;font-size:19px"><span style="font-family:Times New Roman">5</span></span><span style="font-family:&#39;Times New Roman&#39;;font-size:19px"><span style="font-family:方正仿宋_GB2312">年</span></span><span style="font-family:方正仿宋_GB2312;font-size:19px"><span style="font-family:Times New Roman">12</span></span><span style="font-family:&#39;Times New Roman&#39;;font-size:19px"><span style="font-family:方正仿宋_GB2312">月</span></span><span style="font-family:方正仿宋_GB2312;font-size:19px"><span style="font-family:Times New Roman">7</span></span><span style="font-family:&#39;Times New Roman&#39;;font-size:19px"><span style="font-family:方正仿宋_GB2312">日</span></span></p></td><td width="230" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:&#39;Times New Roman&#39;;font-size:19px"><span style="font-family:方正仿宋_GB2312">行政职业能力测验</span></span></p></td><td width="182" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:&#39;Times New Roman&#39;;font-size:19px">09∶00<span style="font-family:方正仿宋_GB2312">～</span><span style="font-family:Times New Roman">11∶00</span></span></p></td></tr><tr style="height:53px"><td width="230" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:&#39;Times New Roman&#39;;font-size:19px"><span style="font-family:方正仿宋_GB2312">申论</span></span></p></td><td width="182" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style=";text-autospace:none;text-align:center;line-height:40px"><span style="font-family:&#39;Times New Roman&#39;;font-size:19px">14∶00<span style="font-family:方正仿宋_GB2312">～</span><span style="font-family:Times New Roman">16∶30</span></span></p></td></tr></tbody></table><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><span style="font-family: 黑体;font-size: 21px">二、按时抵达考点</span></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><span style=";font-family:仿宋;font-size:21px">考试期间出行人数较多，可能造成考点周围交通拥堵，请考生</span><strong><span style="text-decoration:underline;"><span style="font-family: 仿宋;color: #FF0000;font-size: 21px">仔细阅读准考证上的考点名称与地址</span></span></strong><span style="text-decoration:underline;"><span style="font-family: 仿宋;color: #FF0000;font-size: 21px">，</span></span><span style=";font-family:仿宋;font-size:21px"><span style="font-family:仿宋">提前了解考点所在位置，合理规划出行方式和交通路线，预留充足的赴考时间，建议考生至少提前</span><span style="font-family:仿宋">1小时到达考点。考点无法提供停车服务，建议乘坐公共交通出行。</span></span></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><span style="font-family: 黑体;color: #FF0000;font-size: 21px">注意：</span><span style="font-family: 黑体;font-size: 21px">“</span><strong><span style="font-family: 仿宋;font-size: 21px">江苏省徐州技师学院</span></strong><span style="font-family: 仿宋;font-size: 21px">”考点从</span><strong><span style="font-family: 仿宋;color: #FF0000;font-size: 21px">北门</span></strong><span style="font-family: 仿宋;font-size: 21px"><span style="font-family:仿宋">进入；</span><span style="font-family:仿宋">“</span></span><strong><span style="font-family: 仿宋;font-size: 21px">徐州市铜山区</span></strong><strong><span style="font-family: 仿宋;color: #FF0000;font-size: 21px">新区</span></strong><strong><span style="font-family: 仿宋;font-size: 21px"><span style="font-family:仿宋">实验小学</span><span style="font-family:仿宋">”</span></span></strong><span style="font-family: 仿宋;font-size: 21px"><span style="font-family:仿宋">位于铜山区彭祖东路</span><span style="font-family:仿宋">9号</span></span><span style="font-family: 宋体;font-size: 15px">，</span><span style="font-family: 仿宋;font-size: 21px"><span style="font-family:仿宋">简称</span><span style="font-family:仿宋">“铜山新区实小”，</span></span><span style="font-family: 仿宋;color: #FF0000;font-size: 21px">非</span><span style="font-family: 仿宋;font-size: 21px"><span style="font-family:仿宋">铜山区海河路的</span><span style="font-family:仿宋">“铜山实小”；“</span></span><strong><span style="font-family: 仿宋;font-size: 21px"><span style="font-family:仿宋">江苏师范大学附属学校</span><span style="font-family:仿宋">”</span></span></strong><span style="font-family: 仿宋;font-size: 21px">位于铜山区矿大南路；</span><strong><span style="font-family: 仿宋;font-size: 21px">徐州市第三十六中学</span></strong><span style="font-family: 仿宋;font-size: 21px"><span style="font-family:仿宋">位于管道小区内，从小区入口步行至考点北门约</span><span style="font-family:仿宋">15分钟，从考点北门步行至考场约10分钟，请预留充足时间</span></span><span style="font-family: 仿宋;font-size: 21px">。请考生仔细阅读准考证，核对考点地址，不要走错考点。</span></p><table cellspacing="0" align="center"><tbody><tr style="height:36px" class="firstRow"><td width="36" valign="center" style="padding: 0px 7px; border-width: 1px; border-color: rgb(0, 0, 0); word-break: break-all;"><p style=";text-align:center;vertical-align:middle;line-height:40px"><strong><span style="font-family: 宋体;font-size: 16px">序号</span></strong></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-width: 1px; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><strong><span style="font-family: 宋体;font-size: 16px">考点名称</span></strong></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-width: 1px; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><strong><span style="font-family: 宋体;font-size: 16px">考点地址</span></strong></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-width: 1px; border-top-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><strong><span style="font-family: 宋体;font-size: 16px">考点地图</span></strong></p></td></tr><tr style="height:36px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">1</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市大庙中学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市徐州经济技术开发区大庙街道西京路</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/cb/jOT">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">2</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市开发区中学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市徐州经济技术开发区杨山路</span><span style="font-family:Times New Roman">7</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/a8/KWq">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">3</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州经济技术开发区工业学校</span><span style="font-family:Times New Roman">(</span><span style="font-family:宋体">李井校区</span><span style="font-family:Times New Roman">)</span></span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市徐州经济技术开发区大庙镇彭祖大道与兴镇南路交叉口南</span><span style="font-family:Times New Roman">200</span><span style="font-family:宋体">米</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/ad/UZR">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">4</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州经济技术开发区实验学校（北校区）</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市徐州经济技术开发区广德路</span><span style="font-family:Times New Roman">140</span><span style="font-family:宋体">号（实验学校北校区</span><span style="font-family:Times New Roman">2</span><span style="font-family:宋体">号门）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/0e/M1J">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">5</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市金龙湖小学（东校区）</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市徐州经济技术开发区翠湖路</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">号（地铁</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">号线金龙湖站</span><span style="font-family:Times New Roman">3</span><span style="font-family:宋体">号口出）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/50/_njh">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">6</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市解放路小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市云龙区解放南路</span><span style="font-family:Times New Roman">150</span><span style="font-family:宋体">号</span><span style="font-family:Times New Roman">(</span><span style="font-family:宋体">师大云龙校区地铁站</span><span style="font-family:Times New Roman">3</span><span style="font-family:宋体">号口步行</span><span style="font-family:Times New Roman">310</span><span style="font-family:宋体">米</span><span style="font-family:Times New Roman">)</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/67/d2u">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">7</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市云兴小学本部校区</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市云龙区复兴南路</span><span style="font-family:Times New Roman">227</span><span style="font-family:宋体">号（天桥地铁站</span><span style="font-family:Times New Roman">2</span><span style="font-family:宋体">号口旁）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/a9/1k-">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">8</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市黄山中心小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市云龙区黄山新村</span><span style="font-family:Times New Roman">27-28</span><span style="font-family:宋体">号楼</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/5a/nj6u">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">9</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市绿地小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市云龙区庆丰路</span><span style="font-family:Times New Roman">3</span><span style="font-family:宋体">号（绿地世纪城东门）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/be/HS-">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">10</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市华润小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市云龙区云苑路东</span><span style="font-family:Times New Roman">,</span><span style="font-family:宋体">坝山新苑小区北</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/68/V5R">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">11</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市商务城小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市云龙区元和路</span><span style="font-family:Times New Roman">22</span><span style="font-family:宋体">号（徐州市青年路小学绿地商务城分校）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/c6/Qvgf">点击查看</a></span></p></td></tr><tr style="height:6px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">12</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市青年路小学新城区分校</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市云龙区明正路</span><span style="font-family:Times New Roman">13</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/d9/Yfi">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">13</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市新元小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市云龙区怀德路与新元大道交叉口东南</span><span style="font-family:Times New Roman">140</span><span style="font-family:宋体">米</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/0e/IoY">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">14</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市星光小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市泉山区刘场路</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/0e/rel">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">15</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市少华街小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市泉山区志华路</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/c7/8f2f">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">16</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市第三十四中学附属小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市泉山区文华路</span><span style="font-family:Times New Roman">3</span><span style="font-family:宋体">号（靠近学府路与文华路交叉口）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/17/wcf">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">17</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市光荣巷小学菁英路校区</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市泉山区乐雅路</span><span style="font-family:Times New Roman">6</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/ea/raYK">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">18</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市大学路实验学校</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市大学路</span><span style="font-family:Times New Roman">66</span><span style="font-family:宋体">号（徐州市第一人民医院对面）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/19/bPFu">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">19</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市铜山区新区实验小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市铜山区彭祖东路</span><span style="font-family:Times New Roman">9</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/09/7aA">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">20</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">江苏省徐州经贸高等职业学校</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市徐州经济技术开发区蟠桃山路</span><span style="font-family:Times New Roman">31</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/ba/lUq">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">21</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">江苏省徐州技师学院（北门）</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市泉山区润港大道</span><span style="font-family:Times New Roman">15</span><span style="font-family:宋体">号（二环北路）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/12/E3lc">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">22</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">江苏师范大学附属学校</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市铜山区矿大南路</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">号（铜山中等专业学校西隔壁）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/59/CMGh">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">23</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">江苏省徐州市中等专业学校</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市云龙区两山口欣欣路东首</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/95/FTPi">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">24</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州高等师范学校</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市铜山区海河西路</span><span style="font-family:Times New Roman">18</span><span style="font-family:宋体">号（师范大学泉山校区南隔壁）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/ba/Gsc">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">25</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">九州职业技术学院</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市铜山区嵩山路</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/30/oGq">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">26</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">江苏省铜山中等专业学校</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市铜山区大学路</span><span style="font-family:Times New Roman">3</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/2e/iRq">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">27</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市第三十六中学（北门）</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市泉山区国家管网东部储运公司七号路东部</span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/b0/8qZk">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">28</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市第三十一中学湖滨校区</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市泉山区湖滨路</span><span style="font-family:Times New Roman">12</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/53/m4n">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">29</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">江苏省徐州医药高等职业学校（学府校区）</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市铜山区学府路</span><span style="font-family:Times New Roman">6</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/30/Zkhg">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">30</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">江苏模特艺术学校</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市泉山区王陵路</span><span style="font-family:Times New Roman">57</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/19/QRq">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">31</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市铜山区清华中学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市铜山区北京路清华巷</span><span style="font-family:Times New Roman">18</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/13/lQU">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">32</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市鼓楼生态园小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市鼓楼区奔腾大道</span><span style="font-family:Times New Roman">112</span><span style="font-family:宋体">号（奔腾大道和华美一巷交叉口）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/e1/8Ztc">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">33</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市新元中学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市云龙区奥体路</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">号（奥体路与峨嵋路交汇处北</span><span style="font-family:Times New Roman">200</span><span style="font-family:宋体">米，西</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">门进出）</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/c6/3Aq">点击查看</a></span></p></td></tr><tr style="height:18px"><td width="42" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;vertical-align:middle;line-height:40px"><span style="font-family: 宋体;font-size: 15px">34</span></p></td><td width="176" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px">徐州市求是小学</span></p></td><td width="313" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style="vertical-align: bottom;line-height: 40px"><span style="font-family: 宋体;font-size: 16px"><span style="font-family:宋体">徐州市泉山区煤建路</span><span style="font-family:Times New Roman">24</span><span style="font-family:宋体">号</span></span></p></td><td width="126" valign="center" style="padding: 0px 7px; border-left: none; border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0);"><p style=";text-align:center;line-height:40px"><span style="font-family: 宋体;font-size: 15px"><a href="https://j.map.baidu.com/2a/Nbkc">点击查看</a></span></p></td></tr></tbody></table><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><span style=";font-family:仿宋;font-size:21px">&nbsp;</span></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><span style="font-family: 黑体;font-size: 21px">三、备齐考试证件和考试用品</span></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><strong><span style="font-family: 仿宋;font-size: 21px">1.证件要求：</span></strong><span style=";font-family:仿宋;font-size:21px">必须带齐准考证、本人有效居民身份证，方可进入考场。进入考场时要服从工作人员的安排。请认真核对考点、考场和座位号，在指定座位参加考试。</span></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><strong><span style="font-family: 仿宋;font-size: 21px">2.时间要求：</span></strong><span style=";font-family:仿宋;font-size:21px">考试开始前</span><span style=";font-family:仿宋;font-size:21px">30</span><span style=";font-family:仿宋;font-size:21px">分钟</span><span style=";font-family:仿宋;font-size:21px">，</span><span style=";font-family:仿宋;font-size:21px">核对考场签到表上的照片与本人是否一致，在考场签到表上签字后再进场，防止走错考场</span><span style=";font-family:仿宋;font-size:21px">。</span><span style=";font-family:仿宋;font-size:21px">进入考场</span><span style=";font-family:仿宋;font-size:21px">后</span><span style=";font-family:仿宋;font-size:21px">，对号入座，保持安静，并将准考证和有效身份证件放在考位桌面，接受监考人员核查。考试开始</span><span style=";font-family:仿宋;font-size:21px">30</span><span style=";font-family:仿宋;font-size:21px">分钟后</span><span style=";font-family:仿宋;font-size:21px">，</span><span style=";font-family:仿宋;font-size:21px">迟到考生</span><span style=";font-family:仿宋;font-size:21px">不得入场。服从考场管理，</span><span style=";font-family:仿宋;font-size:21px">考试</span><span style=";font-family:仿宋;font-size:21px">期间不得</span><span style=";font-family:仿宋;font-size:21px">提前交卷、退</span><span style=";font-family:仿宋;font-size:21px">场。考试开始和结束时间以考点统一信号为准。</span></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><strong><span style="font-family: 仿宋;font-size: 21px">3.考试用品：</span></strong><span style=";font-family:仿宋;font-size:21px"><span style="font-family:仿宋">考生自备橡皮、</span><span style="font-family:仿宋">2B铅笔、黑色墨水的钢笔、签字笔。</span></span><span style=";font-family:仿宋;font-size:21px">严禁将手机、计算器、</span><span style=";font-family:仿宋;color:#FF0000;font-size:21px">电子手表</span><span style=";font-family:仿宋;font-size:21px">、</span><span style=";font-family:仿宋;font-size:21px">智能手表、智能手环、</span><span style=";font-family:仿宋;color:#FF0000;font-size:21px">智能眼镜</span><span style=";font-family:仿宋;font-size:21px">、</span><span style=";font-family:仿宋;font-size:21px">蓝牙耳机等各种电子、通信、计算、存储或</span><span style=";font-family:仿宋;font-size:21px">其它</span><span style=";font-family:仿宋;font-size:21px">有关设备带至座位，</span><span style=";font-family:仿宋;font-size:21px">手机须关闭报时和闹钟功能，关机后放在指定位置。</span></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><span style=";font-family:仿宋;font-size:21px">准考证只能带一份到座位上，入座前请确认身上和所带的文具袋中（培训机构发的文具袋要特别注意）无禁止携带的物品与材料。</span></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><span style="font-family: 黑体;font-size: 21px">四、</span><span style="font-family: 黑体;font-size: 21px">遵守考场纪律，诚信参考</span></p><p style="margin-top: 0;margin-right: 0;margin-bottom: 0;text-indent: 43px;padding: 0;line-height: 40px"><span style="font-family: 仿宋;font-size: 21px">请考生仔细阅读《考场规则》与《准考证》上的相关要求，遵守考试纪律。</span></p><p style=";text-align:center;line-height:40px"><span style="font-family: 方正小标宋_GBK;letter-spacing: -0;font-size: 29px">考场规则</span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px"><span style="font-family:Calibri">1</span><span style="font-family:方正仿宋_GBK">．考试开始前</span><span style="font-family:Calibri">30</span><span style="font-family:方正仿宋_GBK">分钟，考生凭准考证和有效期内身份证进入考场，对号入座，并将准考证、身份证放在桌面上。</span></span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px"><span style="font-family:Calibri">2</span><span style="font-family:方正仿宋_GBK">．开始考试</span><span style="font-family:Calibri">30</span><span style="font-family:方正仿宋_GBK">分钟后，迟到考生不得入场；考试期间，考生不得提前交卷、退场。</span></span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px"><span style="font-family:Calibri">3</span><span style="font-family:方正仿宋_GBK">．考生应严格按照规定携带文具，开考后不得私自传递任何物品。</span></span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px"><span style="font-family:Calibri">4</span><span style="font-family:方正仿宋_GBK">．除规定可携带的文具以外，严禁将各种电子、通信、计算、存储或其它设备带至座位。已带入考场的要按监考人员的要求切断电源并放在指定位置。凡发现将上述设备带至座位，一律按照相关规定处理。</span></span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px"><span style="font-family:Calibri">5</span><span style="font-family:方正仿宋_GBK">．试卷发放后，考生首先在答题卡规定的位置上用黑色墨水的钢笔或签字笔准确填写本人姓名和准考证号，用</span><span style="font-family:Calibri">2B</span><span style="font-family:方正仿宋_GBK">铅笔在准考证号对应位置填涂，不得做其他标记；按照统一铃声开始答题，否则，按违规违纪处理。</span></span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px"><span style="font-family:Calibri">6</span><span style="font-family:方正仿宋_GBK">．考生不得要求监考人员解释试题，如遇试卷分发错误，页码序号不对、字迹模糊或答题卡有折皱、污点等问题，应举手询问。</span></span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px"><span style="font-family:Calibri">7</span><span style="font-family:方正仿宋_GBK">．考生应严格按照试卷中的答题须知作答，未按要求作答的，按零分处理。不得采取剪、裁、刻、撕等方式损毁试卷和答题卡，否则按违规违纪处理。</span></span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px"><span style="font-family:Calibri">8</span><span style="font-family:方正仿宋_GBK">．考生在考场内必须保持安静，禁止吸烟，严禁交头接耳，不得窥视他人试卷、答题卡及其他答题材料，或为他人窥视提供便利。严禁抄袭。</span></span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px"><span style="font-family:Calibri">9</span><span style="font-family:方正仿宋_GBK">．考试结束铃响，考生应立即停止答题。考生交卷时应将试卷、答题卡分别翻放在桌面上，经监考人员清点允许后，方可离开考场。不得以任何理由将试卷、答题卡和草稿纸带出考场。</span></span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px"><span style="font-family:Calibri">10</span><span style="font-family:方正仿宋_GBK">．考生应服从考试工作人员管理，接受监考人员的监督和检查。对无理取闹，辱骂、威胁、报复工作人员者，按有关纪律和规定处理。</span></span></p><p style="text-indent:43px;line-height:40px"><span style="font-family: 方正仿宋_GBK;font-size: 21px">&nbsp;</span></p><p style="margin-top:0;margin-right:0;margin-bottom:0;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-align:center;line-height:40px"><strong><span style="font-family: 方正仿宋_GB2312;color: #FF0000;font-size: 29px">最后，衷心祝愿广大考生取得好成绩！</span></strong></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;line-height:40px"><strong><span style="font-family: 方正仿宋_GB2312;font-size: 21px">&nbsp;</span></strong></p><p style="margin-top:0;margin-right:0;margin-bottom:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;line-height:40px"><strong><span style="font-family: 方正仿宋_GB2312;font-size: 21px">&nbsp;</span></strong></p><p style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:40px"><span style=";font-family:Calibri;font-size:16px">&nbsp;</span></p><p style=";text-align:center;line-height:40px"><strong><span style="font-family: 方正小标宋_GBK;color: #FF0000;font-size: 29px"><span style="font-family:方正小标宋_GBK">笔试准考证</span><span style="font-family:方正小标宋_GBK">12月3日9：00开始打印</span></span></strong></p><p style="margin-right:0;margin-left:0;text-indent:0;text-align:center;line-height:40px"><a href="http://218.3.167.180:8001/"><strong><span style="text-decoration:underline;"><span style="font-family: 方正小标宋_GBK;color: #FF0000;letter-spacing: 0;font-size: 21px">准考证打印入口（电信入口）</span></span></strong></a></p><p style="margin-right:0;margin-left:0;text-indent:0;text-align:center;line-height:40px"><strong><span style="font-family: 方正小标宋_GBK;color: #FF0000;letter-spacing: 0;font-size: 21px">&nbsp;</span></strong></p><p style="margin-right:0;margin-left:0;text-indent:0;text-align:center;line-height:40px"><a href="http://36.154.82.46:8001/"><strong><span style="text-decoration:underline;"><span style="font-family: 方正小标宋_GBK;color: #FF0000;letter-spacing: 0;font-size: 21px">准考证打印入口（移动入口）</span></span></strong></a></p><p><br/></p>
+                                </span>
+                        </div>
+                    </div>
+                    <style>
+                            /* 要滑动的内容区域样式，设置绝对定位等 */
+                           .scroll-content {
+                                width: 100%;            /* 设置宽度 */
+                              height: 100%;         /* 设置固定高度 */
+                              
+                              padding: 20px;
+                              border: 0px solid #ccc;
+                              margin: 0 auto;
+                            }
+                    
+                        </style>
+                    
+                    
+                    <!-- 翻页 start -->
+                    
+                        <ul class="handover">
+                            <li>
+                                <a href="https://hrss.xz.gov.cn/rsks/zkzdy/745793194913861.shtml" target="_self">上一篇：中央机关及其直属机构2026年度考试录用公务员笔试徐州分考区考前温馨提醒</a>
+                            </li>
+                            <li>
+                            </li>
+                        </ul>
+                    
+                    
+                    <!-- 翻页 end -->
+
+                    <!--article end -->
+<div class="image-links" data-v-922e3332="">
+    <a href="http://jshrss.jiangsu.gov.cn/col/col57253/index.html" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/组 12194@2x.png" alt="" data-v-922e3332=""></a>
+    <a href="http://www.cpta.com.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/蒙版组 686@2x.png" style="height:66.42px" alt="" data-v-922e3332=""></a>
+    <a href="http://hrss.xz.gov.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/徐州人力资源.png" alt="" data-v-922e3332=""></a>
+    <a href="https://www.mohrss.gov.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/组 12201@2x.png" alt="" data-v-922e3332=""></a>
+    <a href="http://jshrss.jiangsu.gov.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/组 12199@2x.png" alt="" data-v-922e3332=""></a>
+</div>                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- bottom start -->
+<!-- footer -->
+<div id="footer">
+    
+<div class="ewb-footer">
+    <div class="footer-line"></div>
+    <div class="footer-cont container">
+        <p class="footer-map">
+			
+					<a target="_blank">网站地图</a>
+					<span>|</span>
+			
+					<a target="_blank">网站联系</a>
+					<span>|</span>
+			
+					<a target="_blank">网站数据报表</a>
+					<span>|</span>
+			
+					<a target="_blank">网站声明</a>
+					</p>
+        <p class="footer-copyright">
+            <a href="https://hrss.xz.gov.cn/" target="_blank">版权所有：徐州市人力资源和社会保障局</a>
+            <a href="https://hrss.xz.gov.cn/" target="_blank">主办单位：徐州市人力资源和社会保障局</a>
+            <!--<span>总访问量：<span id="siteViewCount">30531392</span></span>-->
+        </p>
+        <p class="footer-ab">
+            <a href="https://beian.miit.gov.cn" target="_blank">苏ICP备16047411号-1</a>
+	        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32039302000170" target="_blank">
+            <img src="https://hrss.xz.gov.cn/rsks/img/galogo.png" style="margin-top: 6px;">苏公网安备32039302000170号</a>
+            <a>网站识别码：3200000033</a>
+        </p>
+        <a class="footer-zc" href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=3203000060&url=https%3A%2F%2Fhrss.xz.gov.cn%2F" style="cursor: pointer;"></a>
+        <a class="footer-dzjg" href="https://bszs.conac.cn/sitename?method=show&id=0C098980ED71172FE053022819AC9E05" target="_blank"></a>
+    </div>
+</div>
+</div>
+<!-- footer -->        <!-- bottom end -->
+    </body>
+</html>

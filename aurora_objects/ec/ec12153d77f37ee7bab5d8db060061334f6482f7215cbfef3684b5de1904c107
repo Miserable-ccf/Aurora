@@ -1,0 +1,577 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name='robots' content='follow,index' />
+<meta name='keywords' content='机关事业单位工考网' />
+<meta name='description' content='null' />
+<title>常州市机关事业单位工考网</title>
+<link rel="stylesheet" type="text/css" href="css/gk/main1.css"/>
+<link rel="stylesheet" type="text/css" href="css/gk/style2.css"/>
+<style type="text/css">
+	.u3 {  FONT-SIZE: large; TEXT-DECORATION: underline; HEIGHT: 16px; FONT-FAMILY: Arial; FONT-WEIGHT: bold; MARGIN-LEFT: 20px  }
+	.u4 {  FONT-SIZE: 13px; TEXT-DECORATION: none; FONT-FAMILY: 宋体; FONT-WEIGHT: normal; COLOR: #333333; FONT-STYLE: normal; MARGIN: 5px 0px 0px 50px  }
+	.u5 {  FONT-SIZE: 13px; TEXT-DECORATION: none; FONT-FAMILY: 宋体; FONT-WEIGHT: bold; COLOR: #333333; FONT-STYLE: normal; MARGIN: 5px 0px 0px 50px  }
+	.u6 {  FONT-SIZE: 13px; TEXT-DECORATION: none; FONT-FAMILY: 宋体; FONT-WEIGHT: normal; COLOR: #333333; FONT-STYLE: normal; TEXT-ALIGN: center; MARGIN: 15px 0px 0px  }
+	.fixediv{position:fixed;top:291px;z-index:9999;height:192px;width:120px;}
+	*html .fixediv{position:absolute;top:expression(eval(document.documentElement.scrollTop));margin:140px 0 0 0;}
+	.fixediv-l{left:15px;}
+	.fixediv-r{right:95px;}
+	.fixediv .btn{height:22px;background:#ffffff;text-align:right;line-height:22px;overflow:hidden;width:120px;margin-top:-5px}
+	.fixediv .btn img{padding-top:0px}
+</style>
+
+<style type="text/css">
+<!--
+#demo {
+	background: #FFF;
+	overflow: hidden;
+	height: 365px;
+	text-align: center;
+	float: left;
+}
+#demo img {
+	border: 3px solid #F2F2F2;
+	display: block;
+}
+-->
+</style>
+
+</head>
+
+<body>
+<div class="content">
+
+  <div class="top_nav">
+    <div class="hy">
+      <p class="fl">欢迎光临常州市机关事业单位工考网！</p>
+      <p class="fr"><a href="#" onclick="AddFavorite(window.location,document.title)">加入收藏</a> | <a href="#" onclick="SetHome(this,window.location)">设为首页</a></p>
+    </div>
+  </div>
+
+<!--飘窗广告-->
+<!--
+<div id="fudongand" style="position:absolute;width:250;height:95;z-index:1000;">
+   <div style="float:right;"><span style="CURSOR:pointer;color:red;" onclick="hidefudongand();">关闭</span></div> 
+  <a href="http://www.jsgkpx.com" target="_blank"><img src="/images/adv/jsjxjy.jpg"/></a>
+</div>
+-->
+  <!-------------------------------------------banner------------------------------------------------------->
+  <div><img src="images/index/banner.jpg" width="1004" height="135" /></div>
+  <!-------------------------------------------menu------------------------------------------------------->
+  <div id="menu_bg" style='background:url(images/index/menu_bg.gif)'>
+    <ul id="menu">
+      <li><a href="/"><font color=white>网站首页</font></a></li>
+
+       <li><a href="/jxjy_xz.html"><font color=white>继续教育</font></a></li>
+	    <!--<li><a href="javascript:alert('学习已经结束');"><font color=white>职业道德教育</font></a></li>-->
+		<li><a href="/jxjyPageServlet.do?op=index"><font color=white>职业道德教育</font></a></li>
+      <li><a href="/newsInfoServlet.do?op=news_info&news_id=zFNFIqNFAxNbMNNgNqqFYgNFJghFeJFD"><font color=white>联系我们</font></a></li>
+    </ul>
+    <div class="year_time">
+        <font color=white>今天是 2026年8月18日  <!--星期五--></font>
+    </div>
+  </div>
+
+<!-------------------------------------------main------------------------------------------------------->
+<div id="main_left">
+  <!------------------------------ 图片切------------------------------------->
+  <div id="KinSlideshow" style="visibility:hidden;margin-bottom:5px;">
+        
+        <a href="/newsInfoServlet.do?op=news_info&news_id=FFzgIYAqggxgbYqMbDNqgFNYqgzNhqgz" target="_blank"><img src="/files_upload/news/image/20220509/20200613.png" title="我市组织召开工考培训考核工作会议" alt="我市组织召开工考培训..." width="287" height="271" /></a>
+        
+	</div>
+	
+	
+		<!--<div class="main" style="margin-top:10px;margin-bottom:10px;"><a href="http://www.jsgkpx.com" target="_blank"><img src="images/guangGT.jpg" width="1005px"></a></div>-->
+	
+	
+	
+    <!------------------------------ 证书------------------------------------->
+    <div class="zs_box">
+      <div class="notice_title">
+        <div class="notice"> <b class="notice_icon fl">证书样式</b> <span class="fr"><a href="/pshow.jsp" >更多>></a></span> </div>
+      </div>
+      <div id="demo">
+<div id="demo1">
+
+<div class="pic_meno">
+	<div id="Layer1" style="display:none;position:absolute;z-index:1;"></div>
+	<p ><img src="images/index/cert/zs1.jpg" width="275" height="150" onMouseOut="hiddenPic();" onMouseMove="showPic(this.src);"/></p>
+</div>
+<br/>
+<div class="pic_meno" >
+	<div id="Layer1" style="display:none;position:absolute;z-index:1;"></div>
+	<p ><img src="images/index/cert/zs2.jpg" width="275" height="150" onMouseOut="hiddenPic();" onMouseMove="showPic(this.src);"/></p>
+</div>
+<br/>
+<div class="pic_meno" >
+	<div id="Layer1" style="display:none;position:absolute;z-index:1;"></div>
+	<p ><img src="images/index/cert/zs3.jpg" width="275" height="150" onMouseOut="hiddenPic();" onMouseMove="showPic(this.src);"/></p>
+</div>
+<br/>
+<div class="pic_meno" >
+	<div id="Layer1" style="display:none;position:absolute;z-index:1;"></div>
+	<p ><img src="images/index/cert/zs4.jpg" width="275" height="150" onMouseOut="hiddenPic();" onMouseMove="showPic(this.src);"/></p>
+</div>
+<br/>
+<div class="pic_meno" >
+	<div id="Layer1" style="display:none;position:absolute;z-index:1;"></div>
+	<p ><img src="images/index/cert/zs5.jpg" width="275" height="150" onMouseOut="hiddenPic();" onMouseMove="showPic(this.src);"/></p>
+</div>
+<br/>
+<div class="pic_meno" >
+	<div id="Layer1" style="display:none;position:absolute;z-index:1;"></div>
+	<p ><img src="images/index/cert/zs6.jpg" width="275" height="150" onMouseOut="hiddenPic();" onMouseMove="showPic(this.src);"/></p>
+</div>
+<br/>
+<div class="pic_meno" >
+	<div id="Layer1" style="display:none;position:absolute;z-index:1;"></div>
+	<p ><img src="images/index/cert/dz2.jpg" width="275" height="150" onMouseOut="hiddenPic();" onMouseMove="showPic(this.src);"/></p>
+</div>
+<br/>
+<div class="pic_meno">
+	<div id="Layer1" style="display:none;position:absolute;z-index:1;"></div>
+	<p ><img src="images/index/cert/dz1.jpg" width="275" height="150" onMouseOut="hiddenPic();" onMouseMove="showPic(this.src);"/></p>
+</div>
+<br/>
+<div class="pic_meno">
+	<div id="Layer1" style="display:none;position:absolute;z-index:1;"></div>
+	<p ><img src="images/index/cert/dz3.jpg" width="275" height="150" onMouseOut="hiddenPic();" onMouseMove="showPic(this.src);"/></p>
+</div>
+<p>&nbsp;</p>
+</div>
+<div id="demo2"></div>
+</div>
+    </div>
+  </div>
+  <div id="main_middle">
+    <!-------------------------------------------- 通知公告-------------------------------------------->
+    <div class="notice_box">
+      <div class="notice_title">
+        <div class="notice"> <b class="notice_icon fl">通知公告</b> <span class="fr"><a href="/newsInfoServlet.do?op=news_list&class_id=zYNNNqIANxNbxNINYbgIAgeFxqqYFxqC">更多>></a></span> </div>
+      </div>
+      <ul class="news clear">
+         
+          <li>
+              <a href="/newsInfoServlet.do?op=news_info&news_id=YNFFqzINgxFAbYYMYqFJIgFNNgYCgAxC" title="关于做好2026年全市机关事业单位工勤技能岗位技术等级考评工作的通知（常人社函〔2026〕9号）" target="_blank">
+                 <span class="news_icon">
+                  关于做好2026年全市机关事业单位工勤技能岗位技术等级考评工作的...
+                 </span>
+              </a>
+              <span class="news_time">2026-03-18</span> </li>
+        
+          <li>
+              <a href="/newsInfoServlet.do?op=news_info&news_id=YYzNqIxggNYFAbMNgqYNJqJCNggYqDxz" title="关于做好2026年常州市机关事业单位工勤人员继续教育培训工作的通知" target="_blank">
+                 <span class="news_icon">
+                  关于做好2026年常州市机关事业单位工勤人员继续教育培训工作的通...
+                 </span>
+              </a>
+              <span class="news_time">2026-03-02</span> </li>
+        
+          <li>
+              <a href="/newsInfoServlet.do?op=news_info&news_id=xNzgxgINqANFNFbYMNYqYqgYJAFNeAqJ" title="关于做好2025年常州市机关事业单位工勤人员继续教育培训工作的通知" target="_blank">
+                 <span class="news_icon">
+                  关于做好2025年常州市机关事业单位工勤人员继续教育培训工作的通...
+                 </span>
+              </a>
+              <span class="news_time">2025-03-03</span> </li>
+        
+          <li>
+              <a href="/newsInfoServlet.do?op=news_info&news_id=zFIAYbqMxJqxgNgCFxxeYYFgggeqqNqC" title="关于做好2024年机关事业单位工勤人员继续教育培训工作的通知 " target="_blank">
+                 <span class="news_icon">
+                  关于做好2024年机关事业单位工勤人员继续教育培训工作的通知 
+                 </span>
+              </a>
+              <span class="news_time">2024-03-28</span> </li>
+        
+          <li>
+              <a href="/newsInfoServlet.do?op=news_info&news_id=YYzqIYqAxxbqFgggYYNNMJFggeggDxzz" title="关于做好2024年全市机关事业单位工勤技能岗位技术等级考评工作的通知（常人社函[2024]8号）" target="_blank">
+                 <span class="news_icon">
+                  关于做好2024年全市机关事业单位工勤技能岗位技术等级考评工作的...
+                 </span>
+              </a>
+              <span class="news_time">2024-03-28</span> </li>
+        
+          <li>
+              <a href="/newsInfoServlet.do?op=news_info&news_id=YYYzFIAxFNbYYNNqqqYgMJDFgDFqFYJh" title="关于做好2023年常州市机关事业单位工勤人员继续教育培训工作的通知" target="_blank">
+                 <span class="news_icon">
+                  关于做好2023年常州市机关事业单位工勤人员继续教育培训工作的通...
+                 </span>
+              </a>
+              <span class="news_time">2023-05-15</span> </li>
+        
+
+        
+      </ul>
+    </div>
+    <!-------------------------------------------- 通知公告end-------------------------------------------->
+	
+			<!--<div class="main" style="margin-top:10px;margin-bottom:10px;"><a href="http://www.jsgkpx.com" target="_blank"><img src="images/tt.png" width="477px"></a></div>-->
+	
+	
+	
+    <!-------------------------------------------- 政策法规-------------------------------------------->
+    <div class="zc_box" style="margin-top:0px;">
+      <div class="notice_title">
+        <div class="notice"> <b class="notice_icon fl">政策法规</b> <span class="fr"><a href="/newsInfoServlet.do?op=news_list&class_id=FzqYIAqbIxqbYqzANqNqggFxgqAFqqqJ">更多>></a></span> </div>
+      </div>
+      <ul class="news clear">
+          
+          <li>
+              <a href="/newsInfoServlet.do?op=news_info&news_id=NNzYIFxAgbqFgMgqJgzxggYCNNxgNNbJ" title="关于印发《江苏省机关事业单位工勤技能岗位技术等级考评实施意见》的通知（苏人社发〔2024〕44号）" target="_blank">
+                <span class="news_icon">
+                    关于印发《江苏省机关事业单位工勤技能岗位技术等级考评实施意见》的...
+                </span>
+              </a>
+              <span class="news_time">03-20</span> </li>
+          
+       
+      </ul>
+    </div>
+    <div class="fl"><a href="/newsInfoServlet.do?op=news_info&news_id=xxNqzNIYFNxAqgbxqMqNheJFgYxAYYxC" ><img src="images/index/adv/mainjxjy.png" width="480" height="140" /></a></div>
+
+    <!-------------------------------------------- 政策法规end-------------------------------------------->
+  </div>
+  <div id="main_right">
+    <!-------------------------------------------- 便民通道-------------------------------------------->
+    <div class="notice_box">
+      <div class="notice_title">
+        <div class="notice"> <b class="notice_icon fl">便民通道</b> <span class="fr"></span> </div>
+      </div>
+       
+	  <ul class="bm_button">
+		<li style="margin-top:20%;"><a href="/jxjy_xz.html"><img src="images/index/tools/button1.gif" onmouseover="this.src='images/index/tools/button1_1.gif'" onmouseout="this.src='images/index/tools/button1.gif'"/></a></li>
+      
+	  <li><a href="#" onclick="openModal()"><img src="images/index/tools/buttonIn.jpg" onmouseover="this.src='images/index/tools/buttonIn_1.jpg'" onmouseout="this.src='images/index/tools/buttonIn.jpg'"/></a></li>
+	  <!--   <li><a href="javascript:alert('学习已经结束');"><img src="images/index/tools/button5.jpg" onmouseover="this.src='images/index/tools/button5_5.jpg'" onmouseout="this.src='images/index/tools/button5.jpg'"/></a></li>-->
+        <!--  <li style="margin-top:20px;"><a href="javascript:alert('升级中');"><img src="images/index/tools/button3.gif" onmouseover="this.src='images/index/tools/button3_3.gif'" onmouseout="this.src='images/index/tools/button3.gif'"/></a></li>-->
+       <!-- <li style="margin-top:20px;"><a href="javascript:alert('升级中');"><img src="images/index/tools/button4.gif" onmouseover="this.src='images/index/tools/button4_4.gif'" onmouseout="this.src='images/index/tools/button4.gif'"/></a></li>-->
+      </ul>
+	  
+	<!--   <ul class="bm_button">
+        <li><a href="http://www.jsgkpx.com" target="_blank"><img src="images/index/tools/a-15.jpg" onmouseover="this.src='images/index/tools/a-25.jpg'" onmouseout="this.src='images/index/tools/a-15.jpg'"/></a></li>
+        
+        <li><a href="/index.jsp"><img src="images/index/tools/a-16.jpg" onmouseover="this.src='images/index/tools/a-26.jpg'" onmouseout="this.src='images/index/tools/a-16.jpg'"/></a></li>
+		<li><a href="javascript:alert('学习已经结束');"><img src="images/index/tools/button5.jpg" onmouseover="this.src='images/index/tools/button5_5.jpg'" onmouseout="this.src='images/index/tools/button5.jpg'"/></a></li>
+        <li><a href="javascript:alert('升级中');"><img src="images/index/tools/button4.gif" onmouseover="this.src='images/index/tools/button4_4.gif'" onmouseout="this.src='images/index/tools/button4.gif'"/></a></li>
+      </ul>-->
+	  
+	  
+    </div>
+	
+	
+		<!--<div class="main" style="margin-top:10px;margin-bottom:10px;"><a href="http://www.jsgkpx.com" target="_blank"><img src="images/tt21.png" width="230px"></a></div>-->
+	
+	
+	
+    <!-------------------------------------------- 材料下载-------------------------------------------->
+    <div class="zs_box" style="margin-top:0px;">
+      <div class="notice_title">
+        <div class="notice"> <b class="notice_icon fl">材料下载</b> <span class="fr"><a href="/newsInfoServlet.do?op=news_list&class_id=FNzqIxgAbYxIbxYqMxYgFYqANYJFgNYD">更多>></a></span> </div>
+      </div>
+      <ul class="news">
+          
+           <li><a href="/newsInfoServlet.do?op=news_info&news_id=gYYNzYgIxAbNqgNxYMIDYYNYANqxxDgh" title="工考咨询电话"><span class="news_icon">
+               工考咨询电话</span></a> </li>
+          
+           <li><a href="/newsInfoServlet.do?op=news_info&news_id=zIANbYgYNFxNYYMYxgYNJqxgggMCFzgD" title="2026年技师、高级技师量化评价表"><span class="news_icon">
+               2026年技师、高级技师量化评...</span></a> </li>
+          
+
+       
+      </ul>
+    </div>
+  </div>
+  <!--对联广告-->
+<!--
+  <div id="Bar1190_big" class="fixediv fixediv-l">
+	<a href="/index.jsp" target="_blank"><img width="200"  src="/images/adv/rk.jpg" alt="工勤继续教育学习"></a>
+
+</div>
+
+
+<div id="Bar1190_big" class="fixediv fixediv-r">
+	<a href="/index.jsp" target="_blank"><img width="200" src="/images/adv/rk.jpg" alt="工勤继续教育学习"></a>
+	
+</div>
+-->
+  <!--对联广告end-->
+  
+  <!-------------------------------------------- ad-------------------------------------------->
+
+  <!--<div class="ad_box clear">
+  <ul class="ad">
+  <li><p>南京理工大学专业证书教学班</p><img src="images/index/adv/ad3.gif" width="320" height="107" /></li>
+  <li><p>扬州大学专业证书教学班</p><img src="images/index/adv/ad1.gif" width="319" height="107" /></li>
+  <li><p>西南大学高起专，专升本</p><img src="images/index/adv/ad2.gif" width="319" height="106" /></li>
+  </ul>
+  <div class="clear"></div>
+  </div>-->
+
+ <!-------------------------------------------- link-------------------------------------------->
+    <div class="link_box" style="padding-top:700px">
+      <div class="link_title">
+        <div class="link"> <b class="notice_icon fl">友情链接:</b>
+         <span><a href="https://rsj.changzhou.gov.cn/" target="_blank">常州市人力资源和社会保障局</a></span>
+         <span><a href="http://www.czrc.com.cn/" target="_blank">常州人才网</a></span>
+		 <!-- <span><a href="http://www.jsgkpx.com" target="_blank">江苏工勤人员继续教育云平台</a></span>-->
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------------- link end-------------------------------------------->
+    <div id="foot"><!--Copyright @2012版权所有 常州市人才培训有限公司 All rights reserved.-->
+	     <a href="/newsInfoServlet.do?op=news_info&news_id=zFNFIqNFAxNbMNNgNqqFYgNFJghFeJFD">联系电话：详见“联系我们”</a>    电子信箱：czrsks@163.com   </div>
+
+	<center><script type="text/javascript" src="js/czks_inc.js"></script></center>
+
+<div class="clear"></div>
+</div>
+
+
+
+
+
+
+
+<script>
+<!--
+var speed=80; //数字越大速度越慢
+var tab=document.getElementById("demo");
+var tab1=document.getElementById("demo1");
+var tab2=document.getElementById("demo2");
+tab2.innerHTML=tab1.innerHTML; //克隆demo1为demo2
+function Marquee(){
+if(tab2.offsetTop- tab.scrollTop<=0)//当滚动至demo1与demo2交界时
+tab.scrollTop-=tab1.offsetHeight //demo跳到最顶端
+else{
+tab.scrollTop++
+}
+}
+var MyMar=setInterval(Marquee,speed);
+tab.onmouseover=function() {clearInterval(MyMar)};//鼠标移上时清除定时器达到滚动停止的目的
+tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};//鼠标移开时重设定时器
+-->
+</script>
+
+<!-----------------------------------图片轮显----------------------------------------->
+<script src="/client_scripts/js/jquery-1.12.3.js" type="text/javascript"></script>
+<script src="client_scripts/js/pic/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$("#KinSlideshow").KinSlideshow({
+			moveStyle:"right",
+			titleBar:{titleBar_height:30,titleBar_bgColor:"#08355c",titleBar_alpha:0.5},
+			titleFont:{TitleFont_size:12,TitleFont_color:"#FFFFFF",TitleFont_weight:"normal"},
+			btn:{btn_bgColor:"#FFFFFF",btn_bgHoverColor:"#1072aa",btn_fontColor:"#000000",btn_fontHoverColor:"#FFFFFF",btn_borderColor:"#cccccc",btn_borderHoverColor:"#1188c0",btn_borderWidth:1}
+	});
+})
+</script>
+<center><script type="text/javascript" src="js/czks_inc.js"></script></center>
+</body>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+    function AddFavorite(sURL, sTitle){
+        try{
+            window.external.addFavorite(sURL, sTitle);
+        }catch(e){
+            try{
+                window.sidebar.addPanel(sTitle, sURL, "");
+            }catch(e){
+                alert("加入收藏失败，请使用Ctrl+D进行添加");
+            }
+        }
+    }
+
+    function SetHome(obj,vrl){
+        try{
+            obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }catch(e){
+            if(window.netscape){
+                try{
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }catch(e){
+                    alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage',vrl);
+            }
+        }
+    }
+
+    function showPic(sUrl){
+        var x,y;
+        x = event.clientX+40;
+        y = event.clientY+300;
+        document.getElementById("Layer1").style.left = x;
+        document.getElementById("Layer1").style.top = y;
+        document.getElementById("Layer1").innerHTML = "<img src=\"" + sUrl + "\">";
+        document.getElementById("Layer1").style.display = "block";
+    }
+    function hiddenPic(){
+        document.getElementById("Layer1").innerHTML = "";
+        document.getElementById("Layer1").style.display = "none";
+    }
+    function  goSearchCert(){
+        alert("正在建设中！！！");
+        return;
+        window.location.href="/certificateEntrance.jsp";
+    }
+
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+    function AddFavorite(sURL, sTitle){
+        try{
+            window.external.addFavorite(sURL, sTitle);
+        }catch(e){
+            try{
+                window.sidebar.addPanel(sTitle, sURL, "");
+            }catch(e){
+                alert("加入收藏失败，请使用Ctrl+D进行添加");
+            }
+        }
+    }
+
+    function SetHome(obj,vrl){
+        try{
+            obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }catch(e){
+            if(window.netscape){
+                try{
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }catch(e){
+                    alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage',vrl);
+            }
+        }
+    }
+</SCRIPT>
+
+
+
+<script type="text/javascript">
+   var x = 50,y = 60;
+   var xin = true, yin = true;
+   var step = 1;//层移动的步长，值越大移动速度越快
+   var delay = 20;//层移动的时间间隔,单位为毫秒，值越小移动速度越快
+   var obj=document.getElementById("fudongand");
+   function floatAD()
+   {
+      var L=T=0;
+      var R= document.body.clientWidth-obj.offsetWidth;
+      var B = document.body.clientHeight-obj.offsetHeight;
+      obj.style.left = x + document.body.scrollLeft + "px";
+      obj.style.top = y + document.body.scrollTop +"px";
+      x = x + step*(xin?1:-1);
+      if (x < L) { xin = true; x = L;}
+      if (x > R){ xin = false; x = R;}
+      y = y + step*(yin?1:-1)
+      if (y < T) { yin = true; y = T; }
+      if (y > B) { yin = false; y = B;}
+   }
+   //如果需要显示漂浮广告，请注释掉下面这行代码，然后回复下面那三条已经注释掉的代码
+   //document.getElementById("fudongand").style.display="none";
+   var itl= setInterval("floatAD()", delay);
+   obj.onmouseover=function(){clearInterval(itl)}
+   obj.onmouseout=function(){itl=setInterval("floatAD()", delay)}
+</script>
+
+<script type="text/javascript">
+    function hidefudongand()
+    {
+        document.getElementById("fudongand").style.display="none";
+    }
+</script>
+
+<!-- 弹窗提示 -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+
+        <!-- 关闭按钮 -->
+        <span class="close-btn" onclick="closeModal()">×</span>
+
+        <p style="font-size:16px">本功能仅用于在本平台补学的学员，如果您是在省平台补学，请在省平台补打证书</p>
+
+        <a href="index.jsp" class="btn-link">需要打印，请点此按钮</a>
+
+    </div>
+</div>
+<style>
+/* 背景遮罩 */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.2);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    position:relative; /* 👈 必须，加这个才能定位关闭按钮 */
+    background:rgba(255,255,255,0.9);
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    width:320px;
+}
+
+/* 关闭按钮 */
+.close-btn{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:20px;
+    cursor:pointer;
+    color:#999;
+}
+
+.close-btn:hover{
+    color:#333;
+}
+
+/* 按钮样式 */
+.btn-link{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 24px;
+    background:#3a7afe;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+}
+</style>
+
+<script>
+
+function openModal(){
+    document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+</script>
+
+</html>

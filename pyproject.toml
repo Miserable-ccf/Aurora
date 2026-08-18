@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=59.6"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aurora-monitor"
+version = "0.1.0"
+description = "Lightweight and auditable Jiangsu recruitment notice monitor"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Aurora contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+config = ["PyYAML>=6.0"]
+xlsx = ["openpyxl>=3.1"]
+pdf = ["PyMuPDF>=1.24"]
+documents = ["openpyxl>=3.1", "PyMuPDF>=1.24"]
+all = ["PyYAML>=6.0", "openpyxl>=3.1", "PyMuPDF>=1.24"]
+web = ["fastapi>=0.110,<1", "uvicorn>=0.29,<1"]
+
+[project.scripts]
+aurora-monitor = "aurora_monitor.__main__:main"
+aurora-web = "aurora_web.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["aurora_monitor*", "aurora_web*"]
+
+[tool.setuptools.package-data]
+aurora_web = ["static/*.html", "static/*.css", "static/*.js"]

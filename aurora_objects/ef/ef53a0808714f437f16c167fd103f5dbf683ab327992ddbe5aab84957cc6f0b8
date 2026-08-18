@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>人事考试报名期间常见问题（持续更新）</title>
+<link rel="stylesheet" type="text/css" href="/static/css/info1.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/global1.css" />
+
+<link href="/ztzl/wxrskszl/static/css/style1.css" rel="stylesheet" type="text/css" />
+<link href="/ztzl/wxrskszl/static/css/mobile.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/static/js/jquery.js"></script>
+<script src="//wza.wuxi.gov.cn/wza/wza2.min.js?appid=CNPFfYXbBJZ9OGp"></script>
+<!-- 新检索JS -->
+<script src="//www.wuxi.gov.cn/static_common/js/wzq_search_common.js"></script>
+<script>
+var safeurlsstr = "hrss.wuxi.gov.cn";
+var elsemsg = "\n 您将离开“无锡市人力资源和社会保障局”门户网站。您是否仍要继续？";
+</script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/js_outsite.js"></script>
+</head>
+<body class="special_rsks special rsks_index">
+  
+<div class="banner">无锡人事考试专栏</div>
+<div class="nav w100">
+     <div class="w1001">
+          <ul class="style01">
+           <li><a href="/ztzl/wxrskszl/index.shtml">专栏首页</a></li>
+           <li><a href="/ztzl/wxrskszl/zcwj/index.shtml">政策文件</a></li>
+           <li><a href="/ztzl/wxrskszl/bszn/rskszxjs/index.shtml">办事指南</a></li>
+           <li><a href="/ztzl/wxrskszl/ksfjxz/index.shtml">考试附件下载 </a></li>
+           <li><a style="background:none" href="http://hrss.wuxi.gov.cn/" target="_blank">返回主站</a></li>
+          </ul>
+     </div>
+</div>
+
+
+<div class="cont w100">
+<div class="container">
+  <div class="ConBox">
+    <p class="Pos clearfix"><span class="tit fl">当前位置：<a href="/index.shtml">首页</a> &gt;&gt; <a href="/ztzl/index.shtml">专题专栏</a> &gt;&gt; <a href="/ztzl/wxrskszl/index.shtml">无锡人事考试专栏</a> &gt;&gt; <a href="/ztzl/wxrskszl/ksggjdt/index.shtml">考试信息</a> </span></p>
+    <div class="mainCont">
+      <h1> 人事考试报名期间常见问题（持续更新）</h1>
+      <p class="explain"> 时间：<em>2025-03-31 14:44</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浏览次数： <span  id="clickCount"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来源： <span></span>
+	  
+	  <script language="javascript" >
+  
+              $.ajax({
+				type : "post",
+                url:"/intertidwebapp/counter/count",
+                data: {
+                  'contentID':4532895,
+                  'siteName':'人力资源和社会保障局',
+                  'siteID':129
+                },
+                success:function(data){
+                    $('#clickCount').html(data);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    
+                }
+            });	
+  </script>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;字号：[ <span class="Big"><font  onClick="Zoom.style.fontSize='16px';" style="cursor:pointer" class="list12s">大</font></span> <span class="Middle"><font onClick="Zoom.style.fontSize='14px';" class="list12s" style="cursor:pointer">中</font></span> <span class="Small"><font onClick="Zoom.style.fontSize='12px';" style="cursor:pointer" class="list12s">小</font></span> ]</p>
+
+      <div id="Zoom"> 
+        <!--<$[CONTENT]>start-->
+<p>　　<span style="font-size:14px;">1、专业技术人员资格类考试报名时，我的手机号变更了，怎么办？</span></p>
+
+<p>　　<span style="font-size:14px;">答：用户登录后，进入【注册维护】-【更换手机号码】功能，直接输入变更后手机号，接收验证码进行保存。</span></p>
+
+<p>　　<span style="font-size:14px;">2、专业技术人员资格类考试报名时，我换了个手机号，密码也不对，无法登录，怎么办？ &nbsp;</span></p>
+
+<p>　　<span style="font-size:14px;">答：请考生本人携带身份证到市人事考试中心（市广瑞路2号主楼4楼411办公室）现场办理。</span></p>
+
+<p>　　<span style="font-size:14px;">3、专业技术人员资格类考试报名时，我往年已注册且参加过考试，今年变更了姓名，可以修改吗？</span></p>
+
+<p>　　答：可以修改。请考生先用变更前的姓名报考，在准考证打印期间，本人携带身份证、户口本、准考证到市人事考试中心（市广瑞路2号主楼4楼411办公室）现场办理登记。</p>
+
+<p>　　<span style="font-size:14px;">4、我在报考专业技术人员资格考试时，一直提示&ldquo;你选择的报考条件与填写的报考信息不匹配：学历/学位不符合报考条件&rdquo;？</span></p>
+
+<p>　　答：点击重新填写，注意第1步&ldquo;报考信息&rdquo;中的&ldquo;报考条件&rdquo;选择的学历必须与第3步&ldquo;教育信息&rdquo;选择的学历要保持一致。</p>
+
+<p>　　5、我的学历在学信网无法查询或2001年以前的学历如何进行学历学位信息认证？</p>
+
+<p>　　答：你的情况属特殊情况，请直接咨询学信网如何进行认证。学信网客服热线：010-67410388。</p>
+
+<p>　　6、我的学历信息无法通过在线自动核验怎么办？</p>
+
+<p>　　<span style="font-size:14px;">答：可以继续进行报名，报名信息确认时需上传学信网认证报告。</span></p>
+
+<p>　　7、我在报考专业技术人员资格考试时，已经进行到缴费前的一步了，一直过不去，不能缴费？</p>
+
+<p>　　答：你提交的相关信息需人工在线审核，一般2个工作日内会给出审核结果，无需来现场，请耐心等待。资格审核通过可以进行缴费。</p>
+
+<p>　　<span style="font-size:14px;">8、我的照片是10年前的老照片了，如何修改？</span></p>
+
+<p>　　<span style="font-size:14px;">答：照片是考生参加考试、确认考试身份、制作证书的重要信息，上传时请按照系统格式要求认真核对，确保准确、符合要求，上传成功后原则上不予修改。如照片与本人现在相差特别大，可在报名期间携带本人身份证与电子照片至市人事考试中心（市广瑞路2号主楼4楼411办公室）现场办理。</span></p>
+
+<p>　　<span style="font-size:14px;">9、我在报考专业技术人员资格考试时，报考信息填错了，如何修改？</span></p>
+
+<p>　　<span style="font-size:14px;">答：报名信息确认前，自行修改；报名信息确认后，如涉及姓名、身份证号等关键信息请携带本人身份证至市人事考试中心（市广瑞路2号主楼4楼411办公室）现场办理；如仅涉及工作单位、工作年限等非关键信息，资格审核时以实际材料为准，不必修改。</span></p>
+
+<p>　　<span style="font-size:14px;">10、专业技术人员职业资格考试成绩公布后，我对考试成绩有异议，该如何申请复查?</span></p>
+
+<p>　　<span style="font-size:14px;">答：应考人员对考试成绩如有疑问，在成绩公布的25天内，登录&ldquo;无锡人事考试专栏&mdash;办事指南&mdash;成绩复查办法&rdquo;下载并填写成绩复查申请表。将成绩复查申请表、准考证、打印的成绩单等3项材料交到市人事考试中心（市广瑞路2号主楼4楼411办公室）。</span></p>
+
+<p>　　<span style="font-size:14px;">11、专业技术人员职业资格考试成绩合格后，我该如何领取纸质证书？</span></p>
+
+<p>　　答：请考生关注&ldquo;无锡人事考试专栏&mdash;证书信息&rdquo;，届时会公布证书领取通知。</p>
+
+<p>　　<span style="font-size:14px;">12、公务员报名时，我的照片上传一直不成功怎么办？</span></p>
+
+<p>　　<span style="font-size:14px;">答：照片上传不成功可能由于照片太大或者太小，比例不对。可以经过无锡人事考试专门的照片处理工具处理完再上传。（照片处理工具下载地址：无锡市人力资源和社会保障局官网----无锡人事考试专栏----考试附件下载----人事考试照片编辑工具。）</span></p>
+
+<p>　　<span style="font-size:14px;">13、公务员报名时，为什么我的专业审核通不过？</span></p>
+
+<p>　　<span style="font-size:14px;">答：请考生直接咨询招录单位（招录单位咨询电话可在岗位简介表中查看）。</span></p>
+
+<p>　　<span style="font-size:14px;">14、公务员考试成绩公布后，我对成绩有疑义，请问如何复查？</span></p>
+
+<p>　　<span style="font-size:14px;">答：应考人员对考试成绩如有疑问，在成绩公布的3天内，登录&ldquo;无锡人事考试专栏&mdash;办事指南&mdash;成绩复查办法&rdquo;下载并填写成绩复查申请表。将成绩复查申请表、准考证、打印的成绩单等3项材料交到市人事考试中心（市广瑞路2号主楼4楼405办公室）。</span></p>
+        <!--<$[CONTENT]>end--> 
+      </div>
+      <p class="arc_pages">本篇文章共有<em>1</em>页 当前为第 <em>1</em> 页
+        
+      </p>
+      <div class="others clearfix">
+        <p class="Close"><span>关闭窗口</span></p>
+      </div>
+<script type="text/javascript">
+$(".Big").click(function() {
+	$("#Zoom").css({"font-size": "16px", "line-height": "28px"});
+});
+$(".Middle").click(function() {
+	$("#Zoom").css({"font-size": "14px", "line-height": "24px"});
+});
+$(".Small").click(function() {
+	$("#Zoom").css({"font-size": "12px", "line-height": "22px"});
+});
+$(".Print, .print").click(function(){
+	window.print();
+});
+$(".Close, .close").click(function(){
+	window.close();
+});
+
+</script> 
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+<input type="hidden" id="special" name="special" />
+<link href="/static2022/css/foot2022.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/static2022/js/main.js"></script> 
+<script type="text/javascript" src="https://www.wuxi.gov.cn/static2016/js/Traditionalconversion.js"></script>
+<div class="footer" id="foot">
+  <div class="footer_bot"> <a class="dzjg_ico" target="_blank" href="https://bszs.conac.cn/sitename?method=show&id=09AE5E788EA85E70E053012819AC937C"><img data-bd-imgshare-binded="1" src="http://dcs.conac.cn/image/red.png" id="imgConac" vspace="0" hspace="0" border="0"></a> <a class="jcjcjcjc" href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=3202000043&url=https%3A%2F%2Fhrss.wuxi.gov.cn%2F" target="_blank"><img src="/static2022/images/jiucuo.png"></a>
+    <p class="copyright font14 lh25 white">
+      <a href="/fzlm/wzdt/index.shtml" class="sitemap_t">站点地图</a>  | <a href="/fzlm/lxwm/index.shtml" >联系我们</a> | <a href="http://mail.e.hrss.wuxi.gov.cn/">电子邮局</a><br />
+      无锡市人力资源和社会保障局版权所有   无锡市人力资源和社会保障局主办   联系电话：12333<br />
+      <span id="ym"></span> &nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32021102000707" target="_blank">公安备案号：32021102000707</a> &nbsp;&nbsp;网站标识码：3202000043</p>
+  </div>
+
+</div>
+
+<script>
+$(function(){
+  var href="";
+  var str_ym = "";
+  href = window.location.href;
+  //苏ICP备05047216号
+  if(href.indexOf("hrss.wuxi.gov.cn") != -1){
+    str_ym = '  <a href="http://beian.miit.gov.cn" target="_blank">苏ICP备09024546号</a>';
+  }else{
+    str_ym = '  <a href="http://beian.miit.gov.cn" target="_blank">苏ICP备10046515号-2</a>';
+  }
+  $('#ym').html(str_ym); 
+}); 
+</script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ab8bdc755f448a81a67dc2c08ebcf138";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/website_group_wza.js"></script> 
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/hotkeys.js"></script> 
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/jquery.cookies.js"></script> 
+<script type="text/javascript" src="/static_older/older_special.js"></script> 
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/hotkeys.js"></script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/jquery.cookies.js"></script>
+<script type="text/javascript" src="/static_older/older_special.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 需要适应手机端需要头部添加以下代码 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</meta></meta><script src="/cms_files/default/script/jslib/jquery.js"></script>
+ <script src="/cms_files/default/script/jslib/jquery.cookie.js"></script>
+ <script src="/cms_files/default/script/layui/layui.all.js"></script>
+ <script src="/cms_files/default/script/layui/layer/layer.js"></script>
+ <script src="/script/webglobal.js"></script>
+ <script src="/plugins/libs/require.js"></script>
+ <script src="/plugins/libs/load.js"></script>
+ <script src="/script/webgray.js"></script>
+ <link rel="stylesheet" href="/cms_files/default/css/iconfont.css" />
+<link rel="stylesheet" href="/cms_files/default/script/layui/css/layui.css" />
+<title>关于领取报名考试费电子发票的通知</title>
+<meta name="ColId" content="VcV8IzGIVKNLDvesjvp7A">
+<meta name="SiteName" content="泰州市人力资源和社会保障局">
+<meta name="SiteDomain" content="rsj.taizhou.gov.cn">
+<meta name="SiteIDCode" content="">
+<meta name="ColumnName" content="公示公告">
+<meta name="ColumnType" content="公示公告">
+<meta name="ArticleTitle" content="关于领取报名考试费电子发票的通知">
+<meta name="PubDate" content="2025-12-26 10:54">
+<meta name="ContentSource" content="市人力资源社会保障局">
+<meta name="Keywords" content="发票,领取,电子,考试,考生">
+<meta name="Author" content="左峰">
+<meta name="Description" content="各位考生：为方便考生领取发票，经商市财政部门，自2025年1月1日起，报名考试费将全面开具电子发票，原纸质发票同步停用。现将电子发票领取有关事项通知如下：一、电子发票领取时间。考试当天起（含考试当日）。二、电子发票领取途径。支付宝小程序→市民中心→政务→江苏电子票据→我的票据，自行下载打印。三、电子发票效力说明：电子发票与纸质发票具有同等法律效力，可用于报销、存档等用途。">
+<meta name="Url" content="/ztzl/tzsrsksfwpt/gsgg/art/2025/art_33c154e4bf8c4b4fbbebcbeb4e2d2ee7.html">
+<meta name="server" content="/ztzl/tzsrsksfwpt/gsgg/art/2025/art_33c154e4bf8c4b4fbbebcbeb4e2d2ee7.html">
+<meta name="extend1" content="0">
+<meta name="DeployTime" content="1747038090044">
+<meta name="MakeTime" content="2026-01-08 16:47:19">
+
+<meta id="pagetype" content="1">
+</meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></head>
+
+<body id="page_type" alt="文章页"><div id='barrierfree_container'>
+    <!-- 引入hanweb.css -->
+    <link href="/cms_files/webtaizhoushirenliziyuanheshehuibaozhangju/tplobject/defaultSet/0c64e0ac515c476db11a5798abbc4e8f/images/hanweb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/cms_files/webtaizhoushirenliziyuanheshehuibaozhangju/tplobject/defaultSet/0c64e0ac515c476db11a5798abbc4e8f/images/share.min.css">
+    <link href="/cms_files/webtaizhoushirenliziyuanheshehuibaozhangju/tplobject/defaultSet/0c64e0ac515c476db11a5798abbc4e8f/images/old.css" rel="stylesheet">
+    <!-- 引入自定义css  -->
+    <link href="/cms_files/webtaizhoushirenliziyuanheshehuibaozhangju/tplobject/defaultSet/0c64e0ac515c476db11a5798abbc4e8f/images/wzy.css" rel="stylesheet">
+    <script src="/cms_files/webtaizhoushirenliziyuanheshehuibaozhangju/tplobject/defaultSet/0c64e0ac515c476db11a5798abbc4e8f/images/jquery-3.6.0.min.js"></script>
+    <script src="/cms_files/webtaizhoushirenliziyuanheshehuibaozhangju/tplobject/defaultSet/0c64e0ac515c476db11a5798abbc4e8f/images/jquery.share.min.js"></script>
+    <script type="text/javascript" src="/cms_files/webtaizhoushirenliziyuanheshehuibaozhangju/tplobject/defaultSet/0c64e0ac515c476db11a5798abbc4e8f/images/js1.js"></script>
+    <script type="text/javascript" src="/cms_files/webtaizhoushirenliziyuanheshehuibaozhangju/tplobject/defaultSet/0c64e0ac515c476db11a5798abbc4e8f/images/js2.js"></script>
+    <script>
+        $(function() {
+            getRem();
+            window.onresize = function() {
+                getRem();
+            };
+        })
+
+        function getRem() {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            var fontSize = (oWidth / 750) * 16;
+            if (fontSize > 16) {
+                fontSize = 16;
+            }
+            html.style.fontSize = fontSize + "px";
+        }
+    </script>
+    <!-- 头部 -->
+<script src="/cms_files/filemanager/1051752821/script/20234/4a4e0c9cfde34ea8962dc40393a117ef.js" type="text/javascript" charset="utf-8"></script>    <!-- 头部end -->
+    <!-- 主体部分 -->
+    <div class="content">
+        <div class="zhuti">
+            <!-- 当前位置 -->
+            <div class="bt-place bt-box-1200" ergodic="navigation" barrierfree_zone_dsc="导航区,当前访问位置。" aria-region="true" aria-autolabel="true" aria-label="导航区">
+                <div class="bt-breadcrumb">您当前的位置：
+<a href="/index.html">首页</a>
+<span>></span>
+<a href="/ztzl/index.html">专题专栏</a>
+<span>></span>
+<a href="/ztzl/tzsrsksfwpt/index.html">泰州市人事考试服务平台</a>
+<span>></span>
+<a href="/ztzl/tzsrsksfwpt/gsgg/index.html">公示公告</a>
+                </div>
+                <div class="dqwz">
+                </div>
+            </div>
+            <!-- 当前位置end -->
+            <!-- 正文 -->
+            <div class="wzzw-box clearfix" ergodic="article" barrierfree_zone_dsc="正文区,当前文章正文。">
+                <div class="wzzw-title">关于领取报名考试费电子发票的通知</div>
+<div class="wzzw-text">
+    <ul class="clearfix">
+        <li>信息来源：市人力资源社会保障局</li>
+        <li>发布日期：2025-05-12 16:21</li>
+        <li>浏览次数：<lable id="artcount"></lable></li>
+    </ul>
+</div>
+<div class="wzzw-article" style="min-height: 200px;">
+    <p style="text-align: left;">各位考生：</p><p style="text-indent: 2em;">为方便考生领取发票，经商市财政部门，自2025年1月1日起，报名考试费将全面开具电子发票，原纸质发票同步停用。现将电子发票领取有关事项通知如下：</p><p style="text-indent: 2em;"><strong>一、电子发票领取时间</strong>。考试当天起（含考试当日）。</p><p style="text-indent: 2em;"><strong>二、电子发票领取途径</strong>。支付宝小程序→市民中心→政务→江苏电子票据→我的票据，自行下载打印。</p><p style="text-indent: 2em;"><strong>三、电子发票效力说明</strong>：电子发票与纸质发票具有同等法律效力，可用于报销、存档等用途。</p><p style="text-indent: 2em;">考生在领取过程中，如遇问题，请及时与我们联系，电话：0523-80600203。</p><p style="text-align: right;"><br /></p><p style="text-indent: 2em;"><br /></p>
+</div>
+<!-- 分享 -->
+<div class="fenx clearfix">
+    <div id="share-2"><span>分享到</span></div>
+    <script>
+        $(function () {
+            require.config({
+                paths: {
+                    "share-2": "/cms_files/filemanager/288403819/script/20234/3a84879cb86746c9bce4427d1cb133b6",
+                }
+            })
+            require(["share-2"], function () {
+                $('#share-2').share({
+                    sites: ['weibo', 'wechat', 'qzone']
+                });
+            })
+        })
+    </script>
+    <div class="fenx-r bt-right">
+        <ul class="clearfix">
+            <li><a href="javascript:window.print()">打印此页</a></li>
+            <li><a href="javascript:window.close()">关闭窗口</a></li>
+        </ul>
+    </div>
+</div>
+<!-- 上下篇 -->
+<div id="infoUpEndId_cms_info_up_end" class="sxp">
+    <script>
+        var infoUpEndId = "cms_info_up_end";
+    </script>
+    <script id="cms_info_up_end" src="/cms_files/default/script/upEndTitle/upEndTitle.js" url="/api-gateway/jpaas-publish-server/front/page/topEndTitle/top-end-title" queryData="{'parseType':'bulid','webId':'fe9a0be09fde4df6a7488a492ee250cc','columnId':'VcV8IzGIVKNLDvesjvp7A','beTop':'0','ordernum':'22580'}"></script>
+</div>
+<style>
+    .sxp br {
+        display: block;
+    }
+</style>
+<script>
+    $(function() {
+        var sxpAs = $(".sxp a");
+        sxpAs.each(function() {
+            if ($(this).text() == "") {
+                $(this).parent().hide();
+            }
+        })
+    })
+</script>
+<style>
+@media (max-width: 1200px) {
+    body {
+        min-width: 1200px;
+    }
+
+    .headerTop,
+    .header-banner,
+    footer {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        min-width: 100%;
+    }
+
+    .headerTop,
+    .headerTop-left,
+    .headerTop-right1,
+    .headerTop-right3,
+    .headerTop-right4,
+    .header-search,
+    .footLeft ul,
+    .footLeft p.footInfo_2,
+    .footLeft p.footInfo_3,
+    .footRight {
+        display: none !important;
+    }
+
+    .headerTop,
+    .header-banner,
+    footer {
+        padding: 0;
+    }
+
+    .header-logo {
+        float: none;
+        text-align: center;
+        margin: 0;
+        padding-top: 30px;
+    }
+
+    .headerNav ul {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background: #3a83e9;
+    }
+
+    .headerNav ul li {
+        width: 33.333%;
+        margin: 0;
+    }
+
+    .headerNav ul li a {
+        border-bottom: 0;
+        padding: 0;
+        font-size: 2.25rem;
+        color: #fff;
+        height: 6.25rem;
+        line-height: 6.25rem;
+        text-align: center;
+        background: #3a83e9;
+    }
+
+    .headerNav ul li.active a,
+    .headerNav ul li:hover a {
+        border-bottom: 0;
+        color: #fff;
+        background: #75afff;
+    }
+
+    footer .footBox {
+        min-height: auto !important;
+        padding: 18px 0 !important;
+        display: block !important;
+    }
+
+    .footLeft p span,
+    .footLeft p a {
+        margin-right: 0 !important;
+        text-align: center !important;
+        display: block !important;
+    }
+}
+</style>
+            </div>
+            <!-- 正文end -->
+        </div>
+    </div>
+    <!-- 底部 -->
+<script src="/cms_files/filemanager/1051752821/script/20234/f7241292b96b4c32962ecfb0040b1b08.js" type="text/javascript" charset="utf-8"></script><script>
+    $(function() {
+        //如果没有政策解读，则隐藏
+        var len = $(".mtjdList li").length;
+        if (len == 0) {
+            $(".wzzw-box").addClass("noJd");
+        }
+    })
+</script>
+</link></link></link></link><script src="/cms_files/filemanager/1051752821/script/juba/jubascript.js?v=4.3.3.22"></script>
+ </div></body>
+
+</html>

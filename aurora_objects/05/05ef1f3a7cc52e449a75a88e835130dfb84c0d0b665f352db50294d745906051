@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>2026年常州市文化广电和旅游局下属事业单位公开招聘工作人员面试通知书</title>
+<link rel="stylesheet" type="text/css" href="/template/front/zkz/css/index.css">
+</head>
+
+<body>
+
+<img class="bgone" src="/template/front/zkz/images/banner_bg.jpg">
+<img class="pic" src="/template/front/zkz/images/center_bg.png">
+
+<div class="table">
+	<div class="wel">2026年常州市文化广电和旅游局下属事业单位公开招聘工作人员面试通知书</div>
+	<div class="wel1"></div>
+
+	<div class="user">
+		<div id="yonghu" style=""><img src="/template/front/zkz/images/mm.png"></div>
+		<input type="text" id="person_id" name="person_id" placeholder="请输入身份证号">
+	</div>		
+	
+	<div class="user5">
+		<div id="yonghu" style=""><img src="/template/front/zkz/images/code.png"></div>
+		<input type="text" name="check_num" id="check_num" placeholder="请输入验证码" style="width:295px"><img src="/codenum" style="width:80px;height:30px">
+	</div>	
+	
+	 <div class="user2" style="height:40px;">
+        <p class="logzi">&nbsp;</p>    
+        <a href="javascript:search()"><input name="确定" type="button" class="btnbg" value="确定" /></a>
+		<p class="logzi">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		<a href="http://czks.czrsj.cn"><input name="idx" type="button" class="btnbg" value="首页" /></a>
+      </div>
+	   <div class="user4" style="height:40px;">  
+	  </div>
+
+  </div>
+</body>
+<script src="/client_scripts/js/jquery.min.js"></script>
+<script type="text/javascript">
+	function search(){
+		var personId = $("#person_id").val();
+		
+		if(personId == '' || personId.length<15||personId.length==16||personId.length==17||personId.length>18){
+	        alert("身份证号码长度为15位或18位，请重新填写!");
+            return ;
+        }
+		
+		var codeNum = $("#check_num").val();
+		if(codeNum == '' || isNaN(codeNum)){
+			alert("验证码格式不对，请重试!");
+			return;
+		}
+		window.location.href="?op=res&id=ZHr1786438692622&p_id=" + personId + "&check_num=" + codeNum;
+	}
+</script>
+</html>

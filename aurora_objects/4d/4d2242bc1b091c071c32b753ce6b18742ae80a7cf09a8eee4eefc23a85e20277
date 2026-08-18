@@ -1,0 +1,252 @@
+<!-- 列表展示页 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>公务员考试专栏</title>
+        <link rel="icon" href="https://hrss.xz.gov.cn/rsks/img/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/footer.css" />
+        <link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/homeIndex.css" />
+        <link rel="stylesheet" type="text/css" href="https://hrss.xz.gov.cn/rsks/css/contentIndex.css" />
+        
+        <script src="https://awp-assets.meituan.net/thh/thh_feb_web_portal/js/jquery-3.6.0.min.js"></script>
+        <style>
+            .pagination { height: 50px; position: absolute;top:80%;left:50%;transform:translate(-50%,-50%);}
+            .pagination a { border: 1px solid #48cfad; padding: 3px 8px; margin: 0 2px; }
+            .pagination a.current { background-color: #48cfad; color: #fff; }
+        </style>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            console.log("DOM 加载完毕！");
+            $(".nav-642071527276613").addClass("active");
+            console.log("class更新完毕");
+        });
+        </script>
+<script type="text/javascript">(function(){var s=document.createElement("script");s.src="https://hrss.xz.gov.cn/rsks/api/stat/visit?sid=642071464194117&cid=642071527481413";(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(s);})();</script>    </head>
+    <body>
+        <div class="page flex-col">
+            <div class="section_4 flex-row">
+                
+                <div class="box_8 flex-col" style="margin-left: 0px; height: 100%;">
+                    <!-- header start -->
+<header class="header">
+    <div class="header-content">
+        <img src="https://hrss.xz.gov.cn/rsks/img/xzrsImg.webp" 
+        style=" margin-right: -192px;
+                width: 220.51px;
+                height: 41.03px;">
+        <button class="text-btn" id="toggleBtn">返回网站首页</button>
+        <div class="search-bar">
+            <!--<form method="get" action="https://cms-admin.xztv.tv/prod-api/_search">-->
+            <input name="cid" type="hidden" value="">
+            <input id="_query" stype="text" name="q" placeholder="请输入关键字">
+            <button onclick="performSearch()"></button>
+            
+            </form>
+        </div>
+    </div>
+    <script>
+       // 处理返回网站首页按钮的点击事件
+    $(document).ready(function() {
+        $('#toggleBtn').on('click', function() {
+            // $(this).addClass('active');
+            setTimeout(function() {
+                window.location.href = 'http://hrss.xz.gov.cn/';
+            }, 100);
+        });
+    });
+    // document.addEventListener('DOMContentLoaded', function() {
+    //   const btn = document.getElementById('toggleBtn');
+    //   console.log("按钮元素:", btn); // 确认是否获取到元素
+    
+      // 条件判断显示按钮
+    //   if ("zsgl" != "sy") {
+    //     btn.classList.add('visible');
+    //     }
+    //  
+    //     
+    //     // 按钮点击事件
+    //     $("#toggleBtn").on("click", function() {
+    //         // 先添加active类以确保视觉反馈
+    //         $(this).addClass("active");
+    //         // 使用setTimeout确保样式应用后再跳转
+    //         setTimeout(function() {
+    //             window.location.href = "https://hrss.xz.gov.cn/rsks/sy/";
+    //         }, 100);
+    //     });
+    //     
+    //     
+    //   }
+    // );
+    </script>
+</header>
+<div class="navigation"  id="mainNav">
+    <div class="xzrsLogo">
+        <img src="https://hrss.xz.gov.cn/rsks/img/xzrsLogo.png" style="width :  38px;        height :  38.57px;">
+    </div>
+    <ul class="navbar-nav">
+      <!-- navbar start -->
+                <li>
+                    <a id="link" href="https://hrss.xz.gov.cn/rsks/sy/" class="navigation-title nav-642071527276613">专栏首页</a>
+                </li>
+                <li>
+                    <a id="link" href="https://hrss.xz.gov.cn/rsks/ksjh/" class="navigation-title nav-642071527772229">考试计划</a>
+                </li>
+                <li>
+                    <a id="link" href="https://hrss.xz.gov.cn/rsks/wsbm/" class="navigation-title nav-642071527854149">报名通知</a>
+                </li>
+                <li>
+                    <a id="link" href="https://hrss.xz.gov.cn/rsks/zkzdy/" class="navigation-title nav-642071527915589">准考证打印</a>
+                </li>
+                <li>
+                    <a id="link" href="https://hrss.xz.gov.cn/rsks/cjcx/" class="navigation-title nav-642071527968837">成绩查询</a>
+                </li>
+                <li>
+                    <a id="link" href="https://hrss.xz.gov.cn/rsks/khsh/" class="navigation-title nav-642071528030277">考后审核</a>
+                </li>
+                <li>
+                    <a id="link" href="https://hrss.xz.gov.cn/rsks/zsgl/" class="navigation-title nav-649503032483909">证书管理</a>
+                </li>
+                <li>
+                    <a id="link" href="https://hrss.xz.gov.cn/rsks/fwzn/" class="navigation-title nav-642071528144965">服务指南</a>
+                </li>
+        <!-- navbar end -->
+    </ul>
+</div>
+<script>
+    function performSearch() {
+        var link = "https://cms-admin.xztv.tv/prod-api/";
+        link += "_search?q=" + $('#_query').val() + "&sid=642071464194117&pp=pc";
+        window.location.href = link;
+      };
+    window.onload = function() {
+		document.getElementById('_query').addEventListener('keyup', function(event) {
+		  if (event.key === 'Enter') {
+			var link = "https://cms-admin.xztv.tv/prod-api/";		
+      link += "_search?q=" + $('#_query').val() + "&sid=642071464194117&pp=pc";
+			window.location.href = link;
+		  }
+		});
+	};
+</script>
+                    
+                    <!-- header end -->  
+                    <div class="text_subtitle_wra_1 flex-col"  style=" background: url(https://hrss.xz.gov.cn/rsks/img/MasterDDSSlicePNGfd1a8a821de3ce433f56ff6156e4a23b.png) no-repeat; background-size: 1080px 50px;">
+                        <span class="text_subtitle">公务员考试专栏</span>
+                    </div>
+                    <div class="columns">
+                        <div class="section">
+                            <div class="section-content">
+                                <ul class="announcement-list">
+                                        <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="https://hrss.xz.gov.cn/rsks/sy/gwykszl/782299599523909.shtml" target="_blank">江苏省2026年度考试录用公务员面试徐州考区面试通知书打印通知及考前提醒</a>
+                                          <span class="text_13 announcement-date">2026-03-10</span>
+                                        </li>
+                                        <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="http://jshrss.jiangsu.gov.cn/art/2026/1/12/art_59205_11715082.html" target="_blank">江苏省2026年公务员招录笔试成绩查询</a>
+                                          <span class="text_13 announcement-date">2026-01-13</span>
+                                        </li>
+                                        <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="https://hrss.xz.gov.cn/rsks/zkzdy/747986310877253.shtml" target="_blank">江苏省2026年度考试录用公务员笔试徐州考区准考证打印通知及考前提醒</a>
+                                          <span class="text_13 announcement-date">2025-12-03</span>
+                                        </li>
+                                        <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="https://hrss.xz.gov.cn/rsks/zkzdy/745793194913861.shtml" target="_blank">中央机关及其直属机构2026年度考试录用公务员笔试徐州分考区考前温馨提醒</a>
+                                          <span class="text_13 announcement-date">2025-11-27</span>
+                                        </li>
+                                        <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="https://hrss.xz.gov.cn/rsks/wsbm/736943636959301.shtml" target="_blank">徐州市2026年度考试录用公务员网报专题</a>
+                                          <span class="text_13 announcement-date">2025-11-02</span>
+                                        </li>
+                                        <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d09780e3a20199dd916ecf0122&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007" target="_blank">中央机关及其直属机构2026年度考试录用公务员报考指南</a>
+                                          <span class="text_13 announcement-date">2025-10-21</span>
+                                        </li>
+                                        <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/article/articledetail.html?ArticleId=8a81f6d09780e3a20199dd8187330120&id=0000000062b7b2b60162bccd55ec0006&eid=0000000062b7b2b60162bccdd5860007" target="_blank">中央机关及其直属机构2026年度考试录用公务员公告</a>
+                                          <span class="text_13 announcement-date">2025-10-21</span>
+                                        </li>
+                                        <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="https://hrss.xz.gov.cn/rsks/sy/gwykszl/715791715500101.shtml" target="_blank">2025年徐州市市级机关公开遴选公务员笔试准考证打印通知及考前提醒</a>
+                                          <span class="text_13 announcement-date">2025-09-03</span>
+                                        </li>
+                                        <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="http://www.jszzb.gov.cn/col83/90602.html" target="_blank">2025年江苏省省级机关公开遴选公务员公告</a>
+                                          <span class="text_13 announcement-date">2025-08-25</span>
+                                        </li>
+                                        <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="http://www.xzdj.cn/Item/23800.aspx" target="_blank">2025年徐州市市级机关公开遴选公务员公告</a>
+                                          <span class="text_13 announcement-date">2025-08-25</span>
+                                        </li>
+                                    <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="https://hrss.xz.gov.cn/rsks/sy/gwykszl/782299599523909.shtml" target="_blank">江苏省2026年度考试录用公务员面试徐州考区面试通知书打印通知及考前提醒</a>
+                                          <span class="text_13 announcement-date">2026-03-10</span>
+                                    
+                                    </li>
+                                    <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="https://hrss.xz.gov.cn/rsks/sy/gwykszl/715791715500101.shtml" target="_blank">2025年徐州市市级机关公开遴选公务员笔试准考证打印通知及考前提醒</a>
+                                          <span class="text_13 announcement-date">2025-09-03</span>
+                                    
+                                    </li>
+                                    <li class="announcement-item">
+                                            <a class="text_12 announcement-title" href="https://rs.jshrss.jiangsu.gov.cn/index/cjcx/2025gwyI2i6h1SearchInfo.html" target="_blank">江苏省2025年考试录用公务员（含选调生）笔试成绩查询</a>
+                                          <span class="text_13 announcement-date">2025-02-24</span>
+                                    
+                                    </li>
+                                    <!-- index end -->
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+<div class="image-links" data-v-922e3332="">
+    <a href="http://jshrss.jiangsu.gov.cn/col/col57253/index.html" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/组 12194@2x.png" alt="" data-v-922e3332=""></a>
+    <a href="http://www.cpta.com.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/蒙版组 686@2x.png" style="height:66.42px" alt="" data-v-922e3332=""></a>
+    <a href="http://hrss.xz.gov.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/徐州人力资源.png" alt="" data-v-922e3332=""></a>
+    <a href="https://www.mohrss.gov.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/组 12201@2x.png" alt="" data-v-922e3332=""></a>
+    <a href="http://jshrss.jiangsu.gov.cn/" target="_blank" data-v-922e3332="">
+        <img src="https://hrss.xz.gov.cn/rsks/img/组 12199@2x.png" alt="" data-v-922e3332=""></a>
+</div>                    
+                    
+                </div>
+                <!-- 分页 start -->
+<div class="pagination"><a href="javascript:;" class="page_link page_active" target="_self">1</a></div>                <!-- 分页 end -->
+            </div>
+        </div>
+        <!-- footer start -->
+<!-- footer -->
+<div id="footer">
+    
+<div class="ewb-footer">
+    <div class="footer-line"></div>
+    <div class="footer-cont container">
+        <p class="footer-map">
+			
+					</p>
+        <p class="footer-copyright">
+            <a href="https://hrss.xz.gov.cn/" target="_blank">版权所有：徐州市人力资源和社会保障局</a>
+            <a href="https://hrss.xz.gov.cn/" target="_blank">主办单位：徐州市人力资源和社会保障局</a>
+            <!--<span>总访问量：<span id="siteViewCount">30531392</span></span>-->
+        </p>
+        <p class="footer-ab">
+            <a href="https://beian.miit.gov.cn" target="_blank">苏ICP备16047411号-1</a>
+	        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32039302000170" target="_blank">
+            <img src="https://hrss.xz.gov.cn/rsks/img/galogo.png" style="margin-top: 6px;">苏公网安备32039302000170号</a>
+            <a>网站识别码：3200000033</a>
+        </p>
+        <a class="footer-zc" href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=3203000060&url=https%3A%2F%2Fhrss.xz.gov.cn%2F" style="cursor: pointer;"></a>
+        <a class="footer-dzjg" href="https://bszs.conac.cn/sitename?method=show&id=0C098980ED71172FE053022819AC9E05" target="_blank"></a>
+    </div>
+</div>
+</div>
+<!-- footer -->        <!-- footer end -->
+    </body>
+</html>
