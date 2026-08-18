@@ -6,8 +6,19 @@ from datetime import datetime, timezone
 from typing import Any
 
 from .llm import LLMClient
-from .models import RecommendationItem, RecommendationResponse, UserProfile
+from .models import (
+    ConditionItem,
+    ExcludedNotice,
+    ExcludedPosition,
+    PositionEvaluation,
+    RecommendationItem,
+    RecommendationResponse,
+    UserProfile,
+)
 from .repository import WebRepository
+
+from aurora_monitor.eligibility import VERDICT_FAIL, evaluate_position_row
+from aurora_monitor.positions import UNKNOWN
 
 
 PROCESS_TERMS = (
@@ -50,10 +61,16 @@ class RecommendationService:
             profile, profile_version = existing, existing_version
 
         candidates = []
+        excluded_positions: list[dict[str, Any]] = []
         for row in self.repository.search_candidate_notices():
             item = self._build_item(row, profile)
-            if item:
-                candidates.append(item)
+            if not item:
+                continue
+            item, excluded = self._apply_position_checks(item, profile)
+            if excluded:
+                excluded_positions.append(excluded)
+                continue
+            candidates.append(item)
         candidates.sort(key=lambda value: (value.score, value.first_seen_at), reverse=True)
         items = candidates[: profile.max_results]
 
@@ -63,6 +80,7 @@ class RecommendationService:
             "overview": overview,
             "items": [item.model_dump() for item in items],
             "warnings": warnings,
+            "excluded_positions": excluded_positions,
         }
         run_id = self.repository.save_recommendation_run(
             profile,
@@ -82,6 +100,23 @@ class RecommendationService:
             llm_model=llm_result.model,
             llm_error=llm_result.error,
             generated_at=datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+            excluded_notices=[
+                ExcludedNotice(
+                    notice_id=str(entry.get("notice_id") or ""),
+                    title=str(entry.get("title") or ""),
+                    url=str(entry.get("url") or ""),
+                    positions=[
+                        ExcludedPosition(
+                            position_code=str(position.get("position_code") or ""),
+                            employer=str(position.get("employer") or ""),
+                            position_name=str(position.get("position_name") or ""),
+                            reasons=[str(reason) for reason in position.get("reasons", [])],
+                        )
+                        for position in entry.get("positions", [])
+                    ],
+                )
+                for entry in excluded_positions
+            ],
         )
 
     def _build_item(self, row: dict[str, Any], profile: UserProfile) -> RecommendationItem | None:
@@ -155,6 +190,50 @@ class RecommendationService:
             checks=checks,
         )
 
+    def _apply_position_checks(
+        self, item: RecommendationItem, profile: UserProfile
+    ) -> tuple[RecommendationItem, dict[str, Any] | None]:
+        position_rows = self.repository.positions_for_notice(item.notice_id)
+        if not position_rows:
+            return item, None
+        evaluations = [(row, evaluate_position_row(row, profile)) for row in position_rows]
+        eligible = [(row, evaluation) for row, evaluation in evaluations if evaluation.verdict == "eligible"]
+        review = [(row, evaluation) for row, evaluation in evaluations if evaluation.verdict == "needs_review"]
+        failed = [(row, evaluation) for row, evaluation in evaluations if evaluation.verdict == "not_eligible"]
+        if not eligible and not review:
+            return item, {
+                "notice_id": item.notice_id,
+                "title": item.title,
+                "url": item.url,
+                "positions": [
+                    {
+                        "position_code": _show(row.get("position_code")),
+                        "position_name": _show(row.get("position_name")),
+                        "employer": _show(row.get("employer")),
+                        "reasons": [check.reason for check in evaluation.checks if check.verdict == VERDICT_FAIL][:4],
+                    }
+                    for row, evaluation in failed[:20]
+                ],
+            }
+        item.positions = [_position_model(row, evaluation) for row, evaluation in evaluations]
+        if eligible:
+            item.match_level = "eligible"
+            item.score = min(100, item.score + 25)
+        else:
+            item.match_level = "needs_review"
+            item.score = min(100, item.score + 10)
+        item.reasons.insert(
+            0, f"岗位级核验：{len(eligible)} 个岗位初步符合，{len(review)} 个待核实，{len(failed)} 个不符合"
+        )
+        questions: list[str] = []
+        for _, evaluation in evaluations:
+            for question in evaluation.questions:
+                if question not in questions:
+                    questions.append(question)
+        if questions:
+            item.checks = questions[:6]
+        return item, None
+
     @staticmethod
     def _merge_llm(
         items: list[RecommendationItem], data: dict, profile: UserProfile
@@ -175,15 +254,24 @@ class RecommendationService:
                     clean_checks = [str(value).strip() for value in checks if str(value).strip()]
                     if clean_checks:
                         item.checks = clean_checks[:6]
-        default_overview = (
-            f"根据你的画像，从已抓取且详情可核验的公告中整理出 {len(items)} 条相关信息。"
-            "当前结果是公告级推荐，报名前仍需查看职位表确认专业、学历和身份条件。"
-        )
+        position_items = [item for item in items if item.positions]
+        if position_items:
+            default_overview = (
+                f"根据你的画像，从已抓取且详情可核验的公告中整理出 {len(items)} 条相关信息，"
+                f"其中 {len(position_items)} 条公告已完成职位表岗位级初核。"
+                "岗位结论为初步判断，报名资格仍以招录机关资格审查为准。"
+            )
+        else:
+            default_overview = (
+                f"根据你的画像，从已抓取且详情可核验的公告中整理出 {len(items)} 条相关信息。"
+                "当前结果是公告级推荐，报名前仍需查看职位表确认专业、学历和身份条件。"
+            )
         overview = str(data.get("overview") or "").strip()[:800] or default_overview
-        warnings = [
-            "系统当前尚未完成所有附件的岗位级结构化，不能据此断言一定具备报名资格。",
-            "请以官方公告、职位表和招录单位资格审查结果为准。",
-        ]
+        warnings = ["请以官方公告、职位表和招录单位资格审查结果为准。"]
+        if not position_items:
+            warnings.insert(0, "系统当前尚未完成所有附件的岗位级结构化，不能据此断言一定具备报名资格。")
+        elif len(position_items) < len(items):
+            warnings.insert(0, "部分公告尚未完成岗位级结构化，未结构化的公告仍需人工核对职位表。")
         if isinstance(data.get("warnings"), list):
             extra = [str(value).strip() for value in data["warnings"] if str(value).strip()]
             warnings = (extra + warnings)[:6]
@@ -246,3 +334,37 @@ def _default_checks(profile: UserProfile, has_evidence: bool) -> list[str]:
     if not has_evidence:
         checks.append("详情证据不足，需打开官方原文核验")
     return checks
+
+
+def _show(value: Any) -> str:
+    text = str(value or "").strip()
+    return "" if text in {"", "unknown", "None"} else text
+
+
+def _position_model(row: dict[str, Any], evaluation) -> PositionEvaluation:
+    reasons = [
+        f"{check.label}：{check.requirement} → {check.verdict}"
+        for check in evaluation.checks
+        if check.requirement not in {"", UNKNOWN}
+    ]
+    return PositionEvaluation(
+        position_id=str(row.get("id") or ""),
+        position_code=_show(row.get("position_code")),
+        employer=_show(row.get("employer")),
+        position_name=_show(row.get("position_name")),
+        work_location=_show(row.get("work_location")),
+        headcount=_show(row.get("headcount")),
+        verdict=evaluation.verdict,
+        conditions=[
+            ConditionItem(
+                field=check.field,
+                label=check.label,
+                requirement="未列出" if check.requirement in {"", UNKNOWN} else check.requirement,
+                verdict=check.verdict,
+                reason=check.reason,
+            )
+            for check in evaluation.checks
+        ],
+        reasons=reasons[:8],
+        questions=evaluation.questions[:4],
+    )

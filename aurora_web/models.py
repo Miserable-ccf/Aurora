@@ -55,6 +55,41 @@ class RecommendationRequest(BaseModel):
     save_profile: bool = True
 
 
+class ConditionItem(BaseModel):
+    field: str = ""
+    label: str = ""
+    requirement: str = ""
+    verdict: str = ""
+    reason: str = ""
+
+
+class PositionEvaluation(BaseModel):
+    position_id: str = ""
+    position_code: str = ""
+    employer: str = ""
+    position_name: str = ""
+    work_location: str = ""
+    headcount: str = ""
+    verdict: Literal["eligible", "needs_review", "not_eligible"]
+    conditions: list[ConditionItem] = Field(default_factory=list)
+    reasons: list[str] = Field(default_factory=list)
+    questions: list[str] = Field(default_factory=list)
+
+
+class ExcludedPosition(BaseModel):
+    position_code: str = ""
+    employer: str = ""
+    position_name: str = ""
+    reasons: list[str] = Field(default_factory=list)
+
+
+class ExcludedNotice(BaseModel):
+    notice_id: str
+    title: str
+    url: str
+    positions: list[ExcludedPosition] = Field(default_factory=list)
+
+
 class RecommendationItem(BaseModel):
     notice_id: str
     title: str
@@ -67,12 +102,13 @@ class RecommendationItem(BaseModel):
     first_seen_at: str
     detail_status: str
     score: int
-    match_level: Literal["relevant", "needs_review"]
+    match_level: Literal["eligible", "relevant", "needs_review"]
     reasons: list[str]
     matched_terms: list[str]
     evidence_excerpt: str
     summary: str
     checks: list[str]
+    positions: list[PositionEvaluation] = Field(default_factory=list)
 
 
 class RecommendationResponse(BaseModel):
@@ -85,3 +121,4 @@ class RecommendationResponse(BaseModel):
     llm_model: str
     llm_error: str
     generated_at: str
+    excluded_notices: list[ExcludedNotice] = Field(default_factory=list)

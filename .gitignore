@@ -10,3 +10,6 @@ build/
 .env
 objects/
 logs/
+aurora-web.log
+.aurora-web.pid
+aurora_objects/

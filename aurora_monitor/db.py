@@ -138,6 +138,36 @@ CREATE TABLE IF NOT EXISTS evidence_version (
     UNIQUE(notice_id, content_sha256)
 );
 
+CREATE TABLE IF NOT EXISTS position (
+    id TEXT PRIMARY KEY,
+    notice_id TEXT NOT NULL REFERENCES notice(id),
+    evidence_id TEXT NOT NULL REFERENCES evidence_version(id),
+    sheet_name TEXT NOT NULL DEFAULT '',
+    row_index INTEGER NOT NULL,
+    position_code TEXT NOT NULL DEFAULT 'unknown',
+    employer TEXT NOT NULL DEFAULT 'unknown',
+    position_name TEXT NOT NULL DEFAULT 'unknown',
+    work_location TEXT NOT NULL DEFAULT 'unknown',
+    headcount TEXT NOT NULL DEFAULT 'unknown',
+    education TEXT NOT NULL DEFAULT 'unknown',
+    degree TEXT NOT NULL DEFAULT 'unknown',
+    major_requirement TEXT NOT NULL DEFAULT 'unknown',
+    fresh_graduate_requirement TEXT NOT NULL DEFAULT 'unknown',
+    grassroots_requirement TEXT NOT NULL DEFAULT 'unknown',
+    political_requirement TEXT NOT NULL DEFAULT 'unknown',
+    certificate_requirement TEXT NOT NULL DEFAULT 'unknown',
+    age_requirement TEXT NOT NULL DEFAULT 'unknown',
+    gender_requirement TEXT NOT NULL DEFAULT 'unknown',
+    household_requirement TEXT NOT NULL DEFAULT 'unknown',
+    application_schedule TEXT NOT NULL DEFAULT 'unknown',
+    other_requirements TEXT NOT NULL DEFAULT 'unknown',
+    raw_row TEXT NOT NULL DEFAULT '[]',
+    header_row TEXT NOT NULL DEFAULT '[]',
+    parser_version INTEGER NOT NULL DEFAULT 1,
+    parsed_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(evidence_id, sheet_name, row_index)
+);
+
 CREATE TABLE IF NOT EXISTS notification (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     profile_id TEXT NOT NULL REFERENCES monitor_profile(id),
@@ -184,6 +214,7 @@ CREATE TABLE IF NOT EXISTS recommendation_run (
 CREATE INDEX IF NOT EXISTS source_due_idx ON source(status, next_check_at);
 CREATE INDEX IF NOT EXISTS source_region_idx ON source(region_code, source_group, status);
 CREATE INDEX IF NOT EXISTS notice_source_idx ON notice(source_id, last_seen_at);
+CREATE INDEX IF NOT EXISTS position_notice_idx ON position(notice_id);
 CREATE INDEX IF NOT EXISTS profile_user_idx ON monitor_profile(user_id, enabled);
 CREATE INDEX IF NOT EXISTS recommendation_profile_idx ON recommendation_run(profile_id, created_at);
 """

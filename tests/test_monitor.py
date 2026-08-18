@@ -1,4 +1,5 @@
 import hashlib
+import io
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -217,6 +218,43 @@ class MonitorTests(unittest.TestCase):
                 self.assertTrue(object_file.is_file())
                 self.assertEqual(hashlib.sha256(object_file.read_bytes()).hexdigest(), row["content_sha256"])
                 self.assertEqual(db.read_evidence(row["id"]), object_file.read_bytes())
+            db.close()
+
+    def test_attachment_inside_nested_subpage_is_fetched(self):
+        with tempfile.TemporaryDirectory() as directory:
+            db = Database(Path(directory) / "aurora.db")
+            db.init_schema()
+            db.seed_regions()
+            db.upsert_policy("gov", 1, ["招聘"], [], [])
+            db.add_source({"id": "src-nested", "source_group": "jiangsu_city_recruitment", "region_code": "JS-南京", "publisher": "嵌套测试", "entry_url": "https://example.gov.cn/list", "keyword_policy_id": "gov"})
+
+            from openpyxl import Workbook
+
+            workbook = Workbook()
+            sheet = workbook.active
+            sheet.append(["单位名称", "岗位名称", "招聘人数", "学历要求"])
+            sheet.append(["测试中心", "管理岗", "1", "本科及以上"])
+            buffer = io.BytesIO()
+            workbook.save(buffer)
+            xlsx_body = buffer.getvalue()
+
+            def fake_fetch(url, allowed_domains, timeout=15, **kwargs):
+                if url.endswith("/list"):
+                    return FetchResult(url, 200, "text/html", '<a href="/notice">招聘公告</a>'.encode(), 1)
+                if url.endswith("/notice"):
+                    return FetchResult(url, 200, "text/html", '<a href="/sub/page">岗位条件简介表</a>'.encode(), 1)
+                if url.endswith("/sub/page"):
+                    return FetchResult(url, 200, "text/html", '<a href="/files/jobs.xlsx">2026年招聘岗位表.xlsx</a>'.encode(), 1)
+                return FetchResult(url, 200, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", xlsx_body, 1)
+
+            with patch("aurora_monitor.monitor.fetch", side_effect=fake_fetch):
+                stats = Monitor(db).run_once()
+            self.assertEqual(stats["detail_fetched"], 2)
+            urls = {row[0] for row in db.connection.execute("SELECT source_url FROM evidence_version")}
+            self.assertIn("https://example.gov.cn/sub/page", urls)
+            self.assertIn("https://example.gov.cn/files/jobs.xlsx", urls)
+            position = db.connection.execute("SELECT employer, position_name, education FROM position").fetchone()
+            self.assertEqual((position["employer"], position["position_name"], position["education"]), ("测试中心", "管理岗", "本科及以上"))
             db.close()
 
 

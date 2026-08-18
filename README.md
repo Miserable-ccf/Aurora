@@ -22,6 +22,14 @@ MVP 只处理用户指定的一个考试类型和一个省级范围，来源必�
 
 当前监控范围聚焦江苏省级来源、南京、无锡、徐州、常州、苏州、南通、连云港、淮安、盐城、扬州、镇江、泰州、宿迁 13 个地级市来源，以及这些城市中经过名录核验的公办大专/高职院校招聘栏目。各来源需先完成白名单登记和可访问性核验，普通学校转载不覆盖人社或人事考试官网结论。
 
+详情页附件中的 XLSX/PDF 职位表会自动结构化到 `position` 岗位表：支持双行表头、合并单元格展开、单位列续行继承，并从“其他条件”自由文本中补充学历、学位、政治面貌、应届、基层经历、性别、证书等要求；无法确认的字段标记 `unknown`，原始行内容随记录保存。含“姓名/成绩/排名”等字段的名单类表格不会被当作职位表。岗位级资格判定规则见 `aurora_monitor/eligibility.py`。
+
+专业类别匹配以《江苏省考试录用公务员专业参考目录》为准：目录数据保存在 `config/jiangsu-major-catalog.json`（含研究生/本科两个层次，并展开“专业大类序号为N的所有专业”交叉引用）。职位表要求“XX类”时，按用户学历层次查目录得出明确的 符合/不符合；目录未收录的类别回退为待核实。目录更新时重新生成：
+
+```bash
+python3 tools/build_major_catalog.py 目录.pdf --catalog-name "江苏省2026年度考试录用公务员专业参考目录" --source-url "官方PDF链接"
+```
+
 用户可以分别配置公务员、事业编和公办大专监控范围；首版数据库建议使用 SQLite WAL，后续按并发量平滑迁移 PostgreSQL。
 
 ## 监控模块试运行
@@ -67,6 +75,10 @@ python3 -m aurora_monitor --db aurora.db import-source-yaml --file config/jiangs
 python3 -m aurora_monitor --db aurora.db import-profile --file profile.json
 python3 -m aurora_monitor --db aurora.db run-once
 
+# 对已有证据回补岗位级解析（新证据在抓取时自动解析）
+python3 -m aurora_monitor --db aurora.db parse-positions
+python3 -m aurora_monitor --db aurora.db list-positions --limit 20
+
 # 完成一次抓取并立即投递通知
 python3 -m aurora_monitor --db aurora.db run-cycle
 
@@ -87,7 +99,7 @@ python3 -m aurora_monitor --db aurora.db watch --interval 600 --dispatch
 
 通知有证据门禁：详情页抓取或解析失败时只保留候选公告和失败状态，不创建用户通知；只有详情证据成功保存后才会发送通知。
 
-详情页中同域的职位表、岗位表、招聘计划、附件以及 `.pdf/.xlsx/.xls/.doc/.docx` 文件会作为同一公告的独立证据版本保存，并记录 `source_url`。
+详情页中同域的职位表、岗位表、招聘计划、附件以及 `.pdf/.xlsx/.xls/.doc/.docx` 文件会作为同一公告的独立证据版本保存，并记录 `source_url`。岗位表也可能放在嵌套子页面里（详情页只有“岗位表”入口链接）：这类链接返回网页时，子页面本身存为证据，并在其中再抓一层附件；下载网关链接（扩展名在 `fileName=` 查询参数里）也能识别。历史公告可用 `fetch-attachments --notice-id` 补抓。
 
 详情抓取失败不会永久丢失：公告记录保存 `detail_status` 和退避时间，在后续列表 unchanged 检查中自动重试，成功保存证据后再创建通知。
 
@@ -97,7 +109,7 @@ YAML 模板中的 `<待核验>` URL 不能直接启用；导入前需要替换�
 
 ## 本地网页工作台（第一版）
 
-监控数据可以通过本地网页按用户画像整理。该版本读取已有 `notice` 和 `evidence_version` 数据，先用确定性规则按地区、招考类型、年份和关键词筛选，再由可选的 OpenAI-compatible LLM 生成摘要。未配置 LLM 时仍返回规则整理结果；结果是公告级相关信息，不等同于已经通过职位资格审查。
+监控数据可以通过本地网页按用户画像整理。该版本读取已有 `notice`、`evidence_version` 和 `position` 数据，先用确定性规则按地区、招考类型、年份和关键词筛选；已结构化职位表的公告会逐岗位比对学历、学位、专业、应届、政治面貌、基层经历、证书等硬条件，给出“岗位匹配 / 待核实”结论和需核实问题，全部硬条件不符合的公告不进入推荐列表（淘汰原因保存在 `recommendation_run` 的 `excluded_positions` 中）。画像缺失对应信息时只标记待核实，不做不利推断；专业类别归属等模糊表述输出核实问题而不是强行判定。未配置 LLM 时仍返回规则整理结果，岗位结论为初步判断，不等同于已经通过招录机关资格审查。
 
 安装网页依赖：
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aurora 招考信息工作台</title>
-  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/styles.css?v=4">
 </head>
 <body>
   <header class="app-header">
@@ -85,7 +85,7 @@
 
       <section class="overview" id="overview">
         <h3>整理说明</h3>
-        <p>系统只使用详情已抓取成功的官方公告。结果是公告级相关性整理，不代表已经通过岗位资格审查。</p>
+        <p>系统只使用详情已抓取成功的官方公告。已结构化职位表的公告会给出岗位级初步判断，最终报名资格仍以招录机关审查为准。</p>
       </section>
 
       <div id="loadingState" class="state-panel" hidden>正在检索公告并整理证据...</div>
@@ -99,6 +99,12 @@
       </section>
     </section>
   </main>
-  <script src="/static/app.js" defer></script>
+  <div id="positionModal" class="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="岗位详情">
+      <button class="modal-close" id="positionModalClose" type="button" aria-label="关闭">×</button>
+      <div id="positionModalBody" class="modal-body"></div>
+    </div>
+  </div>
+  <script src="/static/app.js?v=4" defer></script>
 </body>
 </html>

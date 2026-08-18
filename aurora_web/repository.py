@@ -66,6 +66,34 @@ class WebRepository:
         ).fetchall()
         return [dict(row) for row in rows]
 
+    def positions_for_notice(self, notice_id: str) -> list[dict[str, Any]]:
+        rows = self.db.connection.execute(
+            "SELECT * FROM position WHERE notice_id = ? ORDER BY sheet_name, row_index",
+            (notice_id,),
+        ).fetchall()
+        return [dict(row) for row in rows]
+
+    def position_by_id(self, position_id: str) -> dict[str, Any] | None:
+        row = self.db.connection.execute(
+            "SELECT * FROM position WHERE id = ?", (position_id,)
+        ).fetchone()
+        return dict(row) if row else None
+
+    def notice_brief(self, notice_id: str) -> dict[str, Any] | None:
+        row = self.db.connection.execute(
+            "SELECT id, title, url FROM notice WHERE id = ?", (notice_id,)
+        ).fetchone()
+        return dict(row) if row else None
+
+    def evidence_for_notice(self, notice_id: str) -> list[dict[str, Any]]:
+        rows = self.db.connection.execute(
+            """SELECT id, source_url, content_type, parser_status, content_sha256,
+                      retrieved_at, object_path
+               FROM evidence_version WHERE notice_id = ? ORDER BY retrieved_at""",
+            (notice_id,),
+        ).fetchall()
+        return [dict(row) for row in rows]
+
     def save_recommendation_run(
         self,
         profile: UserProfile,

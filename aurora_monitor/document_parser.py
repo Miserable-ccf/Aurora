@@ -13,6 +13,7 @@ class ParsedDocument:
     rows: list[list[str]] = field(default_factory=list)
     parser_status: str = "parsed"
     warnings: list[str] = field(default_factory=list)
+    sheets: list[tuple[str, list[list[str]]]] = field(default_factory=list)
 
 
 class _TextParser(HTMLParser):
@@ -37,24 +38,64 @@ def parse_document(body: bytes, content_type: str, url: str = "", charset: str |
             import fitz  # type: ignore
         except ImportError:
             return ParsedDocument("", parser_status="needs_dependency", warnings=["PDF parsing requires PyMuPDF (fitz)"])
-        document = fitz.open(stream=body, filetype="pdf")
-        text = "\n".join(page.get_text() for page in document).strip()
+        try:
+            document = fitz.open(stream=body, filetype="pdf")
+            text = "\n".join(page.get_text() for page in document).strip()
+        except Exception as exc:
+            return ParsedDocument("", parser_status="error", warnings=[f"PDF 解析失败：{exc}"])
         return ParsedDocument(text, parser_status="parsed" if text else "empty", warnings=[] if text else ["PDF has no extractable text layer"])
-    if "spreadsheet" in normalized_type or "excel" in normalized_type or suffix.endswith((".xlsx", ".xlsm")):
+    if "spreadsheet" in normalized_type or "excel" in normalized_type or suffix.endswith((".xlsx", ".xlsm", ".xls")):
         try:
             from openpyxl import load_workbook  # type: ignore
         except ImportError:
             return ParsedDocument("", parser_status="needs_dependency", warnings=["XLSX parsing requires openpyxl"])
-        workbook = load_workbook(io.BytesIO(body), read_only=True, data_only=True)
+        try:
+            workbook = load_workbook(io.BytesIO(body), read_only=True, data_only=True)
+        except Exception as exc:
+            return _parse_xls(body, f"openpyxl 无法解析，尝试 xlrd（{exc}）")
+        sheets: list[tuple[str, list[list[str]]]] = []
         rows: list[list[str]] = []
         for sheet in workbook.worksheets:
+            sheet_rows: list[list[str]] = []
             for values in sheet.iter_rows(values_only=True):
                 row = [str(value).strip() if value is not None else "" for value in values]
                 if any(row):
-                    rows.append(row)
+                    sheet_rows.append(row)
+            if sheet_rows:
+                sheets.append((sheet.title, sheet_rows))
+                rows.extend(sheet_rows)
         text = "\n".join("\t".join(row) for row in rows)
-        return ParsedDocument(text, rows=rows)
+        return ParsedDocument(text, rows=rows, sheets=sheets)
     return ParsedDocument(body.decode("utf-8", errors="replace"), parser_status="unknown_type", warnings=[f"unsupported content type: {content_type or 'unknown'}"])
+
+
+def _parse_xls(body: bytes, note: str) -> ParsedDocument:
+    try:
+        import xlrd  # type: ignore
+    except ImportError:
+        return ParsedDocument("", parser_status="needs_dependency", warnings=["XLS parsing requires xlrd", note])
+    try:
+        book = xlrd.open_workbook(file_contents=body)
+    except Exception as exc:
+        return ParsedDocument("", parser_status="error", warnings=[f"XLS 解析失败：{exc}", note])
+    sheets: list[tuple[str, list[list[str]]]] = []
+    rows: list[list[str]] = []
+    for sheet in book.sheets():
+        sheet_rows: list[list[str]] = []
+        for row_index in range(sheet.nrows):
+            row = []
+            for value in sheet.row_values(row_index):
+                if isinstance(value, float) and value.is_integer():
+                    row.append(str(int(value)))
+                else:
+                    row.append(str(value).strip())
+            if any(row):
+                sheet_rows.append(row)
+        if sheet_rows:
+            sheets.append((sheet.name, sheet_rows))
+            rows.extend(sheet_rows)
+    text = "\n".join("\t".join(row) for row in rows)
+    return ParsedDocument(text, rows=rows, sheets=sheets, warnings=[note] if not rows else [])
 
 
 def _decode_text(body: bytes, charset: str | None = None) -> str:

@@ -13,6 +13,7 @@ from .adapters import CandidateLink, discover, is_next_page
 from .document_parser import parse_document
 from .fetcher import fetch
 from .filtering import decide, normalize_text
+from .positions import extract_positions, upsert_positions
 
 
 GROUP_TO_SCOPES = {
@@ -186,22 +187,69 @@ class Monitor:
                 (evidence_id, notice_id, result.url, digest, result.content_type, None, object_path, parsed.text, parsed.parser_status, json.dumps(parsed.warnings, ensure_ascii=False)),
             )
             conn.execute("UPDATE notice SET detail_status='fetched', detail_failures=0, next_detail_retry_at=NULL, last_seen_at=CURRENT_TIMESTAMP WHERE id=?", (notice_id,))
+        if cursor.rowcount > 0:
+            try:
+                records = extract_positions(parsed, result.url)
+                if records:
+                    upsert_positions(self.db, notice_id, evidence_id, records)
+            except Exception:
+                pass
         return digest, cursor.rowcount > 0
 
     def _fetch_attachments(self, notice_id: str, detail, allowed_domains: list[str]) -> int:
         if detail.content_type not in {"text/html", "application/xhtml+xml"}:
             return 0
         fetched = 0
+        candidates: list[CandidateLink] = []
+        seen_urls = {detail.url}
         for candidate in discover(detail, "generic_html_v1"):
-            if not _looks_like_attachment(candidate.title, candidate.url):
+            if candidate.url in seen_urls:
                 continue
-            try:
-                attachment = fetch(candidate.url, allowed_domains, timeout=self.timeout)
-                _, inserted = self._store_evidence(notice_id, attachment)
-                fetched += int(inserted)
-            except Exception:
-                continue
+            if _looks_like_attachment(candidate.title, candidate.url):
+                seen_urls.add(candidate.url)
+                candidates.append(candidate)
+        for candidate in candidates[:10]:
+            fetched += self._fetch_attachment_or_subpage(notice_id, candidate, allowed_domains)
         return fetched
+
+    def _fetch_attachment_or_subpage(self, notice_id: str, candidate: CandidateLink, allowed_domains: list[str]) -> int:
+        """抓取附件候选；若返回的是网页（岗位表入口子页面），保存证据并在其中再找一层附件。"""
+        try:
+            result = fetch(candidate.url, allowed_domains, timeout=self.timeout)
+        except Exception:
+            return 0
+        if result.content_type in {"text/html", "application/xhtml+xml"} and not _url_has_file_extension(candidate.url):
+            self._store_evidence(notice_id, result)
+            fetched = 0
+            for inner in discover(result, "generic_html_v1"):
+                if _looks_like_attachment(inner.title, inner.url):
+                    fetched += self._fetch_attachment_file(notice_id, inner.url, allowed_domains)
+            return fetched
+        _, inserted = self._store_evidence(notice_id, result)
+        return int(inserted)
+
+    def _fetch_attachment_file(self, notice_id: str, url: str, allowed_domains: list[str]) -> int:
+        try:
+            attachment = fetch(url, allowed_domains, timeout=self.timeout)
+        except Exception:
+            return 0
+        _, inserted = self._store_evidence(notice_id, attachment)
+        return int(inserted)
+
+    def fetch_attachments_for_notice(self, notice_id: str) -> int:
+        """重新抓取指定公告详情页并补抓附件，用于修复历史漏抓。"""
+        row = self.db.connection.execute(
+            """SELECT n.url, s.allowed_domains FROM notice n
+               JOIN source s ON s.id = n.source_id WHERE n.id = ?""",
+            (notice_id,),
+        ).fetchone()
+        if not row:
+            raise ValueError(f"notice not found: {notice_id}")
+        allowed_domains = _loads(row["allowed_domains"])
+        detail = fetch(row["url"], allowed_domains, timeout=self.timeout)
+        if detail.content_type not in {"text/html", "application/xhtml+xml"}:
+            return 0
+        return self._fetch_attachments(notice_id, detail, allowed_domains)
 
     def _mark_detail_failed(self, notice_id: str) -> None:
         with self.db.transaction() as conn:
@@ -272,8 +320,15 @@ def _extract_date(title: str, url: str) -> str | None:
 
 
 def _looks_like_attachment(title: str, url: str) -> bool:
-    lower_url = url.lower().split("?", 1)[0]
-    if lower_url.endswith((".pdf", ".xlsx", ".xls", ".xlsm", ".doc", ".docx")):
+    if _url_has_file_extension(url):
         return True
     normalized = normalize_text(title)
-    return any(term in normalized for term in ("职位表", "岗位表", "招聘计划", "招聘岗位", "附件", "报名表"))
+    return any(term in normalized for term in ("职位表", "岗位表", "岗位条件简介表", "简介表", "招聘计划", "招聘岗位", "附件", "报名表"))
+
+
+def _url_has_file_extension(url: str) -> bool:
+    lower_url = url.lower().split("#", 1)[0]
+    if lower_url.split("?", 1)[0].endswith((".pdf", ".xlsx", ".xls", ".xlsm", ".doc", ".docx")):
+        return True
+    # 下载网关链接的扩展名常在查询参数里，例如 download?fileName=岗位简介表.xls
+    return "?" in lower_url and bool(re.search(r"\.(pdf|xlsx|xlsm|xls|doc|docx)(?=&|$)", lower_url))

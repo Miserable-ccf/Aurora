@@ -1,13 +1,16 @@
 from __future__ import annotations
 
+import json
 import os
 from pathlib import Path
+from urllib.parse import parse_qs, quote, unquote, urlparse
 
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 
 from aurora_monitor.db import Database
+from aurora_monitor.eligibility import evaluate_position_row
 
 from .config import load_local_env
 from .models import RecommendationRequest, RecommendationResponse, UserProfile
@@ -84,6 +87,71 @@ def create_app(database_path: str | Path | None = None) -> FastAPI:
             return service.recommend(request.profile, request.save_profile)
         except ValueError as exc:
             raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+    @app.get("/api/v1/positions/{position_id}")
+    def position_detail(position_id: str, user_id: str = "local-user") -> dict:
+        row = repository.position_by_id(position_id)
+        if not row:
+            raise HTTPException(status_code=404, detail="position not found")
+        profile, _ = repository.get_profile(user_id)
+        evaluation = evaluate_position_row(row, profile)
+        position = {key: value for key, value in row.items() if key not in {"raw_row", "header_row"}}
+        for key in ("raw_row", "header_row"):
+            try:
+                position[key] = json.loads(row[key] or "[]")
+            except json.JSONDecodeError:
+                position[key] = []
+        notice = repository.notice_brief(row["notice_id"]) or {}
+        return {
+            "position": position,
+            "notice_id": row["notice_id"],
+            "evidence_id": row["evidence_id"],
+            "notice_title": notice.get("title", ""),
+            "notice_url": notice.get("url", ""),
+            "verdict": evaluation.verdict,
+            "conditions": [
+                {
+                    "field": check.field,
+                    "label": check.label,
+                    "requirement": "未列出" if check.requirement in {"", "unknown"} else check.requirement,
+                    "verdict": check.verdict,
+                    "reason": check.reason,
+                }
+                for check in evaluation.checks
+            ],
+            "questions": evaluation.questions,
+            "sources": [
+                {
+                    "evidence_id": evidence["id"],
+                    "source_url": evidence["source_url"],
+                    "content_type": evidence["content_type"] or "",
+                    "parser_status": evidence["parser_status"],
+                    "content_sha256": evidence["content_sha256"],
+                    "retrieved_at": evidence["retrieved_at"],
+                    "has_file": bool(evidence["object_path"]),
+                    "is_origin": evidence["id"] == row["evidence_id"],
+                }
+                for evidence in repository.evidence_for_notice(row["notice_id"])
+            ],
+        }
+
+    @app.get("/api/v1/evidence/{evidence_id}/file")
+    def evidence_file(evidence_id: str) -> Response:
+        evidence = database.connection.execute(
+            "SELECT object_path, content_type, source_url FROM evidence_version WHERE id = ?",
+            (evidence_id,),
+        ).fetchone()
+        if not evidence or not evidence["object_path"]:
+            raise HTTPException(status_code=404, detail="evidence file not found")
+        body = database.read_object(evidence["object_path"])
+        parsed_url = urlparse(evidence["source_url"])
+        query_filename = parse_qs(parsed_url.query).get("fileName", [""])[0]
+        filename = query_filename or unquote(parsed_url.path.split("/")[-1]) or evidence_id
+        return Response(
+            content=body,
+            media_type=evidence["content_type"] or "application/octet-stream",
+            headers={"Content-Disposition": f"inline; filename*=UTF-8''{quote(filename)}"},
+        )
 
     return app
 

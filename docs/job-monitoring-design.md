@@ -307,6 +307,8 @@ normalizer_version 标准化规则版本
 
 专业名称只做候选匹配，最终资格结论仍为 `符合 / 不符合 / 待核实`。同一职位代码在不同版本中发生变化时保留历史版本，不覆盖旧分析。
 
+当前实现：`aurora_monitor/positions.py` 负责行抽取与字段映射（`PARSER_VERSION` 记录规则版本，原始行保存在 `position.raw_row`，支持人工纠错追溯），XLSX 证据在 `_store_evidence` 入库时同步解析，历史证据可用 `parse-positions` 命令回补；`aurora_monitor/eligibility.py` 按硬条件逐项输出 `符合 / 不符合 / 待核实`，画像缺失字段一律待核实，网页工作台据此展示岗位级初核结论。
+
 ## 10. 订阅和通知
 
 用户订阅不直接保存完整画像，只保存用于监控匹配的已确认条件：

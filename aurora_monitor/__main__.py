@@ -13,10 +13,11 @@ from .notifications import NotificationDispatcher
 def main() -> int:
     parser = argparse.ArgumentParser(description="Aurora lightweight notice monitor")
     parser.add_argument("--db", default="aurora.db")
-    parser.add_argument("command", choices=["init", "run-once", "run-cycle", "watch", "dispatch-notifications", "list-notices", "list-candidates", "source-health", "validate-institutions", "import-policy", "import-sources", "import-source-yaml", "import-profile", "import-institutions"])
+    parser.add_argument("command", choices=["init", "run-once", "run-cycle", "watch", "dispatch-notifications", "list-notices", "list-candidates", "list-positions", "source-health", "validate-institutions", "import-policy", "import-sources", "import-source-yaml", "import-profile", "import-institutions", "parse-positions", "fetch-attachments"])
     parser.add_argument("--limit", type=int)
     parser.add_argument("--interval", type=int, default=60)
     parser.add_argument("--profile-id")
+    parser.add_argument("--notice-id")
     parser.add_argument("--file")
     parser.add_argument("--batch-id", default="manual")
     parser.add_argument("--provider", default="user")
@@ -53,6 +54,29 @@ def main() -> int:
         elif args.command == "source-health":
             rows = [dict(row) for row in db.list_source_health(args.limit or 100)]
             print(json.dumps(rows, ensure_ascii=False))
+        elif args.command == "parse-positions":
+            from .positions import backfill_positions
+
+            stats = backfill_positions(db, notice_id=args.notice_id, limit=args.limit)
+            print(json.dumps(stats, ensure_ascii=False))
+        elif args.command == "fetch-attachments":
+            if not args.notice_id:
+                parser.error("fetch-attachments requires --notice-id")
+            from .positions import backfill_positions
+
+            fetched = Monitor(db).fetch_attachments_for_notice(args.notice_id)
+            stats = backfill_positions(db, notice_id=args.notice_id)
+            print(json.dumps({"attachments_fetched": fetched, **stats}, ensure_ascii=False))
+        elif args.command == "list-positions":
+            rows = db.connection.execute(
+                """SELECT p.id, p.notice_id, p.position_code, p.employer, p.position_name,
+                          p.headcount, p.education, p.major_requirement, n.title AS notice_title
+                   FROM position p JOIN notice n ON n.id = p.notice_id
+                   WHERE (? IS NULL OR p.notice_id = ?)
+                   ORDER BY p.parsed_at DESC LIMIT ?""",
+                (args.notice_id, args.notice_id, args.limit or 50),
+            ).fetchall()
+            print(json.dumps([dict(row) for row in rows], ensure_ascii=False))
         elif args.command == "validate-institutions":
             if not args.file:
                 parser.error("validate-institutions requires --file")
