@@ -1,0 +1,61 @@
+# 江苏省公办大专招聘栏目来源（逐步核验登记）
+# 依据：config/jiangsu-public-colleges.csv 白名单（省教育厅 2026-03 名单，68 所）
+# entry_url 均为各校官网域名下经探测+人工抽查的招聘/人事栏目。
+
+policy:
+  keyword_policy: public_college_recruitment_jiangsu_v1
+  default_check_interval_sec: 86400
+  max_response_bytes: 20971520
+  allowed_content_types: [text/html, application/pdf, application/vnd.ms-excel,
+                          application/vnd.openxmlformats-officedocument.spreadsheetml.sheet]
+
+sources:
+  - id: js_college_czie
+    source_group: jiangsu_public_college
+    institution_id: "4132013102"
+    region: 常州
+    source_level: official
+    publisher: 常州工程职业技术学院（人事处人才招聘）
+    entry_url: "https://rsc.czie.edu.cn/24613/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_ciit
+    source_group: jiangsu_public_college
+    institution_id: "4132013101"
+    region: 常州
+    source_level: official
+    publisher: 常州工业职业技术学院（公开招聘）
+    entry_url: "http://www.ciit.edu.cn/zhaopinxinxi/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_wxic
+    source_group: jiangsu_public_college
+    institution_id: "4132012702"
+    region: 无锡
+    source_level: official
+    publisher: 无锡商业职业技术学院（人才招聘）
+    entry_url: "https://www.wxic.edu.cn/216/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jscc
+    source_group: jiangsu_public_college
+    institution_id: "4132014543"
+    region: 常州
+    source_level: official
+    publisher: 江苏城乡建设职业学院（人事处人才招聘）
+    entry_url: "http://rsc.jscc.edu.cn/29585/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_szys
+    source_group: jiangsu_public_college
+    institution_id: "3632000583"
+    region: 苏州
+    source_level: official
+    publisher: 苏州幼儿师范高等专科学校（人事处）
+    entry_url: "https://www.szys.net/zqdh/gljg/rsc1"
+    discovery_type: html_list
+    adapter: generic_html_v1
