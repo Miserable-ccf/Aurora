@@ -57,13 +57,17 @@ aurora-monitor --db aurora.db init
 python3 -m aurora_monitor --db aurora.db init
 ```
 
-导入你提供的公办大专白名单（CSV 字段见数据库设计）：
+导入公办大专白名单。仓库已内置江苏省 68 所公办专科层次高校名单
+`config/jiangsu-public-colleges.csv`（依据江苏省教育厅《江苏省普通高等学校名单》
+2026-03-05 版专科层次的省属/市县属/央企举办 68 所，已与教育部全国普通高校名单
+交叉核对；苏州工业园区职业技术学院、宿迁职业技术学院按省教育厅名单列为民办，
+未纳入白名单）：
 
 ```bash
-python3 -m aurora_monitor --db aurora.db validate-institutions --file institutions.csv
+python3 -m aurora_monitor --db aurora.db validate-institutions --file config/jiangsu-public-colleges.csv
 
 python3 -m aurora_monitor --db aurora.db import-institutions \
-  --file institutions.csv --batch-id whitelist-20260816 --provider user
+  --file config/jiangsu-public-colleges.csv --batch-id jiangsu-public-colleges-2026-08-18 --provider user
 ```
 
 导入关键词策略、来源和用户监控配置后执行一次检查：
