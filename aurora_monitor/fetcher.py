@@ -4,7 +4,8 @@ import re
 import time
 from dataclasses import dataclass
 from html.parser import HTMLParser
-from urllib.error import HTTPError
+import ssl
+from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 
@@ -81,6 +82,10 @@ def fetch(url: str, allowed_domains: list[str], timeout: int = 15, max_bytes: in
         if exc.code == 304:
             return FetchResult(url, 304, "", b"", int((time.monotonic() - started) * 1000), not_modified=True)
         raise
+    except URLError as exc:
+        if parsed.scheme != "https" or not _needs_legacy_tls_retry(exc):
+            raise
+        response_context = urlopen(request, timeout=timeout, context=_legacy_ssl_context())
     with response_context as response:
         final_host = (urlparse(response.geturl()).hostname or "").lower()
         if not host_allowed(final_host, allowed_domains):
@@ -90,6 +95,26 @@ def fetch(url: str, allowed_domains: list[str], timeout: int = 15, max_bytes: in
             raise ValueError("response exceeds size limit")
         status = getattr(response, "status", 200)
         return FetchResult(url, status, response.headers.get_content_type(), body, int((time.monotonic() - started) * 1000), response.headers.get_content_charset(), response.headers.get("ETag"), response.headers.get("Last-Modified"), status == 304)
+
+
+def _needs_legacy_tls_retry(exc: URLError) -> bool:
+    """判断是否为可用遗留密码套件重试的 TLS 握手类错误（不含证书校验失败）。"""
+    text = str(getattr(exc, "reason", exc) or exc).lower()
+    if "ssl" not in text and "tls" not in text:
+        return False
+    if "certificate verify failed" in text or "unable to get local issuer" in text:
+        return False
+    return any(token in text for token in ("handshake", "dh key too small", "alert", "wrong version number", "no protocols available", "unsupported protocol"))
+
+
+def _legacy_ssl_context() -> ssl.SSLContext:
+    """构建兼容老旧服务器的 TLS 上下文：保留证书校验，仅放宽密码套件（排除小 DH 密钥协商）。"""
+    context = ssl.create_default_context()
+    try:
+        context.set_ciphers("DEFAULT:!DHE:@SECLEVEL=0")
+    except ssl.SSLError:
+        pass
+    return context
 
 
 def extract_links(result: FetchResult) -> list[tuple[str, str]]:

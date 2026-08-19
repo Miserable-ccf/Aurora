@@ -1,4 +1,5 @@
 import unittest
+from aurora_monitor import fetcher
 from aurora_monitor.fetcher import host_allowed, FetchResult
 
 
@@ -25,3 +26,29 @@ class HostAllowedTests(unittest.TestCase):
         self.assertTrue(host_allowed("jshrss.jiangsu.gov.cn", allowed))
         self.assertFalse(host_allowed("gov.cn.evil.com", allowed))
         self.assertFalse(host_allowed("example.com", allowed))
+
+
+class LegacyTlsRetryTests(unittest.TestCase):
+    def test_handshake_failure_triggers_retry(self):
+        from urllib.error import URLError
+
+        exc = URLError("[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1007)")
+        self.assertTrue(fetcher._needs_legacy_tls_retry(exc))
+
+    def test_small_dh_key_triggers_retry(self):
+        from urllib.error import URLError
+
+        exc = URLError("[SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1007)")
+        self.assertTrue(fetcher._needs_legacy_tls_retry(exc))
+
+    def test_certificate_failure_does_not_trigger_retry(self):
+        from urllib.error import URLError
+
+        exc = URLError("[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)")
+        self.assertFalse(fetcher._needs_legacy_tls_retry(exc))
+
+    def test_non_ssl_error_does_not_trigger_retry(self):
+        from urllib.error import URLError
+
+        exc = URLError("[Errno 111] Connection refused")
+        self.assertFalse(fetcher._needs_legacy_tls_retry(exc))

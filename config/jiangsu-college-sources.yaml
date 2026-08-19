@@ -162,6 +162,7 @@ sources:
     discovery_type: html_list
     adapter: generic_html_v1
 
+  # 禁用：服务器证书链不完整（缺中间证书），校验必失败；不放宽证书校验，待校方修复后重启用
   - id: js_college_4132014256
     source_group: jiangsu_public_college
     institution_id: "4132014256"
@@ -171,6 +172,7 @@ sources:
     entry_url: "http://rsc.szitu.edu.cn"
     discovery_type: html_list
     adapter: generic_html_v1
+    enabled: false
 
   - id: js_college_4132013751
     source_group: jiangsu_public_college
@@ -289,5 +291,227 @@ sources:
     source_level: official
     publisher: 宿迁幼儿师范高等专科学校（人事管理）
     entry_url: "https://www.sqsf.cn/xxgk1/rsgl.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  # 禁用：站点被 JS 质询型 WAF 拦截（HTTP 412），纯 HTTP 抓取无法通过，待人工找到可用栏目后重启用
+  - id: js_college_jvic
+    source_group: jiangsu_public_college
+    institution_id: "4132012047"
+    region: 南京
+    source_level: official
+    publisher: 江苏经贸职业技术学院（人事处招聘信息）
+    entry_url: "https://www.jvic.edu.cn/rsc/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+    enabled: false
+
+  - id: js_college_njpi
+    source_group: jiangsu_public_college
+    institution_id: "4132012920"
+    region: 南京
+    source_level: official
+    publisher: 南京科技职业学院（通知公告）
+    entry_url: "https://www.njpi.edu.cn/tzgg/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jmi
+    source_group: jiangsu_public_college
+    institution_id: "4132012679"
+    region: 南京
+    source_level: official
+    publisher: 江苏海事职业技术学院（人事处招聘公告）
+    entry_url: "https://rs.jmi.edu.cn/786/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_ncc
+    source_group: jiangsu_public_college
+    institution_id: "4132014001"
+    region: 南京
+    source_level: official
+    publisher: 南京城市职业学院（人员招聘信息）
+    entry_url: "https://www.ncc.edu.cn/ryzpxx/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jssfjy
+    source_group: jiangsu_public_college
+    institution_id: "4132014841"
+    region: 南京
+    source_level: official
+    publisher: 江苏司法警官职业学院（招聘公告）
+    entry_url: "https://www.jssfjy.cn/type/1000212.html"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jshvc
+    source_group: jiangsu_public_college
+    institution_id: "4132014255"
+    region: 南京
+    source_level: official
+    publisher: 江苏卫生健康职业学院（人事处）
+    entry_url: "https://www.jshvc.edu.cn/rsc/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_wxstc
+    source_group: jiangsu_public_college
+    institution_id: "4132012681"
+    region: 无锡
+    source_level: official
+    publisher: 无锡科技职业学院（人事处人才招聘）
+    entry_url: "https://rsc.wxstc.cn/rczp.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jypc
+    source_group: jiangsu_public_college
+    institution_id: "4132013137"
+    region: 无锡
+    source_level: official
+    publisher: 江阴职业技术学院（官网招聘公告）
+    entry_url: "https://www.jypc.edu.cn/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_xzyz
+    source_group: jiangsu_public_college
+    institution_id: "4132014329"
+    region: 徐州
+    source_level: official
+    publisher: 徐州幼儿师范高等专科学校（人事处人才招聘）
+    entry_url: "https://zxc.xzyz.edu.cn/jsgz/rczp.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_cztgi
+    source_group: jiangsu_public_college
+    institution_id: "4132012807"
+    region: 常州
+    source_level: official
+    publisher: 常州纺织服装职业技术学院（人事处招聘公告）
+    entry_url: "https://rsc.cztgi.edu.cn/36/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_czimt
+    source_group: jiangsu_public_college
+    institution_id: "4132013114"
+    region: 常州
+    source_level: official
+    publisher: 常州机电职业技术学院（信息公开招聘公告）
+    entry_url: "https://www.czimt.edu.cn/xxgkw/5480/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_sgmart
+    source_group: jiangsu_public_college
+    institution_id: "4132010960"
+    region: 苏州
+    source_level: official
+    publisher: 苏州工艺美术职业技术学院（招聘信息）
+    entry_url: "https://td.sgmart.edu.cn/zpxx.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_szai
+    source_group: jiangsu_public_college
+    institution_id: "4132012808"
+    region: 苏州
+    source_level: official
+    publisher: 苏州农业职业技术学院（组织人事处）
+    entry_url: "https://www.szai.edu.cn/zzrsc/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1074"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_szjm
+    source_group: jiangsu_public_college
+    institution_id: "4132012685"
+    region: 苏州
+    source_level: official
+    publisher: 苏州经贸职业技术学院（人事处人才引进招聘）
+    entry_url: "https://www.szjm.edu.cn/rsc/rcyj/rczp.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_szhct
+    source_group: jiangsu_public_college
+    institution_id: "4132012688"
+    region: 苏州
+    source_level: official
+    publisher: 苏州卫生职业技术学院（人才招聘）
+    entry_url: "https://www.szhct.edu.cn/rczp.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_siso
+    source_group: jiangsu_public_college
+    institution_id: "4132014295"
+    region: 苏州
+    source_level: official
+    publisher: 苏州工业园区服务外包职业学院（业务公开最新招聘）
+    entry_url: "https://www.siso.edu.cn/ywgk/zxns.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_szit
+    source_group: jiangsu_public_college
+    institution_id: "4132011288"
+    region: 苏州
+    source_level: official
+    publisher: 沙洲职业工学院（人事处通知公告）
+    entry_url: "https://rsc.szit.edu.cn/tzgg.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jsbc
+    source_group: jiangsu_public_college
+    institution_id: "4132014475"
+    region: 南通
+    source_level: official
+    publisher: 江苏商贸职业学院（人事处人才招聘）
+    entry_url: "https://rsc.jsbc.edu.cn/rczp/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jsfpc
+    source_group: jiangsu_public_college
+    institution_id: "4132013104"
+    region: 淮安
+    source_level: official
+    publisher: 江苏食品药品职业技术学院（人事处）
+    entry_url: "https://rsc.jsfpc.edu.cn/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jsei
+    source_group: jiangsu_public_college
+    institution_id: "4132012805"
+    region: 淮安
+    source_level: official
+    publisher: 江苏电子信息职业学院（招聘信息）
+    entry_url: "https://www.jsei.edu.cn/zpxx.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jscj
+    source_group: jiangsu_public_college
+    institution_id: "4132013753"
+    region: 淮安
+    source_level: official
+    publisher: 江苏财经职业技术学院（人事处招聘公告）
+    entry_url: "https://rsc.jscj.edu.cn/1968/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jsafc
+    source_group: jiangsu_public_college
+    institution_id: "4132013103"
+    region: 镇江
+    source_level: official
+    publisher: 江苏农林职业技术学院（人事处）
+    entry_url: "https://rsc.jsafc.edu.cn/"
     discovery_type: html_list
     adapter: generic_html_v1
