@@ -515,3 +515,94 @@ sources:
     entry_url: "https://rsc.jsafc.edu.cn/"
     discovery_type: html_list
     adapter: generic_html_v1
+
+  - id: js_college_zjc
+    source_group: jiangsu_public_college
+    institution_id: "4132011051"
+    region: 镇江
+    source_level: official
+    publisher: 镇江市高等专科学校（人事处人才招聘）
+    entry_url: "https://rsc.zjc.edu.cn/list.asp?sid=1"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_tzpc
+    source_group: jiangsu_public_college
+    institution_id: "4132012106"
+    region: 泰州
+    source_level: official
+    publisher: 泰州职业技术学院（人才招聘）
+    entry_url: "https://www.tzpc.edu.cn/42/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_ntst
+    source_group: jiangsu_public_college
+    institution_id: "4132012684"
+    region: 南通
+    source_level: official
+    publisher: 南通科技职业学院（通知公告）
+    entry_url: "https://www.ntst.edu.cn/23/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_njcit
+    source_group: jiangsu_public_college
+    institution_id: "4132013112"
+    region: 南京
+    source_level: official
+    publisher: 南京信息职业技术学院（社会公告）
+    entry_url: "https://www.njcit.cn/11/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jatc
+    source_group: jiangsu_public_college
+    institution_id: "4132014568"
+    region: 镇江
+    source_level: official
+    publisher: 江苏航空职业技术学院（通知公告）
+    entry_url: "https://www.jatc.edu.cn/869/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jcet
+    source_group: jiangsu_public_college
+    institution_id: "4132010958"
+    region: 南通
+    source_level: official
+    publisher: 江苏工程职业技术学院（人事处）
+    entry_url: "https://rsc.jcet.edu.cn/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  # 以下 3 所无独立招聘列表页（列表路径 404/403 或需 JS 会话），以官网首页为入口，首页直挂招聘公告
+  - id: js_college_wxgyxy
+    source_group: jiangsu_public_college
+    institution_id: "4132013749"
+    region: 无锡
+    source_level: official
+    publisher: 无锡工艺职业技术学院（官网首页直挂招聘公告）
+    entry_url: "https://www.wxgyxy.edu.cn/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_ycpc
+    source_group: jiangsu_public_college
+    institution_id: "4132013752"
+    region: 盐城
+    source_level: official
+    publisher: 盐城工业职业技术学院（官网首页直挂招聘公告）
+    entry_url: "https://www.ycpc.edu.cn/"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jscn
+    source_group: jiangsu_public_college
+    institution_id: "4132014541"
+    region: 淮安
+    source_level: official
+    publisher: 江苏护理职业学院（官网首页直挂人才招聘）
+    entry_url: "https://www.jscn.edu.cn/"
+    discovery_type: html_list
+    adapter: generic_html_v1
