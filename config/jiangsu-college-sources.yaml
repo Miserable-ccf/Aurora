@@ -606,3 +606,23 @@ sources:
     entry_url: "https://www.jscn.edu.cn/"
     discovery_type: html_list
     adapter: generic_html_v1
+
+  - id: js_college_jssc
+    source_group: jiangsu_public_college
+    institution_id: "4132012703"
+    region: 南通
+    source_level: official
+    publisher: 江苏航运职业技术学院（人才招聘）
+    entry_url: "https://www.jssc.edu.cn/688/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
+
+  - id: js_college_jsmc
+    source_group: jiangsu_public_college
+    institution_id: "4132012682"
+    region: 盐城
+    source_level: official
+    publisher: 江苏医药职业学院（信息公开人才招聘）
+    entry_url: "https://xwgk.jsmc.edu.cn/rczp/list.htm"
+    discovery_type: html_list
+    adapter: generic_html_v1
