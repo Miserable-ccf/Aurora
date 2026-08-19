@@ -336,15 +336,18 @@ sources:
     discovery_type: html_list
     adapter: generic_html_v1
 
+  # 禁用：该站"通知公告"栏目为 DWR/JS 动态渲染，静态抓取只能拿到导航链接；
+  # DWR 接口经多种参数组合实测均返回服务端 Error，暂无法适配。该校为省属院校，招聘主要走省属事业单位统一公开招聘（已覆盖）
   - id: js_college_jssfjy
     source_group: jiangsu_public_college
     institution_id: "4132014841"
     region: 南京
     source_level: official
-    publisher: 江苏司法警官职业学院（招聘公告）
+    publisher: 江苏司法警官职业学院（通知公告）
     entry_url: "https://www.jssfjy.cn/type/1000212.html"
     discovery_type: html_list
     adapter: generic_html_v1
+    enabled: false
 
   - id: js_college_jshvc
     source_group: jiangsu_public_college
