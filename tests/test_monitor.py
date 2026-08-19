@@ -7,7 +7,7 @@ from pathlib import Path
 
 from aurora_monitor.db import Database
 from aurora_monitor.fetcher import FetchResult
-from aurora_monitor.monitor import Monitor
+from aurora_monitor.monitor import Monitor, _looks_like_subnotice
 
 
 class MonitorTests(unittest.TestCase):
@@ -260,3 +260,14 @@ class MonitorTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SubnoticeDetectionTests(unittest.TestCase):
+    def test_county_subnotice_page_matches(self):
+        url = "http://www.shuyang.gov.cn/shuyang/gsgg/202603/a7019b6cb8784b26a091804f8520a7cc.shtml"
+        self.assertTrue(_looks_like_subnotice(url))
+
+    def test_list_and_non_gov_pages_excluded(self):
+        self.assertFalse(_looks_like_subnotice("https://sqhrss.suqian.gov.cn/rlzyj/ksjdzx/index_1.shtml"))
+        self.assertFalse(_looks_like_subnotice("https://example.com/a.shtml"))
+        self.assertFalse(_looks_like_subnotice("http://www.shuyang.gov.cn/files/a.xlsx"))

@@ -46,13 +46,27 @@ class LinkParser(HTMLParser):
             self._href = None
 
 
+def host_allowed(host: str, allowed_domains: list[str]) -> bool:
+    """检查主机是否在白名单内；支持 `*.gov.cn` 通配后缀条目。"""
+    host = host.lower()
+    for item in allowed_domains:
+        entry = item.lower().strip()
+        if entry.startswith("*."):
+            if host.endswith(entry[1:]):
+                return True
+        else:
+            domain = entry.lstrip(".")
+            if host == domain or host.endswith("." + domain):
+                return True
+    return False
+
+
 def fetch(url: str, allowed_domains: list[str], timeout: int = 15, max_bytes: int = 20 * 1024 * 1024, etag: str | None = None, last_modified: str | None = None) -> FetchResult:
     parsed = urlparse(url)
     if parsed.scheme not in {"http", "https"}:
         raise ValueError("only http/https sources are allowed")
     host = (parsed.hostname or "").lower()
-    domains = {item.lower().lstrip(".") for item in allowed_domains}
-    if not any(host == domain or host.endswith("." + domain) for domain in domains):
+    if not host_allowed(host, allowed_domains):
         raise ValueError(f"host is not allowlisted: {host}")
     headers = {"User-Agent": "AuroraMonitor/0.1", "Accept": "text/html,application/pdf,application/vnd.ms-excel"}
     if etag:
@@ -69,7 +83,7 @@ def fetch(url: str, allowed_domains: list[str], timeout: int = 15, max_bytes: in
         raise
     with response_context as response:
         final_host = (urlparse(response.geturl()).hostname or "").lower()
-        if not any(final_host == domain or final_host.endswith("." + domain) for domain in domains):
+        if not host_allowed(final_host, allowed_domains):
             raise ValueError(f"redirect target is not allowlisted: {final_host}")
         body = response.read(max_bytes + 1)
         if len(body) > max_bytes:

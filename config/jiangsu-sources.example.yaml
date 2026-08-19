@@ -154,6 +154,8 @@ sources:
     source_level: official
     publisher: 宿迁市人社/人事考试部门
     entry_url: "https://sqhrss.suqian.gov.cn/rlzyj/ksjdzx/index_1.shtml"
+    # 市级统一公告会挂各县区政府网站的子公告链接，需通配放行 *.gov.cn
+    allowed_domains: ["sqhrss.suqian.gov.cn", "*.gov.cn"]
     discovery_type: html_list
     adapter: generic_html_v1
 

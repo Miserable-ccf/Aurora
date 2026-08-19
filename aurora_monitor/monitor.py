@@ -201,6 +201,7 @@ class Monitor:
             return 0
         fetched = 0
         candidates: list[CandidateLink] = []
+        subnotices: list[CandidateLink] = []
         seen_urls = {detail.url}
         for candidate in discover(detail, "generic_html_v1"):
             if candidate.url in seen_urls:
@@ -208,7 +209,13 @@ class Monitor:
             if _looks_like_attachment(candidate.title, candidate.url):
                 seen_urls.add(candidate.url)
                 candidates.append(candidate)
+            elif _looks_like_subnotice(candidate.url):
+                seen_urls.add(candidate.url)
+                subnotices.append(candidate)
         for candidate in candidates[:10]:
+            fetched += self._fetch_attachment_or_subpage(notice_id, candidate, allowed_domains)
+        # 嵌套子公告页面（如市级统一公告挂各县区公告链接）：跟进一层并在其中挖附件。
+        for candidate in subnotices[:10]:
             fetched += self._fetch_attachment_or_subpage(notice_id, candidate, allowed_domains)
         return fetched
 
@@ -317,6 +324,19 @@ def _extract_date(title: str, url: str) -> str | None:
     if not 1 <= month <= 12 or not 1 <= day <= 31:
         return None
     return f"{year:04d}-{month:02d}-{day:02d}"
+
+
+def _looks_like_subnotice(url: str) -> bool:
+    """官方子公告页：gov.cn 域名下以 .shtml/.html/.htm 结尾的页面（排除栏目列表页）。"""
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").lower()
+    if not host.endswith(".gov.cn"):
+        return False
+    path = parsed.path.lower()
+    if not path.endswith((".shtml", ".html", ".htm")):
+        return False
+    name = path.rsplit("/", 1)[-1]
+    return not name.startswith(("index", "default"))
 
 
 def _looks_like_attachment(title: str, url: str) -> bool:
