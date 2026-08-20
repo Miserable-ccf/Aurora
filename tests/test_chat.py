@@ -5,7 +5,14 @@ from pathlib import Path
 from unittest.mock import patch
 
 from aurora_monitor.db import Database
-from aurora_web.chat import ChatOrchestrator, normalize_patch, validate_recommendations
+from aurora_web.chat import (
+    FOLLOWUP_GUIDANCE,
+    ChatOrchestrator,
+    _extract_position_ref,
+    _to_ordinal,
+    normalize_patch,
+    validate_recommendations,
+)
 from aurora_web.llm import LLMResult
 from aurora_web.repository import WebRepository
 
@@ -23,16 +30,24 @@ class _DisabledLLM:
 
 
 class _FakeLLM:
-    def __init__(self, extracts=None, selection=None):
+    def __init__(self, extracts=None, selection=None, followups=None, answer=None):
         self.enabled = True
         self.model = "fake-model"
         self.extracts = extracts or []
         self.selection = selection
+        self.followups = followups or []
+        self.answer = answer
         self.calls = []
 
     def chat(self, system, payload, temperature=0.1):
         self.calls.append(("chat", payload.get("task", "")[:12]))
-        if payload.get("task", "").startswith("判断用户"):
+        task = payload.get("task", "")
+        if task.startswith("判断用户在岗位推荐完成后"):
+            if self.followups:
+                content = json.dumps(self.followups.pop(0), ensure_ascii=False)
+                return LLMResult({"_message": {"content": content}}, True, self.model)
+            return LLMResult({"_message": {"content": '{"intent": "general", "position_ref": null}'}}, True, self.model)
+        if task.startswith("判断用户"):
             return LLMResult({"_message": {"content": '{"intent": "confirm"}'}}, True, self.model)
         if self.extracts:
             content = json.dumps({"extracted": self.extracts.pop(0)}, ensure_ascii=False)
@@ -41,6 +56,10 @@ class _FakeLLM:
 
     def chat_with_tools(self, system, payload, tools, executor, max_rounds=4):
         self.calls.append(("chat_with_tools", len(tools)))
+        if str(payload.get("task", "")).startswith("用户在岗位推荐完成后提出追问"):
+            if self.answer is None:
+                return LLMResult({}, False, self.model, "no answer configured")
+            return LLMResult({"answer": self.answer}, True, self.model)
         if self.selection is None:
             return LLMResult({}, False, self.model, "no selection configured")
         return LLMResult(self.selection, True, self.model)
@@ -145,7 +164,8 @@ class OrchestratorFlowTests(unittest.TestCase):
         self.assertEqual(cards[0]["position_id"], "p1")
 
         fourth = orchestrator.handle("还有吗", session_id=first["session_id"])
-        self.assertIn("追问模式暂未开放", fourth["reply"])
+        self.assertEqual(fourth["stage"], "followup")
+        self.assertIn("暂无更多", fourth["reply"])
 
     def test_slot_filling_requires_all_fields(self):
         orchestrator = ChatOrchestrator(self.repository, llm=_DisabledLLM(), service=_StubService([]))
@@ -190,3 +210,141 @@ class OrchestratorFlowTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def _row(position_id, name, verdict="eligible", score=100):
+    return {"position_id": position_id, "position_code": position_id, "employer": "测试学院", "position_name": name,
+            "work_location": "南京", "headcount": "1", "education": "硕士研究生", "degree": "硕士",
+            "major_requirement": "计算机类", "verdict": verdict, "score": score, "notice_id": "n1",
+            "notice_title": "2026年公开招聘公告", "notice_url": "https://example.gov.cn/n1",
+            "published_at": "2026-01-01", "match_reasons": ["地区范围匹配"], "questions": ["核对专业方向"]}
+
+
+class FollowupHelpersTests(unittest.TestCase):
+    def test_position_ref_parsing(self):
+        self.assertEqual(_extract_position_ref("第一个岗位的详情"), 1)
+        self.assertEqual(_extract_position_ref("岗位2的要求"), 2)
+        self.assertEqual(_extract_position_ref("3号具体什么情况"), 3)
+        self.assertEqual(_extract_position_ref("第 三个"), 3)
+        self.assertIsNone(_extract_position_ref("还有更多吗"))
+        self.assertEqual(_to_ordinal("2"), 2)
+        self.assertEqual(_to_ordinal("三"), 3)
+        self.assertIsNone(_to_ordinal(5))
+        self.assertIsNone(_to_ordinal(None))
+
+
+def _flow_to_done(orchestrator):
+    first = orchestrator.handle("", profile_patch={
+        "exam_types": ["事业编"], "education": "硕士研究生", "degree": "硕士",
+        "major": "计算机科学与技术", "region_codes": ["南京"],
+    })
+    second = orchestrator.handle("确认", session_id=first["session_id"])
+    assert second["stage"] == "done"
+    return second
+
+
+class FollowupFlowTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.db = Database(Path(self.tmp.name) / "chat.db")
+        self.db.init_schema()
+        self.db.seed_regions()
+        self.repository = WebRepository(self.db)
+        self.db.upsert_policy("p", 1, ["招聘"], [], [])
+        self.db.add_source({
+            "id": "s", "source_group": "test", "region_code": "JS-南京",
+            "publisher": "测试来源", "entry_url": "https://example.gov.cn/list",
+            "keyword_policy_id": "p",
+        })
+        with self.db.transaction() as conn:
+            conn.execute(
+                """INSERT INTO notice(id, source_id, title, normalized_title, url,
+                   published_at, decision, matched_terms, detail_status)
+                   VALUES ('n1', 's', '2026年公开招聘公告', '招聘', 'https://example.gov.cn/n1',
+                   '2026-01-01', 'candidate', '["招聘"]', 'fetched')"""
+            )
+            conn.execute(
+                """INSERT INTO evidence_version(id, notice_id, source_url, content_sha256, parser_status)
+                   VALUES ('e1', 'n1', 'https://example.gov.cn/a.xlsx', ?, 'parsed')""",
+                ("a" * 64,),
+            )
+            for row_index, (position_id, position_name) in enumerate((("p1", "专任教师"), ("p2", "辅导员"), ("p3", "实验员")), start=1):
+                conn.execute(
+                    """INSERT INTO position(id, notice_id, evidence_id, sheet_name, row_index,
+                       position_code, employer, position_name, education, degree, major_requirement)
+                       VALUES (?, 'n1', 'e1', 'Sheet1', ?, '01', '测试学院', ?, '硕士研究生', '硕士', '计算机类')""",
+                    (position_id, row_index, position_name),
+                )
+
+    def tearDown(self):
+        self.db.close()
+        self.tmp.cleanup()
+
+    def _orchestrator(self, llm, rows):
+        return ChatOrchestrator(self.repository, llm=llm, service=_StubService(rows))
+
+    def test_detail_by_ordinal_in_rule_mode(self):
+        orchestrator = self._orchestrator(_DisabledLLM(), _rows())
+        done = _flow_to_done(orchestrator)
+        first_id = done["recommendations"]["cards"][0]["position_id"]
+        reply = orchestrator.handle("第一个岗位的详情", session_id=done["session_id"])
+        self.assertEqual(reply["stage"], "followup")
+        self.assertIn("专任教师", reply["reply"])
+        self.assertIn("来源公告", reply["reply"])
+        self.assertIn("逐条核验", reply["reply"])
+        self.assertEqual(first_id, "p1")
+
+    def test_detail_without_ordinal_asks_clarification(self):
+        orchestrator = self._orchestrator(_DisabledLLM(), _rows())
+        done = _flow_to_done(orchestrator)
+        reply = orchestrator.handle("详情", session_id=done["session_id"])
+        self.assertIn("第几个", reply["reply"])
+
+    def test_more_positions_paginates_and_exhausts(self):
+        rows = [_row("p1", "岗位一"), _row("p2", "岗位二"), _row("p3", "岗位三"), _row("p4", "岗位四"), _row("p5", "岗位五")]
+        orchestrator = self._orchestrator(_DisabledLLM(), rows)
+        done = _flow_to_done(orchestrator)
+        shown = {card["position_id"] for card in done["recommendations"]["cards"]}
+        self.assertEqual(len(shown), 3)
+
+        more = orchestrator.handle("还有更多岗位吗", session_id=done["session_id"])
+        self.assertEqual(more["stage"], "followup")
+        new_cards = more["recommendations"]["cards"]
+        self.assertEqual(len(new_cards), 2)
+        self.assertFalse(shown & {card["position_id"] for card in new_cards})
+
+        exhausted = orchestrator.handle("还有吗", session_id=done["session_id"])
+        self.assertIn("暂无更多", exhausted["reply"])
+
+    def test_modify_profile_recommends_again_with_llm(self):
+        llm = _FakeLLM(
+            extracts=[{"region_codes": ["JS"]}],
+            followups=[{"intent": "modify_profile", "position_ref": None}],
+        )
+        orchestrator = self._orchestrator(llm, _rows())
+        done = _flow_to_done(orchestrator)
+        reply = orchestrator.handle("地区改成江苏全省", session_id=done["session_id"])
+        self.assertEqual(reply["stage"], "followup")
+        self.assertIn("已按新条件重新推荐", reply["reply"])
+        self.assertEqual(reply["profile_draft"]["region_codes"], ["JS"])
+        self.assertIn("recommendations", reply)
+
+    def test_modify_without_llm_explains_limitation(self):
+        orchestrator = self._orchestrator(_DisabledLLM(), _rows())
+        done = _flow_to_done(orchestrator)
+        reply = orchestrator.handle("重新改一下地区", session_id=done["session_id"])
+        self.assertIn("未启用 LLM", reply["reply"])
+
+    def test_general_question_with_llm_answer(self):
+        llm = _FakeLLM(followups=[{"intent": "general", "position_ref": None}], answer="事业编与公务员的编制性质不同，请以公告为准。")
+        orchestrator = self._orchestrator(llm, _rows())
+        done = _flow_to_done(orchestrator)
+        reply = orchestrator.handle("事业编和公务员有什么区别", session_id=done["session_id"])
+        self.assertEqual(reply["stage"], "followup")
+        self.assertIn("编制性质不同", reply["reply"])
+
+    def test_general_question_without_llm_gives_guidance(self):
+        orchestrator = self._orchestrator(_DisabledLLM(), _rows())
+        done = _flow_to_done(orchestrator)
+        reply = orchestrator.handle("事业编和公务员有什么区别", session_id=done["session_id"])
+        self.assertEqual(reply["reply"], FOLLOWUP_GUIDANCE)

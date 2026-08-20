@@ -81,7 +81,7 @@ class ChatToolbox:
             return {"error": "position not found"}
         notice = self.repository.notice_brief(row["notice_id"]) or {}
         fields = {
-            key: row.get(key)
+            key: _show(row.get(key))
             for key in (
                 "id", "position_code", "employer", "position_name", "work_location", "headcount",
                 "education", "degree", "major_requirement", "fresh_graduate_requirement",
@@ -89,6 +89,8 @@ class ChatToolbox:
                 "gender_requirement", "household_requirement", "other_requirements",
             )
         }
+        if not fields.get("employer"):
+            fields["employer"] = _show(notice.get("publisher"))
         return {
             "position": fields,
             "notice_id": row["notice_id"],
@@ -184,3 +186,9 @@ def _profile_view(profile: UserProfile) -> dict[str, Any]:
 
 def dumps(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False)
+
+
+def _show(value: Any) -> str:
+    """把职位表里的占位空值（unknown/None）统一成空字符串。"""
+    text = str(value or "").strip()
+    return "" if text in {"unknown", "None"} else text

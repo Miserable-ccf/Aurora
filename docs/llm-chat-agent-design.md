@@ -140,14 +140,14 @@ P6 输出：3 张推荐卡片（岗位、单位、地区、招录人数、匹配
 
 1. 供应商是否支持原生 tools 协议未知 → 已设计 JSON 模拟降级；
 2. 岗位表未解析的公告（detail 未抓取/附件加密）无法岗位级核验，只能公告级推荐，卡片需标注"岗位表待解析"；
-3. 追问模式（改地区/换类型）放二期，一期确认画像后如需修改重新走确认（**用户已确认一期不做**）；
+3. 追问模式（改地区/换类型）：已在二期落地（见第 15 节）；
 4. LLM 成本：每次推荐约 2-4 次模型调用（抽取 1 次/轮 + 理由 1 次 + 可选复检 1 次），建议 temperature 0、上下文裁剪（候选只传前 8 名的结构化字段）。
 
 ## 14. 决策记录与实现状态
 
 - 供应商候选：gpt5.6 / qwen3.8 / deepseek（均为 OpenAI 兼容接口），由用户在环境变量
   `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL_NAME` 中手动填写；未配置时全链路降级为规则模式。
-- 追问模式：一期不做（已确认）。
+- 追问模式：一期不做（已确认）；二期已实现（2026-08）。
 - 一期实现落地：
   - `aurora_web/chat_tools.py`：5 个工具函数 + OpenAI function schema；
   - `aurora_web/chat.py`：ChatOrchestrator 状态机（slot_filling → confirm → done）、
@@ -156,3 +156,23 @@ P6 输出：3 张推荐卡片（岗位、单位、地区、招录人数、匹配
   - `aurora_web/recommendation.py`：新增 `recommend_positions` 岗位级检索入口；
   - `POST /api/v1/chat` 端点 + 独立对话页 `/static/chat.html`；
   - tests/test_chat.py：8 个用例覆盖规范化/终检/状态机/LLM 路径（fake client）。
+
+## 15. 追问模式（二期，已实现）
+
+状态机扩展为 `slot_filling → confirm → done ⇄ followup`：推荐完成后用户可继续追问，
+会话上下文（已推荐岗位 id、卡片摘要、已展示岗位集合）持久化在 `chat_session.context_json`。
+
+**意图分类**：LLM 优先（输出 `{"intent", "position_ref"}`），失败或未配置时按规则降级
+（序数正则"第 N 个/岗位 N/N 号" → 详情；更多/还有 → 翻页；修改类关键词 → 改画像；其余 → 一般问答）。
+
+四类意图处理（检索与核验始终走规则代码，LLM 只做分类/解释）：
+
+| 意图 | 处理 | 输出 |
+| --- | --- | --- |
+| position_detail | 按序数定位岗位 → `get_position_detail` + `check_eligibility` | 岗位字段 + 逐条核验（√/?/×）+ 来源公告链接 |
+| more_positions | 重新检索（确定性排序），排除已展示岗位取下一批 3 个 | 新卡片 + 累计展示计数，候选耗尽时提示放宽条件 |
+| modify_profile | LLM 抽取变更字段（changes_only：只输出变更字段的完整新值）→ 合并画像 → 重新推荐 | 新画像摘要 + 新推荐卡片；缺字段则回 slot_filling |
+| general | LLM tools 循环（get_position_detail / check_eligibility），输出 `{"answer": ...}` | 文本回答；失败时给出追问引导 |
+
+防幻觉约束不变：详情/核验全部来自工具返回；不出现"一定可以报考"表述；
+未配置 LLM 时详情/翻页仍可用（规则路径），改画像与一般问答给出明确引导。

@@ -81,7 +81,10 @@ class WebRepository:
 
     def notice_brief(self, notice_id: str) -> dict[str, Any] | None:
         row = self.db.connection.execute(
-            "SELECT id, title, url FROM notice WHERE id = ?", (notice_id,)
+            """SELECT n.id, n.title, n.url, s.publisher
+               FROM notice n LEFT JOIN source s ON s.id = n.source_id
+               WHERE n.id = ?""",
+            (notice_id,),
         ).fetchone()
         return dict(row) if row else None
 
