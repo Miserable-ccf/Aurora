@@ -1,10 +1,10 @@
-"""重新解析历史证据中的二进制附件，修复 extracted_text 乱码。
+"""重新解析历史证据中的二进制附件，修复 extracted_text 乱码与漏解析。
 
 用法：python3 tools/repair_evidence_text.py --db aurora.db [--dry-run]
 
-针对 parser_status 为 unknown_type/error 或 extracted_text 以 ZIP 魔数开头的证据，
-从对象存储读取原始字节，用修复后的 document_parser 重新解析并回写；
-若新解析出表格行，则幂等地补跑岗位提取。
+针对 parser_status 为 unknown_type/error/unsupported_format/needs_dependency/binary_skipped
+或 extracted_text 以 ZIP 魔数开头的证据，从对象存储读取原始字节，
+用当前 document_parser 重新解析并回写；若新解析出表格行，则幂等地补跑岗位提取。
 """
 from __future__ import annotations
 
@@ -31,7 +31,8 @@ def main() -> int:
     rows = conn.execute(
         """SELECT id, notice_id, source_url, content_type, object_path, parser_status
            FROM evidence_version
-           WHERE parser_status IN ('unknown_type', 'error') OR extracted_text LIKE 'PK%'"""
+           WHERE parser_status IN ('unknown_type', 'error', 'unsupported_format', 'needs_dependency', 'binary_skipped')
+              OR extracted_text LIKE 'PK%'"""
     ).fetchall()
 
     stats = {"scanned": len(rows), "repaired": 0, "still_unsupported": 0, "positions_added": 0}

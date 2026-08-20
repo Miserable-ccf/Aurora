@@ -11,6 +11,7 @@ from urllib.parse import urlparse
 ZIP_MAGIC = b"PK\x03\x04"
 PDF_MAGIC = b"%PDF"
 OLE2_MAGIC = b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+RAR_MAGIC = b"Rar!\x1a\x07"
 
 
 @dataclass(frozen=True)
@@ -54,6 +55,8 @@ def parse_document(body: bytes, content_type: str, url: str = "", charset: str |
         return _parse_zip_container(body, content_type)
     if body.startswith(OLE2_MAGIC):
         return _parse_ole2(body)
+    if body.startswith(RAR_MAGIC):
+        return ParsedDocument("", parser_status="unsupported_format", warnings=["RAR 压缩包无法在线解包，请下载附件人工查看"])
     if _looks_binary(body):
         return ParsedDocument("", parser_status="binary_skipped", warnings=[f"二进制附件未解析为文本: {content_type or 'unknown'}"])
     return ParsedDocument(body.decode("utf-8", errors="replace"), parser_status="unknown_type", warnings=[f"unsupported content type: {content_type or 'unknown'}"])
@@ -121,14 +124,112 @@ def _parse_zip_container(body: bytes, content_type: str) -> ParsedDocument:
     word = _parse_docx(body)
     if word.parser_status in {"parsed", "empty"} and word.text:
         return ParsedDocument(word.text, parser_status=word.parser_status, warnings=[f"按魔数识别为 DOCX（声明类型: {content_type or 'unknown'}）"])
+    nested = _parse_zip_entries(body)
+    if nested:
+        return nested
     return ParsedDocument("", parser_status="unsupported_format", warnings=[f"ZIP 容器无法解析为 xlsx/docx（声明类型: {content_type or 'unknown'}）"])
+
+
+def _parse_zip_entries(body: bytes) -> ParsedDocument | None:
+    """ZIP 容器本身不是 xlsx/docx 时，逐个尝试包内的文档文件（岗位表常在包内）。"""
+    try:
+        archive = zipfile.ZipFile(io.BytesIO(body))
+    except Exception:
+        return None
+    best: ParsedDocument | None = None
+    texts: list[str] = []
+    for name in archive.namelist():
+        lower = name.lower()
+        if not lower.endswith((".xlsx", ".xlsm", ".xls", ".docx", ".doc", ".txt", ".csv")):
+            continue
+        if any(part.startswith("__MACOSX") or part.startswith(".") for part in name.split("/")):
+            continue
+        try:
+            entry_body = archive.read(name)
+        except Exception:
+            continue
+        parsed = parse_document(entry_body, "", name)
+        if parsed.parser_status not in {"parsed", "empty"} or not (parsed.rows or parsed.text):
+            continue
+        if parsed.rows and (best is None or not best.rows):
+            best = ParsedDocument(parsed.text, rows=parsed.rows, sheets=parsed.sheets, warnings=[f"解析自 ZIP 包内文件: {name}"])
+        elif parsed.text:
+            texts.append(f"[{name}]\n{parsed.text}")
+    if best is not None:
+        return best
+    if texts:
+        return ParsedDocument("\n\n".join(texts), warnings=["解析自 ZIP 包内文本文件"])
+    return None
 
 
 def _parse_ole2(body: bytes) -> ParsedDocument:
     spreadsheet = _parse_xls(body)
     if spreadsheet.parser_status in {"parsed", "empty"} and (spreadsheet.rows or spreadsheet.text):
         return ParsedDocument(spreadsheet.text, rows=spreadsheet.rows, sheets=spreadsheet.sheets, parser_status=spreadsheet.parser_status, warnings=["按魔数识别为 OLE2 复合文档（xls）"] + spreadsheet.warnings)
-    return ParsedDocument("", parser_status="unsupported_format", warnings=["OLE2 复合文档（旧版 .doc/.xls）暂不支持文本提取，请下载附件查看"])
+    word = _parse_doc(body, note="按魔数识别为 OLE2 复合文档（doc）")
+    if word.parser_status in {"parsed", "empty"} and word.text:
+        return word
+    return ParsedDocument("", parser_status="unsupported_format", warnings=["OLE2 复合文档无法解析为 xls/doc，请下载附件查看"])
+
+
+def _parse_doc(body: bytes, note: str = "") -> ParsedDocument:
+    """提取旧版 Word（.doc）二进制文本：通过 FIB 定位 Clx/piece table。"""
+    try:
+        import olefile  # type: ignore
+    except ImportError:
+        return ParsedDocument("", parser_status="needs_dependency", warnings=["DOC parsing requires olefile", note])
+    try:
+        archive = olefile.OleFileIO(io.BytesIO(body))
+        word_stream = archive.openstream("WordDocument").read()
+        flags = int.from_bytes(word_stream[0x000A:0x000C], "little")
+        table_name = "1Table" if flags & 0x0200 else "0Table"
+        table_stream = archive.openstream(table_name).read()
+        fc_clx = int.from_bytes(word_stream[0x01A2:0x01A6], "little")
+        lcb_clx = int.from_bytes(word_stream[0x01A6:0x01AA], "little")
+        text = _extract_doc_text(word_stream, table_stream[fc_clx:fc_clx + lcb_clx])
+    except Exception as exc:
+        return ParsedDocument("", parser_status="error", warnings=[f"DOC 解析失败：{exc}", note])
+    text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", text)
+    text = re.sub(r"\r+", "\n", text)
+    text = "\n".join(line.strip() for line in text.splitlines() if line.strip())
+    if not text:
+        return ParsedDocument("", parser_status="empty", warnings=["DOC 无可提取文本", note])
+    return ParsedDocument(text, warnings=[note] if note else [])
+
+
+def _extract_doc_text(word_stream: bytes, clx: bytes) -> str:
+    """按 piece table（PlcPcd）拼接 WordDocument 流中的文本块。"""
+    index = 0
+    plc_pcd: bytes | None = None
+    while index < len(clx):
+        block_type = clx[index]
+        if block_type == 0x01:
+            size = int.from_bytes(clx[index + 1:index + 3], "little")
+            index += 3 + size
+        elif block_type == 0x02:
+            size = int.from_bytes(clx[index + 1:index + 5], "little")
+            plc_pcd = clx[index + 5:index + 5 + size]
+            break
+        else:
+            raise ValueError(f"未知 Clx 块类型: {block_type}")
+    if plc_pcd is None or len(plc_pcd) < 12:
+        raise ValueError("缺少 piece table")
+    piece_count = (len(plc_pcd) - 4) // 12
+    offsets = [int.from_bytes(plc_pcd[i * 4:i * 4 + 4], "little") for i in range(piece_count + 1)]
+    parts: list[str] = []
+    for piece_index in range(piece_count):
+        pcd = plc_pcd[4 * (piece_count + 1) + piece_index * 8:4 * (piece_count + 1) + (piece_index + 1) * 8]
+        fc_raw = int.from_bytes(pcd[2:6], "little")
+        length = offsets[piece_index + 1] - offsets[piece_index]
+        if length <= 0:
+            continue
+        if fc_raw & 0x40000000:
+            start = (fc_raw & 0x3FFFFFFF) // 2
+            parts.append(word_stream[start:start + length].decode("cp1252", errors="replace"))
+        else:
+            start = fc_raw & 0x3FFFFFFF
+            parts.append(word_stream[start:start + length * 2].decode("utf-16-le", errors="replace"))
+    return "".join(parts)
 
 
 def _looks_binary(body: bytes) -> bool:

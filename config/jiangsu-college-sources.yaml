@@ -384,8 +384,9 @@ sources:
     institution_id: "4132014329"
     region: 徐州
     source_level: official
-    publisher: 徐州幼儿师范高等专科学校（人事处人才招聘）
-    entry_url: "https://zxc.xzyz.edu.cn/jsgz/rczp.htm"
+    publisher: 徐州幼儿师范高等专科学校（人事网招聘信息）
+    # 原栏目 /jsgz/rczp.htm 只含2019-2021旧公告；2026年招聘公告实际发在"招聘信息"栏目（column 1053）
+    entry_url: "https://zxc.xzyz.edu.cn/zpxx.htm"
     discovery_type: html_list
     adapter: generic_html_v1
 

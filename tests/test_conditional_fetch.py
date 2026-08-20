@@ -52,3 +52,11 @@ class LegacyTlsRetryTests(unittest.TestCase):
 
         exc = URLError("[Errno 111] Connection refused")
         self.assertFalse(fetcher._needs_legacy_tls_retry(exc))
+
+    def test_referer_header_is_set_when_provided(self):
+        request = fetcher._build_request("https://example.edu.cn/download.jsp", referer="https://example.edu.cn/notice.htm")
+        self.assertEqual(request.get_header("Referer"), "https://example.edu.cn/notice.htm")
+
+    def test_referer_header_absent_by_default(self):
+        request = fetcher._build_request("https://example.edu.cn/download.jsp")
+        self.assertIsNone(request.get_header("Referer"))

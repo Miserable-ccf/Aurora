@@ -62,19 +62,25 @@ def host_allowed(host: str, allowed_domains: list[str]) -> bool:
     return False
 
 
-def fetch(url: str, allowed_domains: list[str], timeout: int = 15, max_bytes: int = 20 * 1024 * 1024, etag: str | None = None, last_modified: str | None = None) -> FetchResult:
+def _build_request(url: str, etag: str | None = None, last_modified: str | None = None, referer: str | None = None) -> Request:
+    headers = {"User-Agent": "AuroraMonitor/0.1", "Accept": "text/html,application/pdf,application/vnd.ms-excel"}
+    if etag:
+        headers["If-None-Match"] = etag
+    if last_modified:
+        headers["If-Modified-Since"] = last_modified
+    if referer:
+        headers["Referer"] = referer
+    return Request(url, headers=headers)
+
+
+def fetch(url: str, allowed_domains: list[str], timeout: int = 15, max_bytes: int = 20 * 1024 * 1024, etag: str | None = None, last_modified: str | None = None, referer: str | None = None) -> FetchResult:
     parsed = urlparse(url)
     if parsed.scheme not in {"http", "https"}:
         raise ValueError("only http/https sources are allowed")
     host = (parsed.hostname or "").lower()
     if not host_allowed(host, allowed_domains):
         raise ValueError(f"host is not allowlisted: {host}")
-    headers = {"User-Agent": "AuroraMonitor/0.1", "Accept": "text/html,application/pdf,application/vnd.ms-excel"}
-    if etag:
-        headers["If-None-Match"] = etag
-    if last_modified:
-        headers["If-Modified-Since"] = last_modified
-    request = Request(url, headers=headers)
+    request = _build_request(url, etag, last_modified, referer)
     started = time.monotonic()
     try:
         response_context = urlopen(request, timeout=timeout)

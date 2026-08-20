@@ -213,16 +213,20 @@ class Monitor:
                 seen_urls.add(candidate.url)
                 subnotices.append(candidate)
         for candidate in candidates[:10]:
-            fetched += self._fetch_attachment_or_subpage(notice_id, candidate, allowed_domains)
+            fetched += self._fetch_attachment_or_subpage(notice_id, candidate, allowed_domains, referer=detail.url)
         # 嵌套子公告页面（如市级统一公告挂各县区公告链接）：跟进一层并在其中挖附件。
         for candidate in subnotices[:10]:
-            fetched += self._fetch_attachment_or_subpage(notice_id, candidate, allowed_domains)
+            fetched += self._fetch_attachment_or_subpage(notice_id, candidate, allowed_domains, referer=detail.url)
         return fetched
 
-    def _fetch_attachment_or_subpage(self, notice_id: str, candidate: CandidateLink, allowed_domains: list[str]) -> int:
-        """抓取附件候选；若返回的是网页（岗位表入口子页面），保存证据并在其中再找一层附件。"""
+    def _fetch_attachment_or_subpage(self, notice_id: str, candidate: CandidateLink, allowed_domains: list[str], referer: str | None = None) -> int:
+        """抓取附件候选；若返回的是网页（岗位表入口子页面），保存证据并在其中再找一层附件。
+
+        部分 CMS（如万博 download.jsp）对附件下载做防盗链校验，缺少 Referer 会返回
+        验证页/空白页，因此统一携带来源公告页 URL 作为 Referer。
+        """
         try:
-            result = fetch(candidate.url, allowed_domains, timeout=self.timeout)
+            result = fetch(candidate.url, allowed_domains, timeout=self.timeout, referer=referer)
         except Exception:
             return 0
         if result.content_type in {"text/html", "application/xhtml+xml"} and not _url_has_file_extension(candidate.url):
@@ -230,14 +234,14 @@ class Monitor:
             fetched = 0
             for inner in discover(result, "generic_html_v1"):
                 if _looks_like_attachment(inner.title, inner.url):
-                    fetched += self._fetch_attachment_file(notice_id, inner.url, allowed_domains)
+                    fetched += self._fetch_attachment_file(notice_id, inner.url, allowed_domains, referer=result.url)
             return fetched
         _, inserted = self._store_evidence(notice_id, result)
         return int(inserted)
 
-    def _fetch_attachment_file(self, notice_id: str, url: str, allowed_domains: list[str]) -> int:
+    def _fetch_attachment_file(self, notice_id: str, url: str, allowed_domains: list[str], referer: str | None = None) -> int:
         try:
-            attachment = fetch(url, allowed_domains, timeout=self.timeout)
+            attachment = fetch(url, allowed_domains, timeout=self.timeout, referer=referer)
         except Exception:
             return 0
         _, inserted = self._store_evidence(notice_id, attachment)
