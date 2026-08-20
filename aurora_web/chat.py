@@ -108,6 +108,16 @@ class ChatSessionStore:
                 ),
             )
 
+    def messages(self, session_id: str) -> list[dict[str, Any]]:
+        rows = self.db.connection.execute(
+            "SELECT role, content, meta_json FROM chat_message WHERE session_id=? ORDER BY id",
+            (session_id,),
+        ).fetchall()
+        return [
+            {"role": row["role"], "content": row["content"], "meta": json.loads(row["meta_json"] or "{}")}
+            for row in rows
+        ]
+
     def add_message(self, session_id: str, role: str, content: str, meta: dict[str, Any] | None = None) -> None:
         now = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
         with self.db.transaction() as conn:
@@ -148,7 +158,11 @@ class ChatOrchestrator:
 
         session["stage"] = reply.pop("_stage", session["stage"])
         self.store.save(session)
-        self.store.add_message(session["session_id"], "assistant", reply.get("reply", ""), {"stage": session["stage"]})
+        meta: dict[str, Any] = {"stage": session["stage"]}
+        recommendation = reply.get("recommendations")
+        if isinstance(recommendation, dict) and recommendation.get("cards"):
+            meta["cards"] = recommendation["cards"]
+        self.store.add_message(session["session_id"], "assistant", reply.get("reply", ""), meta)
         return {
             "session_id": session["session_id"],
             "stage": session["stage"],
@@ -156,6 +170,25 @@ class ChatOrchestrator:
             "missing_fields": [field for field in REQUIRED_SLOTS if field not in session["profile_draft"]],
             "llm_used": self.llm.enabled,
             **reply,
+        }
+
+    # ---------- 历史恢复（刷新页面后重建上下文） ----------
+
+    def history(self, session_id: str) -> dict[str, Any]:
+        session = self.store.load(session_id)
+        if not session:
+            return {"found": False, "session_id": session_id, "messages": []}
+        messages = [
+            {"role": record["role"], "content": record["content"], "cards": record["meta"].get("cards") or []}
+            for record in self.store.messages(session_id)
+            if record["content"].strip() or record["meta"].get("cards")
+        ]
+        return {
+            "found": True,
+            "session_id": session["session_id"],
+            "stage": session["stage"],
+            "profile_draft": session["profile_draft"],
+            "messages": messages,
         }
 
     # ---------- 阶段实现 ----------

@@ -84,6 +84,12 @@ def create_app(database_path: str | Path | None = None) -> FastAPI:
         version = repository.save_profile(profile)
         return {"saved": True, "version": version, "profile": profile}
 
+    @app.get("/api/v1/chat/history")
+    def chat_history(session_id: str = "") -> dict:
+        if not session_id:
+            raise HTTPException(status_code=400, detail="session_id is required")
+        return chat_orchestrator.history(session_id)
+
     @app.post("/api/v1/chat")
     def chat(request: dict) -> dict:
         message = str(request.get("message") or "").strip()

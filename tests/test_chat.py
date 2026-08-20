@@ -348,3 +348,31 @@ class FollowupFlowTests(unittest.TestCase):
         done = _flow_to_done(orchestrator)
         reply = orchestrator.handle("事业编和公务员有什么区别", session_id=done["session_id"])
         self.assertEqual(reply["reply"], FOLLOWUP_GUIDANCE)
+
+    def test_history_restores_messages_with_cards(self):
+        orchestrator = self._orchestrator(_DisabledLLM(), _rows())
+        done = _flow_to_done(orchestrator)
+        orchestrator.handle("第一个岗位的详情", session_id=done["session_id"])
+
+        history = orchestrator.history(done["session_id"])
+        self.assertTrue(history["found"])
+        self.assertEqual(history["stage"], "followup")
+        roles = [message["role"] for message in history["messages"]]
+        self.assertIn("user", roles)
+        self.assertIn("assistant", roles)
+        card_messages = [message for message in history["messages"] if message["cards"]]
+        self.assertEqual(len(card_messages), 1)
+        self.assertEqual(len(card_messages[0]["cards"]), 3)
+        self.assertTrue(all(card["notice_url"] for card in card_messages[0]["cards"]))
+
+        # 模拟重启后用同一 store 重建编排器（会话持久化在库里）
+        reborn = ChatOrchestrator(self.repository, llm=_DisabledLLM(), service=_StubService(_rows()))
+        history2 = reborn.history(done["session_id"])
+        self.assertTrue(history2["found"])
+        self.assertEqual(len(history2["messages"]), len(history["messages"]))
+
+    def test_history_unknown_session(self):
+        orchestrator = self._orchestrator(_DisabledLLM(), _rows())
+        history = orchestrator.history("不存在的会话")
+        self.assertFalse(history["found"])
+        self.assertEqual(history["messages"], [])
