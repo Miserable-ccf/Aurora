@@ -82,7 +82,7 @@ class Monitor:
         links = links if links is not None else self._discover_pages(source, result)
         for candidate in links:
             title, url = candidate.title, candidate.url
-            decision = decide(title, _loads(policy["include_any"]), _loads(policy["exclude_any"]), _loads(policy["workflow_terms"]))
+            decision = decide(title, _loads(policy["include_any"]), _loads(policy["exclude_any"]), _loads(policy["workflow_terms"]), _loads(policy["process_terms"]))
             counts[decision.decision] += 1
             notice_id = hashlib.sha256(f"{source['id']}::{url}".encode()).hexdigest()
             is_new_notice = self._upsert_notice(notice_id, source, title, url, decision, _extract_date(title, url))

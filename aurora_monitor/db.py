@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS keyword_policy (
     include_any TEXT NOT NULL DEFAULT '[]',
     exclude_any TEXT NOT NULL DEFAULT '[]',
     workflow_terms TEXT NOT NULL DEFAULT '[]',
+    process_terms TEXT NOT NULL DEFAULT '[]',
     status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('draft', 'active', 'retired')),
     PRIMARY KEY (id, version)
 );
@@ -294,6 +295,7 @@ class Database:
         self._ensure_column("notice", "next_detail_retry_at", "TEXT")
         self._ensure_column("evidence_version", "source_url", "TEXT NOT NULL DEFAULT ''")
         self._ensure_column("evidence_version", "object_path", "TEXT")
+        self._ensure_column("keyword_policy", "process_terms", "TEXT NOT NULL DEFAULT '[]'")
         self.connection.commit()
 
     def _ensure_column(self, table: str, column: str, definition: str) -> None:
@@ -320,11 +322,13 @@ class Database:
                     (f"JS-{city}", city),
                 )
 
-    def upsert_policy(self, policy_id: str, version: int, include: list[str], exclude: list[str], workflow: list[str]) -> None:
+    def upsert_policy(self, policy_id: str, version: int, include: list[str], exclude: list[str], workflow: list[str], process: list[str] | None = None) -> None:
         with self.transaction() as conn:
             conn.execute(
-                "INSERT OR REPLACE INTO keyword_policy(id, version, include_any, exclude_any, workflow_terms) VALUES (?, ?, ?, ?, ?)",
-                (policy_id, version, _json(include), _json(exclude), _json(workflow)),
+                "INSERT INTO keyword_policy(id, version, include_any, exclude_any, workflow_terms, process_terms) VALUES (?, ?, ?, ?, ?, ?)"
+                " ON CONFLICT(id, version) DO UPDATE SET include_any=excluded.include_any, exclude_any=excluded.exclude_any,"
+                " workflow_terms=excluded.workflow_terms, process_terms=excluded.process_terms",
+                (policy_id, version, _json(include), _json(exclude), _json(workflow), _json(process or [])),
             )
 
     def import_institutions_csv(self, path: str | Path, batch_id: str, provider: str = "user") -> dict[str, int]:
@@ -600,5 +604,5 @@ class Database:
         payload = json.loads(Path(path).read_text(encoding="utf-8"))
         policies = payload.get("policies", []) if isinstance(payload, dict) else payload if isinstance(payload, list) else []
         for policy in policies:
-            self.upsert_policy(policy["id"], int(policy.get("version", 1)), policy.get("include_any", []), policy.get("exclude_any", []), policy.get("workflow_terms", []))
+            self.upsert_policy(policy["id"], int(policy.get("version", 1)), policy.get("include_any", []), policy.get("exclude_any", []), policy.get("workflow_terms", []), policy.get("process_terms", []))
         return len(policies)
