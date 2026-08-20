@@ -58,6 +58,104 @@ class RecommendationServiceTests(unittest.TestCase):
             self.assertEqual(db.connection.execute("SELECT COUNT(*) FROM recommendation_run").fetchone()[0], 1)
             db.close()
 
+    def test_jobfair_notices_are_never_candidates(self):
+        with tempfile.TemporaryDirectory() as directory:
+            db = Database(Path(directory) / "a.db")
+            db.init_schema()
+            db.seed_regions()
+            db.upsert_policy("p", 1, ["招聘"], [], [])
+            db.add_source({
+                "id": "s",
+                "source_group": "jiangsu_city_hrss",
+                "region_code": "JS-苏州",
+                "publisher": "苏州人社",
+                "entry_url": "https://example.gov.cn/list",
+                "keyword_policy_id": "p",
+            })
+            with db.transaction() as conn:
+                conn.execute(
+                    """INSERT INTO notice(id, source_id, title, normalized_title, url,
+                       published_at, decision, matched_terms, detail_status)
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                    ("n1", "s", "2026年春风行动暨就业援助季系列招聘活动岗位明细", "招聘", "https://example.gov.cn/n1", "2026-03-01", "candidate", '["招聘"]', "fetched"),
+                )
+                conn.execute(
+                    """INSERT INTO evidence_version(id, notice_id, source_url, content_sha256, parser_status)
+                       VALUES ('e1', 'n1', 'https://example.gov.cn/a.xlsx', ?, 'parsed')""",
+                    ("a" * 64,),
+                )
+                conn.execute(
+                    """INSERT INTO position(id, notice_id, evidence_id, sheet_name, row_index,
+                       position_code, employer, position_name, education, major_requirement)
+                       VALUES ('p1', 'n1', 'e1', 'Sheet1', 1, '01', '某公司', '仓管员', '不限', '不限')"""
+                )
+            service = RecommendationService(WebRepository(db), LLMClient())
+            profile = UserProfile(exam_types=["civil_service", "public_institution"], region_codes=["JS"])
+            self.assertEqual(service.recommend_positions(profile), [])
+            db.close()
+
+    def test_recommend_positions_excludes_by_position_name_and_notice_title(self):
+        with tempfile.TemporaryDirectory() as directory:
+            db = Database(Path(directory) / "a.db")
+            db.init_schema()
+            db.seed_regions()
+            db.upsert_policy("p", 1, ["招聘"], [], [])
+            db.add_source({
+                "id": "s",
+                "source_group": "jiangsu_city_recruitment",
+                "region_code": "JS-南京",
+                "publisher": "南京官方来源",
+                "entry_url": "https://example.gov.cn/list",
+                "keyword_policy_id": "p",
+            })
+            with db.transaction() as conn:
+                conn.execute(
+                    """INSERT INTO notice(id, source_id, title, normalized_title, url,
+                       published_at, decision, matched_terms, detail_status)
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                    ("n1", "s", "2026年事业单位公开招聘工作人员公告", "招聘", "https://example.gov.cn/n1", "2026-03-01", "candidate", '["招聘"]', "fetched"),
+                )
+                conn.execute(
+                    """INSERT INTO evidence_version(id, notice_id, source_url, content_sha256, parser_status)
+                       VALUES ('e1', 'n1', 'https://example.gov.cn/a.xlsx', ?, 'parsed')""",
+                    ("a" * 64,),
+                )
+                conn.execute(
+                    """INSERT INTO position(id, notice_id, evidence_id, sheet_name, row_index,
+                       position_code, employer, position_name, education, major_requirement)
+                       VALUES ('p1', 'n1', 'e1', 'Sheet1', 1, '01', '测试学院', '专任教师', '硕士研究生及以上', '计算机科学与技术')"""
+                )
+                conn.execute(
+                    """INSERT INTO position(id, notice_id, evidence_id, sheet_name, row_index,
+                       position_code, employer, position_name, education, major_requirement)
+                       VALUES ('p2', 'n1', 'e1', 'Sheet1', 2, '02', '测试学院', '专职辅导员', '硕士研究生及以上', '不限')"""
+                )
+                conn.execute(
+                    """INSERT INTO notice(id, source_id, title, normalized_title, url,
+                       published_at, decision, matched_terms, detail_status)
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                    ("n2", "s", "2026年事业单位公开招聘辅导员公告", "招聘", "https://example.gov.cn/n2", "2026-03-02", "candidate", '["招聘"]', "fetched"),
+                )
+                conn.execute(
+                    """INSERT INTO evidence_version(id, notice_id, source_url, content_sha256, parser_status)
+                       VALUES ('e2', 'n2', 'https://example.gov.cn/b.xlsx', ?, 'parsed')""",
+                    ("b" * 64,),
+                )
+                conn.execute(
+                    """INSERT INTO position(id, notice_id, evidence_id, sheet_name, row_index,
+                       position_code, employer, position_name, education, major_requirement)
+                       VALUES ('p3', 'n2', 'e1', 'Sheet1', 3, '01', '测试学院', '专职辅导员', '硕士研究生及以上', '不限')"""
+                )
+            service = RecommendationService(WebRepository(db), LLMClient())
+            base = dict(major="计算机科学与技术", education="硕士研究生", degree="硕士", region_codes=["JS-南京"])
+            # 排除“辅导员”：混招公告保留专任教师，辅导员专场公告整篇跳过
+            rows = service.recommend_positions(UserProfile(exclude_keywords=["辅导员"], **base))
+            self.assertEqual([row["position_name"] for row in rows], ["专任教师"])
+            # 不排除时三个岗位都在候选里
+            rows_all = service.recommend_positions(UserProfile(**base))
+            self.assertEqual(len(rows_all), 3)
+            db.close()
+
     def test_position_level_evaluation_marks_eligible_and_excludes_failed(self):
         with tempfile.TemporaryDirectory() as directory:
             db = Database(Path(directory) / "a.db")

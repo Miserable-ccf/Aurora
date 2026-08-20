@@ -21,6 +21,14 @@ from aurora_monitor.eligibility import VERDICT_FAIL, evaluate_position_row
 from aurora_monitor.positions import UNKNOWN
 
 
+JOBFAIR_TERMS = (
+    "春风行动",
+    "就业援助",
+    "招聘活动",
+    "招聘会",
+    "人才交流会",
+)
+
 PROCESS_TERMS = (
     "成绩公告",
     "成绩查询",
@@ -122,14 +130,22 @@ class RecommendationService:
     def recommend_positions(self, profile: UserProfile, limit: int = 30) -> list[dict[str, Any]]:
         """按画像返回岗位级候选（对话式推荐使用）：只保留解析出岗位表的公告，逐岗位核验。"""
         results: list[dict[str, Any]] = []
+        exclude_terms = [str(term).strip() for term in profile.exclude_keywords if str(term).strip()]
         for row in self.repository.search_candidate_notices():
-            item = self._build_item(row, profile)
+            # 岗位级排除：公告标题命中排除词则整篇跳过；否则只排除岗位名命中的岗位，
+            # 保留同一公告里的其他岗位（比公告级排除更精细）。
+            item = self._build_item(row, profile, apply_text_exclude=False)
             if not item:
+                continue
+            if exclude_terms and any(term in item.title for term in exclude_terms):
                 continue
             position_rows = self.repository.positions_for_notice(item.notice_id)
             if not position_rows:
                 continue
             for position_row in position_rows:
+                position_name = _show(position_row.get("position_name"))
+                if exclude_terms and any(term in position_name for term in exclude_terms):
+                    continue
                 evaluation = evaluate_position_row(position_row, profile)
                 score = item.score + (25 if evaluation.verdict == "eligible" else 10 if evaluation.verdict == "needs_review" else 0)
                 results.append(
@@ -157,7 +173,7 @@ class RecommendationService:
         results.sort(key=lambda value: (order.get(value["verdict"], 3), -value["score"]))
         return results[: max(1, min(int(limit or 30), 60))]
 
-    def _build_item(self, row: dict[str, Any], profile: UserProfile) -> RecommendationItem | None:
+    def _build_item(self, row: dict[str, Any], profile: UserProfile, apply_text_exclude: bool = True) -> RecommendationItem | None:
         title = str(row.get("title") or "").strip()
         text = _compact_text(row.get("extracted_text") or "")
         searchable = f"{title}\n{text[:12000]}"
@@ -176,7 +192,10 @@ class RecommendationService:
             return None
         if not profile.include_process_updates and any(term in title for term in PROCESS_TERMS):
             return None
-        if any(term in searchable for term in profile.exclude_keywords):
+        # 招聘会/春风行动等企业岗位集市公告，不属于公务员/事业编/大专招聘
+        if any(term in title for term in JOBFAIR_TERMS):
+            return None
+        if apply_text_exclude and any(term in searchable for term in profile.exclude_keywords):
             return None
         if profile.include_keywords and not any(term in searchable for term in profile.include_keywords):
             return None

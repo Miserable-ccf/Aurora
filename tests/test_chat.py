@@ -105,6 +105,10 @@ class NormalizePatchTests(unittest.TestCase):
         self.assertEqual(result["region_codes"], [])
         self.assertEqual(result["major"], "计算机科学与技术")
 
+    def test_exclude_keywords_normalized(self):
+        result = normalize_patch({"exclude_keywords": [" 辅导员 ", "", "行政管理", "辅导员"]})
+        self.assertEqual(result["exclude_keywords"], ["辅导员", "行政管理"])
+
 
 class ValidateRecommendationsTests(unittest.TestCase):
     def test_unknown_and_failed_positions_are_rejected(self):
@@ -370,6 +374,35 @@ class FollowupFlowTests(unittest.TestCase):
         history2 = reborn.history(done["session_id"])
         self.assertTrue(history2["found"])
         self.assertEqual(len(history2["messages"]), len(history["messages"]))
+
+    def test_modify_adds_exclusion_and_profile_shows_it(self):
+        llm = _FakeLLM(
+            extracts=[{"exclude_keywords": ["辅导员"]}],
+            followups=[{"intent": "modify_profile", "position_ref": None}],
+        )
+        orchestrator = self._orchestrator(llm, _rows())
+        done = _flow_to_done(orchestrator)
+        reply = orchestrator.handle("我不要辅导员岗位，要教师岗", session_id=done["session_id"])
+        self.assertEqual(reply["stage"], "followup")
+        self.assertEqual(reply["profile_draft"]["exclude_keywords"], ["辅导员"])
+        self.assertIn("排除岗位", reply["reply"])
+
+    def test_exclusions_accumulate_when_modified_twice(self):
+        llm = _FakeLLM(
+            extracts=[{"exclude_keywords": ["辅导员"]}, {"exclude_keywords": ["行政管理"]}],
+            followups=[{"intent": "modify_profile", "position_ref": None}, {"intent": "modify_profile", "position_ref": None}],
+        )
+        orchestrator = self._orchestrator(llm, _rows())
+        done = _flow_to_done(orchestrator)
+        orchestrator.handle("不要辅导员", session_id=done["session_id"])
+        reply = orchestrator.handle("行政管理也不要", session_id=done["session_id"])
+        self.assertEqual(reply["profile_draft"]["exclude_keywords"], ["辅导员", "行政管理"])
+
+    def test_rule_mode_classifies_exclusion_request_as_modify(self):
+        orchestrator = self._orchestrator(_DisabledLLM(), _rows())
+        done = _flow_to_done(orchestrator)
+        reply = orchestrator.handle("不要辅导员", session_id=done["session_id"])
+        self.assertIn("未启用 LLM", reply["reply"])
 
     def test_history_unknown_session(self):
         orchestrator = self._orchestrator(_DisabledLLM(), _rows())

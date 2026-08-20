@@ -35,7 +35,7 @@ SLOT_GUIDANCE = {
 }
 
 CONFIRM_WORDS = ("确认", "没问题", "可以", "对的", "是的", "好的", "推荐", "开始", "ok", "yes", "嗯", "对")
-MODIFY_WORDS = ("修改", "改一下", "不对", "重新", "不是", "换个", "错了")
+MODIFY_WORDS = ("修改", "改一下", "不对", "重新", "不是", "换个", "错了", "不要", "排除", "去掉")
 MORE_WORDS = ("更多", "还有", "换一批", "下一批", "下一页", "其他岗位", "别的岗位", "再看看", "再推荐")
 DETAIL_WORDS = ("详情", "详细", "具体", "介绍", "展开", "明细")
 
@@ -293,7 +293,7 @@ class ChatOrchestrator:
                 {
                     "task": (
                         "判断用户在岗位推荐完成后的追问意图。position_detail=查看某个推荐岗位的详情；"
-                        "more_positions=想看更多/其他岗位；modify_profile=想修改画像条件重新推荐；general=其他问题。"
+                        "more_positions=想看更多/其他岗位；modify_profile=想修改画像条件（含增加/调整排除的岗位类型）重新推荐；general=其他问题。"
                         '只输出一个 JSON 对象：{"intent": "position_detail|more_positions|modify_profile|general", '
                         '"position_ref": 用户指代第几个推荐岗位（1-3，未指代则填 null）}'
                     ),
@@ -420,11 +420,13 @@ class ChatOrchestrator:
             task = (
                 "用户想修改已确认的招考画像。只输出需要修改的字段，被修改的字段给出修改后的完整新值"
                 "（如地区调整时输出调整后的完整地区列表，而不是增量）；未提及的字段不要输出。"
+                "用户明确表示不想要某类岗位时（如“不要辅导员”），把岗位名称关键词放入 exclude_keywords。"
                 '只输出一个 JSON 对象，格式：{"extracted": {字段名: 值}}'
             )
         else:
             task = (
                 "从用户消息中抽取招考画像字段。无法确定的字段不要输出；不要编造用户未提及的信息。"
+                "用户明确表示不想要某类岗位时（如“不要辅导员”），把岗位名称关键词放入 exclude_keywords。"
                 '只输出一个 JSON 对象，格式：{"extracted": {字段名: 值}}'
             )
         payload = {
@@ -435,6 +437,7 @@ class ChatOrchestrator:
                 "degree": "字符串，如 学士/硕士/博士",
                 "major": "字符串，专业名称",
                 "region_codes": "数组，取值 JS 或 JS-城市名（城市：" + "、".join(REGIONS) + "）",
+                "exclude_keywords": "数组，用户明确不想要的岗位名称关键词（如“不要辅导员”→[“辅导员”]），没有则不输出",
             },
             "missing_fields": missing,
             "current_draft": draft,
@@ -500,6 +503,8 @@ class ChatOrchestrator:
         for key, value in normalized.items():
             if value in (None, "", []):
                 draft.pop(key, None)
+            elif key == "exclude_keywords":
+                draft[key] = list(dict.fromkeys((draft.get("exclude_keywords") or []) + value))
             else:
                 draft[key] = value
 
@@ -519,6 +524,8 @@ class ChatOrchestrator:
             f"- 专业：{draft.get('major') or '未填'}",
             f"- 偏好地区：{'、'.join(regions) or '未填'}",
         ]
+        if draft.get("exclude_keywords"):
+            lines.append(f"- 排除岗位：岗位名称含“{'”“'.join(draft['exclude_keywords'])}”的不推荐")
         return "\n".join(lines)
 
     @staticmethod
@@ -690,6 +697,11 @@ def normalize_patch(patch: dict[str, Any]) -> dict[str, Any]:
     """把前端/模型给出的宽松字段规范化为 UserProfile 可用值。"""
     result: dict[str, Any] = {}
     for key, value in patch.items():
+        if key == "exclude_keywords":
+            values = value if isinstance(value, list) else [value]
+            terms = [str(item).strip() for item in values if str(item).strip()]
+            result[key] = list(dict.fromkeys(terms))
+            continue
         if key not in REQUIRED_SLOTS:
             continue
         if key == "exam_types":
