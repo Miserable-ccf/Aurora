@@ -42,7 +42,7 @@ start() {
             echo "抓取失败（可能无网络），继续启动服务。"
         fi
     fi
-    nohup python3 -m aurora_web --db "$DB" --host "$HOST" --port "$PORT" >>"$LOG_FILE" 2>&1 &
+    setsid nohup python3 -m aurora_web --db "$DB" --host "$HOST" --port "$PORT" >>"$LOG_FILE" 2>&1 < /dev/null &
     echo $! >"$PID_FILE"
     sleep 2
     if is_running; then

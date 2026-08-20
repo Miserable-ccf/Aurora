@@ -214,7 +214,10 @@ class ChatOrchestrator:
 
     def _llm_extract_slots(self, draft: dict[str, Any], missing: list[str], message: str) -> dict[str, Any]:
         payload = {
-            "task": "从用户消息中抽取招考画像字段，只输出 JSON。无法确定的字段不要输出；不要编造用户未提及的信息。",
+            "task": (
+                "从用户消息中抽取招考画像字段。无法确定的字段不要输出；不要编造用户未提及的信息。"
+                '只输出一个 JSON 对象，格式：{"extracted": {字段名: 值}}'
+            ),
             "slot_schema": {
                 "exam_types": "数组，取值 civil_service/public_institution/public_college（公务员/事业编/大专老师）",
                 "education": "字符串，如 本科/硕士研究生/博士研究生",
@@ -231,15 +234,23 @@ class ChatOrchestrator:
             return {}
         message_obj = result.data.get("_message") or {}
         parsed = _parse_json(message_obj.get("content") or "")
-        extracted = parsed.get("extracted") if isinstance(parsed, dict) else None
-        return extracted if isinstance(extracted, dict) else {}
+        if not isinstance(parsed, dict):
+            return {}
+        extracted = parsed.get("extracted")
+        if isinstance(extracted, dict):
+            return extracted
+        # 兜底：模型未包 extracted 外层、直接输出槽位字段时也能识别
+        if any(field in parsed for field in REQUIRED_SLOTS):
+            return {field: parsed[field] for field in REQUIRED_SLOTS if field in parsed}
+        return {}
 
     def _llm_select_top3(self, profile: UserProfile, pool: list[dict[str, Any]]):
         payload = {
             "task": (
                 "以下是按资格核验与匹配分排序的候选岗位（verdict=eligible 表示硬条件初步符合）。"
                 "请为用户选出 3 个最合适的岗位并写推荐理由（每条不超过 60 字，必须引用候选数据中的字段）。"
-                "如需核实岗位细节可调用工具。输出 JSON：{\"selected\":[{\"position_id\":..., \"reason\":..., \"checks\":[报名前需核对的问题]}]}"
+                "如需核实岗位细节可调用工具。只输出一个合法 JSON 对象（不要 Markdown 代码块或多余文字，"
+                "reason/checks 文本内避免使用英文双引号）：{\"selected\":[{\"position_id\":..., \"reason\":..., \"checks\":[报名前需核对的问题]}]}"
             ),
             "profile": profile.model_dump(exclude={"user_id"}),
             "candidates": pool,
@@ -348,7 +359,10 @@ def validate_recommendations(pool: list[dict[str, Any]], selected: list[dict[str
             continue
         seen.add(position_id)
         reason = str(item.get("reason") or "").strip() or "、".join(row["match_reasons"][:2])
-        checks = [str(check) for check in (item.get("checks") or row["questions"]) if str(check).strip()][:3]
+        raw_checks = item.get("checks") or row["questions"]
+        if isinstance(raw_checks, str):
+            raw_checks = [raw_checks]
+        checks = [str(check) for check in raw_checks if str(check).strip()][:3]
         cards.append(_card_from_row(row, reason, checks))
     return cards, violations
 

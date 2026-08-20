@@ -100,6 +100,11 @@ class ValidateRecommendationsTests(unittest.TestCase):
         self.assertEqual([card["position_id"] for card in cards], ["p1"])
         self.assertEqual(len(violations), 2)
 
+    def test_string_checks_is_wrapped_not_split_into_chars(self):
+        cards, violations = validate_recommendations(_rows(), [{"position_id": "p1", "reason": "ok", "checks": "需核对公告原文"}])
+        self.assertEqual(cards[0]["checks"], ["需核对公告原文"])
+        self.assertEqual(violations, [])
+
     def test_not_eligible_cannot_be_recommended(self):
         rows = _rows()
         rows[1]["verdict"] = "not_eligible"

@@ -189,12 +189,22 @@ class LLMClient:
                 "Content-Type": "application/json",
             },
         )
+        raw, content_type = "", ""
         try:
             with urlopen(request, timeout=self.timeout) as response:
-                payload = json.loads(response.read().decode("utf-8"))
+                content_type = response.headers.get("Content-Type", "")
+                raw = response.read().decode("utf-8", errors="replace")
+            payload = json.loads(raw)
             message = payload["choices"][0]["message"]
             return LLMResult({"_message": message}, True, self.model)
-        except (HTTPError, URLError, TimeoutError, KeyError, IndexError, ValueError, json.JSONDecodeError) as exc:
+        except json.JSONDecodeError:
+            if "text/html" in content_type or raw.lstrip()[:1] == "<":
+                return LLMResult(
+                    {}, False, self.model,
+                    "LLM 调用失败：接口返回了 HTML 页面而非 JSON，请检查 LLM_BASE_URL 是否包含 API 路径前缀（如 /v1）",
+                )
+            return LLMResult({}, False, self.model, "LLM 调用失败：响应不是有效 JSON")
+        except (HTTPError, URLError, TimeoutError, KeyError, IndexError, ValueError) as exc:
             return LLMResult({}, False, self.model, f"LLM 调用失败：{type(exc).__name__}")
 
     def _chat_url(self) -> str:
@@ -215,5 +225,8 @@ def _parse_json_object(content: str) -> dict:
         start, end = text.find("{"), text.rfind("}")
         if start < 0 or end <= start:
             return {}
-        result = json.loads(text[start : end + 1])
+        try:
+            result = json.loads(text[start : end + 1])
+        except json.JSONDecodeError:
+            return {}
     return result if isinstance(result, dict) else {}
