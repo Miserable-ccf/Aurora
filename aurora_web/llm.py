@@ -106,6 +106,97 @@ class LLMClient:
         except (HTTPError, URLError, TimeoutError, KeyError, IndexError, ValueError, json.JSONDecodeError) as exc:
             return LLMResult({}, False, self.model, f"LLM 调用失败，已降级为规则结果：{type(exc).__name__}")
 
+    def chat(self, system: str, user_payload: dict, temperature: float = 0.1) -> LLMResult:
+        """单轮 JSON 模式对话（结构化输出）。"""
+        if not self.enabled:
+            return LLMResult({}, False, self.model, "LLM 尚未配置")
+        body = json.dumps(
+            {
+                "model": self.model,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False)},
+                ],
+                "temperature": temperature,
+                "response_format": {"type": "json_object"},
+            },
+            ensure_ascii=False,
+        ).encode("utf-8")
+        return self._post(body)
+
+    def chat_with_tools(self, system: str, user_payload: dict, tools: list[dict], tool_executor, max_rounds: int = 4) -> LLMResult:
+        """OpenAI tools 协议循环：模型可多轮调用工具，最终返回 JSON 文本。
+
+        tool_executor(name, arguments) -> dict；任何调用异常都回传给模型（error 字段），
+        避免单点故障中断整个会话。供应商不支持 tools 协议时返回 error 说明，由上层降级。
+        """
+        if not self.enabled:
+            return LLMResult({}, False, self.model, "LLM 尚未配置")
+        messages = [
+            {"role": "system", "content": system},
+            {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False)},
+        ]
+        for _ in range(max_rounds):
+            body = json.dumps(
+                {
+                    "model": self.model,
+                    "messages": messages,
+                    "tools": tools,
+                    "tool_choice": "auto",
+                    "temperature": 0.1,
+                },
+                ensure_ascii=False,
+            ).encode("utf-8")
+            result = self._post(body)
+            if not result.used:
+                return result
+            message = result.data.get("_message") or {}
+            tool_calls = message.get("tool_calls") or []
+            if not tool_calls:
+                content = message.get("content") or ""
+                parsed = _parse_json_object(content)
+                if not parsed:
+                    return LLMResult({}, False, self.model, "模型没有返回有效 JSON")
+                return LLMResult(parsed, True, self.model)
+            messages.append({"role": "assistant", "content": message.get("content") or "", "tool_calls": tool_calls})
+            for call in tool_calls[:5]:
+                function = call.get("function") or {}
+                name = function.get("name") or ""
+                try:
+                    arguments = json.loads(function.get("arguments") or "{}")
+                except json.JSONDecodeError:
+                    arguments = {}
+                try:
+                    output = tool_executor(name, arguments)
+                except Exception as exc:  # 工具异常不应中断会话
+                    output = {"error": f"工具执行失败：{type(exc).__name__}: {exc}"}
+                messages.append(
+                    {
+                        "role": "tool",
+                        "tool_call_id": call.get("id") or name,
+                        "content": json.dumps(output, ensure_ascii=False)[:6000],
+                    }
+                )
+        return LLMResult({}, False, self.model, "工具循环超过最大轮次")
+
+    def _post(self, body: bytes) -> LLMResult:
+        request = Request(
+            self._chat_url(),
+            data=body,
+            method="POST",
+            headers={
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json",
+            },
+        )
+        try:
+            with urlopen(request, timeout=self.timeout) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            message = payload["choices"][0]["message"]
+            return LLMResult({"_message": message}, True, self.model)
+        except (HTTPError, URLError, TimeoutError, KeyError, IndexError, ValueError, json.JSONDecodeError) as exc:
+            return LLMResult({}, False, self.model, f"LLM 调用失败：{type(exc).__name__}")
+
     def _chat_url(self) -> str:
         if self.base_url.endswith("/chat/completions"):
             return self.base_url

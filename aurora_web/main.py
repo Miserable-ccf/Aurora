@@ -12,6 +12,7 @@ from fastapi.staticfiles import StaticFiles
 from aurora_monitor.db import Database
 from aurora_monitor.eligibility import evaluate_position_row
 
+from .chat import ChatOrchestrator
 from .config import load_local_env
 from .models import RecommendationRequest, RecommendationResponse, UserProfile
 from .recommendation import RecommendationService
@@ -31,10 +32,12 @@ def create_app(database_path: str | Path | None = None) -> FastAPI:
     database.seed_regions()
     repository = WebRepository(database)
     service = RecommendationService(repository)
+    chat_orchestrator = ChatOrchestrator(repository)
 
     app.state.database = database
     app.state.repository = repository
     app.state.recommendation_service = service
+    app.state.chat_orchestrator = chat_orchestrator
     app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
     @app.on_event("shutdown")
@@ -80,6 +83,15 @@ def create_app(database_path: str | Path | None = None) -> FastAPI:
     def put_profile(profile: UserProfile) -> dict:
         version = repository.save_profile(profile)
         return {"saved": True, "version": version, "profile": profile}
+
+    @app.post("/api/v1/chat")
+    def chat(request: dict) -> dict:
+        message = str(request.get("message") or "").strip()
+        session_id = request.get("session_id") or None
+        profile_patch = request.get("profile_patch") if isinstance(request.get("profile_patch"), dict) else None
+        if not message and not profile_patch:
+            raise HTTPException(status_code=400, detail="message or profile_patch is required")
+        return chat_orchestrator.handle(message, session_id=session_id, profile_patch=profile_patch)
 
     @app.post("/api/v1/recommendations", response_model=RecommendationResponse)
     def recommendations(request: RecommendationRequest) -> RecommendationResponse:

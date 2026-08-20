@@ -1,6 +1,6 @@
 # LLM 对话式岗位推荐设计方案
 
-状态：评审稿
+状态：已实现（一期）
 日期：2026-08-20
 
 ## 1. 需求
@@ -140,5 +140,19 @@ P6 输出：3 张推荐卡片（岗位、单位、地区、招录人数、匹配
 
 1. 供应商是否支持原生 tools 协议未知 → 已设计 JSON 模拟降级；
 2. 岗位表未解析的公告（detail 未抓取/附件加密）无法岗位级核验，只能公告级推荐，卡片需标注"岗位表待解析"；
-3. 追问模式（改地区/换类型）放二期，一期确认画像后如需修改重新走确认；
+3. 追问模式（改地区/换类型）放二期，一期确认画像后如需修改重新走确认（**用户已确认一期不做**）；
 4. LLM 成本：每次推荐约 2-4 次模型调用（抽取 1 次/轮 + 理由 1 次 + 可选复检 1 次），建议 temperature 0、上下文裁剪（候选只传前 8 名的结构化字段）。
+
+## 14. 决策记录与实现状态
+
+- 供应商候选：gpt5.6 / qwen3.8 / deepseek（均为 OpenAI 兼容接口），由用户在环境变量
+  `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL_NAME` 中手动填写；未配置时全链路降级为规则模式。
+- 追问模式：一期不做（已确认）。
+- 一期实现落地：
+  - `aurora_web/chat_tools.py`：5 个工具函数 + OpenAI function schema；
+  - `aurora_web/chat.py`：ChatOrchestrator 状态机（slot_filling → confirm → done）、
+    chat_session/chat_message 会话表、Reflection 终检 `validate_recommendations`；
+  - `aurora_web/llm.py`：新增 `chat`（JSON 模式）与 `chat_with_tools`（tools 循环，上限 4 轮）；
+  - `aurora_web/recommendation.py`：新增 `recommend_positions` 岗位级检索入口；
+  - `POST /api/v1/chat` 端点 + 独立对话页 `/static/chat.html`；
+  - tests/test_chat.py：8 个用例覆盖规范化/终检/状态机/LLM 路径（fake client）。

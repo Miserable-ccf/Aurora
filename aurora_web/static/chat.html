@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurora 岗位推荐对话</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #f4f6fa; color: #1f2937; }
+    header { padding: 16px 24px; background: #111827; color: #f9fafb; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 18px; margin: 0; }
+    header a { color: #93c5fd; font-size: 14px; text-decoration: none; }
+    .chat-wrap { max-width: 760px; margin: 24px auto; padding: 0 16px; }
+    .messages { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; height: 60vh; overflow-y: auto; }
+    .msg { margin-bottom: 14px; display: flex; }
+    .msg .bubble { max-width: 85%; padding: 10px 14px; border-radius: 10px; white-space: pre-wrap; line-height: 1.6; font-size: 14px; }
+    .msg.user { justify-content: flex-end; }
+    .msg.user .bubble { background: #2563eb; color: #fff; }
+    .msg.assistant .bubble { background: #f3f4f6; }
+    .cards { margin-top: 8px; display: grid; gap: 8px; }
+    .card { border: 1px solid #d1d5db; border-radius: 8px; padding: 10px 12px; background: #fff; font-size: 13px; }
+    .card h3 { margin: 0 0 6px; font-size: 14px; }
+    .card .tag { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; margin-right: 6px; }
+    .tag.eligible { background: #dcfce7; color: #166534; }
+    .tag.review { background: #fef9c3; color: #854d0e; }
+    .card a { color: #2563eb; word-break: break-all; }
+    .input-row { display: flex; gap: 8px; margin-top: 12px; }
+    .input-row input { flex: 1; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; }
+    .input-row button { padding: 10px 20px; border: none; border-radius: 8px; background: #2563eb; color: #fff; font-size: 14px; cursor: pointer; }
+    .input-row button:disabled { background: #9ca3af; cursor: wait; }
+    .hint { font-size: 12px; color: #6b7280; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aurora 岗位推荐对话</h1>
+    <a href="/">← 返回工作台</a>
+  </header>
+  <div class="chat-wrap">
+    <div class="messages" id="messages"></div>
+    <div class="input-row">
+      <input id="input" placeholder="直接描述你的条件，例如：硕士，计算机科学与技术，想看南京的事业编或大专老师" autocomplete="off">
+      <button id="send">发送</button>
+    </div>
+    <p class="hint">推荐结果仅为初步匹配，报名前务必核对公告原文；每轮会话独立，刷新页面开启新会话。</p>
+  </div>
+  <script>
+    const messagesEl = document.getElementById("messages");
+    const inputEl = document.getElementById("input");
+    const sendBtn = document.getElementById("send");
+    let sessionId = null;
+
+    function addMessage(role, text, cards) {
+      const wrap = document.createElement("div");
+      wrap.className = "msg " + role;
+      const bubble = document.createElement("div");
+      bubble.className = "bubble";
+      bubble.textContent = text;
+      if (cards && cards.length) {
+        const grid = document.createElement("div");
+        grid.className = "cards";
+        cards.forEach(card => {
+          const el = document.createElement("div");
+          el.className = "card";
+          const eligible = card.verdict === "eligible";
+          el.innerHTML =
+            "<h3>" + escapeHtml((card.position_name || "岗位") + " · " + escapeHtml(card.employer || "")) + "</h3>" +
+            "<span class='tag " + (eligible ? "eligible'>初步符合" : "review'>待核实") + "</span>" +
+            "招 " + escapeHtml(card.headcount || "?") + " 人｜学历：" + escapeHtml(card.education || "未列出") +
+            "<br>专业要求：" + escapeHtml(card.major_requirement || "未列出") +
+            "<br>推荐理由：" + escapeHtml(card.reason || "") +
+            (card.checks && card.checks.length ? "<br>报名前需核对：" + escapeHtml(card.checks.join("；")) : "") +
+            "<br><a href='" + encodeURI(card.notice_url || "#") + "' target='_blank'>来源公告：" + escapeHtml(card.notice_title || card.notice_url || "") + "</a>";
+          grid.appendChild(el);
+        });
+        bubble.appendChild(grid);
+      }
+      wrap.appendChild(bubble);
+      messagesEl.appendChild(wrap);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/[&<>"']/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
+    }
+
+    async function send() {
+      const message = inputEl.value.trim();
+      if (!message) return;
+      addMessage("user", message);
+      inputEl.value = "";
+      sendBtn.disabled = true;
+      try {
+        const resp = await fetch("/api/v1/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ session_id: sessionId, message }),
+        });
+        const data = await resp.json();
+        if (!resp.ok) throw new Error(data.detail || resp.statusText);
+        sessionId = data.session_id;
+        addMessage("assistant", data.reply || "", data.recommendations && data.recommendations.cards);
+      } catch (err) {
+        addMessage("assistant", "出错了：" + err.message);
+      } finally {
+        sendBtn.disabled = false;
+        inputEl.focus();
+      }
+    }
+
+    sendBtn.addEventListener("click", send);
+    inputEl.addEventListener("keydown", event => { if (event.key === "Enter") send(); });
+    addMessage("assistant", "你好！我是 Aurora 岗位推荐助手。告诉我你的学历、学位、专业和偏好地区（例如：硕士，计算机类，南京/苏州，想看事业编或大专老师），我会从已抓取的江苏招考公告里为你推荐 3 个初步符合的岗位。");
+  </script>
+</body>
+</html>

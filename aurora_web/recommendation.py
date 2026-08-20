@@ -119,6 +119,44 @@ class RecommendationService:
             ],
         )
 
+    def recommend_positions(self, profile: UserProfile, limit: int = 30) -> list[dict[str, Any]]:
+        """按画像返回岗位级候选（对话式推荐使用）：只保留解析出岗位表的公告，逐岗位核验。"""
+        results: list[dict[str, Any]] = []
+        for row in self.repository.search_candidate_notices():
+            item = self._build_item(row, profile)
+            if not item:
+                continue
+            position_rows = self.repository.positions_for_notice(item.notice_id)
+            if not position_rows:
+                continue
+            for position_row in position_rows:
+                evaluation = evaluate_position_row(position_row, profile)
+                score = item.score + (25 if evaluation.verdict == "eligible" else 10 if evaluation.verdict == "needs_review" else 0)
+                results.append(
+                    {
+                        "position_id": position_row.get("id") or "",
+                        "position_code": _show(position_row.get("position_code")),
+                        "employer": _show(position_row.get("employer")) or item.institution_name or item.publisher,
+                        "position_name": _show(position_row.get("position_name")),
+                        "work_location": _show(position_row.get("work_location")),
+                        "headcount": _show(position_row.get("headcount")),
+                        "education": _show(position_row.get("education")),
+                        "degree": _show(position_row.get("degree")),
+                        "major_requirement": _show(position_row.get("major_requirement")),
+                        "verdict": evaluation.verdict,
+                        "score": min(score, 125),
+                        "notice_id": item.notice_id,
+                        "notice_title": item.title,
+                        "notice_url": item.url,
+                        "published_at": item.published_at,
+                        "match_reasons": item.reasons[:4],
+                        "questions": evaluation.questions[:3],
+                    }
+                )
+        order = {"eligible": 0, "needs_review": 1, "not_eligible": 2}
+        results.sort(key=lambda value: (order.get(value["verdict"], 3), -value["score"]))
+        return results[: max(1, min(int(limit or 30), 60))]
+
     def _build_item(self, row: dict[str, Any], profile: UserProfile) -> RecommendationItem | None:
         title = str(row.get("title") or "").strip()
         text = _compact_text(row.get("extracted_text") or "")
