@@ -258,15 +258,30 @@ class ChatOrchestrator:
             else:
                 selection_meta = {"llm_used": False, "error": llm_selection.error}
         if not selected:
+            picked = _pick_diverse(top_pool, 3)
             selected = [
                 {"position_id": row["position_id"], "reason": "、".join(row["match_reasons"][:2]) or "规则匹配", "checks": row["questions"][:2]}
-                for row in top_pool[:3]
+                for row in picked
             ]
         # P5：Reflection 终检（规则执行）
         cards, violations = validate_recommendations(top_pool, selected)
         if len(cards) < 3:
             used_ids = {card["position_id"] for card in cards}
+            used_employers = {str(card.get("employer") or "").strip() for card in cards}
+            used_employers.discard("")
             for row in top_pool:
+                if len(cards) >= 3:
+                    break
+                if row["position_id"] in used_ids or row["verdict"] == "not_eligible":
+                    continue
+                employer = str(row.get("employer") or "").strip()
+                if employer and employer in used_employers:
+                    continue
+                cards.append(_card_from_row(row, "规则匹配（候补）", []))
+                used_ids.add(row["position_id"])
+                if employer:
+                    used_employers.add(employer)
+            for row in top_pool:  # 仍不足 3 张时放宽单位限制
                 if len(cards) >= 3:
                     break
                 if row["position_id"] in used_ids or row["verdict"] == "not_eligible":
@@ -353,7 +368,7 @@ class ChatOrchestrator:
                 "reply": "当前画像下暂无更多候选岗位了。可以试试修改条件（如“地区加上全省”），或刷新页面重新开始。",
                 "_stage": "followup",
             }
-        next_rows = fresh[:3]
+        next_rows = _pick_diverse(fresh, 3)
         cards = [_card_from_row(row, "、".join(row["match_reasons"][:2]) or "规则匹配", row["questions"][:2]) for row in next_rows]
         context["shown_ids"] = list(shown | {card["position_id"] for card in cards})
         eligible_count = sum(1 for row in rows if row["verdict"] == "eligible")
@@ -470,6 +485,7 @@ class ChatOrchestrator:
                 "以下是按资格核验与匹配分排序的候选岗位（verdict=eligible 表示硬条件初步符合），"
                 "所需信息已全部给出，无需调用任何工具。"
                 "请为用户选出 3 个最合适的岗位并写推荐理由（每条不超过 60 字，必须引用候选数据中的字段）。"
+                "选出的 3 个岗位必须来自 3 个不同的用人单位（employer 字段不同）。"
                 "只输出一个合法 JSON 对象（不要 Markdown 代码块或多余文字，"
                 "reason/checks 文本内避免使用英文双引号）：{\"selected\":[{\"position_id\":..., \"reason\":..., \"checks\":[报名前需核对的问题]}]}"
             ),
@@ -613,6 +629,29 @@ def _render_detail(ref: int | None, detail: dict[str, Any], evaluation: dict[str
     return "\n".join(lines)
 
 
+def _pick_diverse(rows: list[dict[str, Any]], limit: int) -> list[dict[str, Any]]:
+    """挑选候选岗位：同一批内优先不同单位；凑不满时放宽限制补足。"""
+    picked: list[dict[str, Any]] = []
+    employers: set[str] = set()
+    for row in rows:
+        if len(picked) >= limit:
+            break
+        employer = str(row.get("employer") or "").strip()
+        if employer and employer in employers:
+            continue
+        picked.append(row)
+        if employer:
+            employers.add(employer)
+    if len(picked) < limit:
+        for row in rows:
+            if len(picked) >= limit:
+                break
+            if row in picked:
+                continue
+            picked.append(row)
+    return picked
+
+
 def _extract_position_ref(text: str) -> int | None:
     match = POSITION_REF_PATTERN.search(text)
     if not match:
@@ -650,6 +689,7 @@ def validate_recommendations(pool: list[dict[str, Any]], selected: list[dict[str
     cards: list[dict[str, Any]] = []
     violations: list[str] = []
     seen: set[str] = set()
+    seen_employers: set[str] = set()
     for item in selected[:3]:
         position_id = str(item.get("position_id") or "")
         row = pool_by_id.get(position_id)
@@ -662,7 +702,13 @@ def validate_recommendations(pool: list[dict[str, Any]], selected: list[dict[str
         if position_id in seen:
             violations.append(f"重复推荐: {row['position_name']}")
             continue
+        employer = str(row.get("employer") or "").strip()
+        if employer and employer in seen_employers:
+            violations.append(f"重复单位已跳过: {row['position_name']}（{employer}）")
+            continue
         seen.add(position_id)
+        if employer:
+            seen_employers.add(employer)
         reason = str(item.get("reason") or "").strip() or "、".join(row["match_reasons"][:2])
         raw_checks = item.get("checks") or row["questions"]
         if isinstance(raw_checks, str):

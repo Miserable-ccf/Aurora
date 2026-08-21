@@ -9,6 +9,7 @@ from aurora_web.chat import (
     FOLLOWUP_GUIDANCE,
     ChatOrchestrator,
     _extract_position_ref,
+    _pick_diverse,
     _to_ordinal,
     normalize_patch,
     validate_recommendations,
@@ -132,6 +133,14 @@ class ValidateRecommendationsTests(unittest.TestCase):
         self.assertEqual(cards[0]["checks"], ["需核对公告原文"])
         self.assertEqual(violations, [])
 
+    def test_same_employer_only_recommended_once(self):
+        rows = _rows()
+        rows[1]["employer"] = rows[0]["employer"]  # p2 与 p1 同一单位
+        rows[2]["employer"] = "另一学院"
+        cards, violations = validate_recommendations(rows, [{"position_id": "p1"}, {"position_id": "p2"}, {"position_id": "p3"}])
+        self.assertEqual([card["position_id"] for card in cards], ["p1", "p3"])
+        self.assertTrue(any("重复单位" in v for v in violations))
+
     def test_not_eligible_cannot_be_recommended(self):
         rows = _rows()
         rows[1]["verdict"] = "not_eligible"
@@ -241,6 +250,33 @@ class FollowupHelpersTests(unittest.TestCase):
         self.assertIsNone(_to_ordinal(None))
 
 
+class PickDiverseTests(unittest.TestCase):
+    def test_prefers_distinct_employers(self):
+        rows = [
+            {"position_id": "a1", "employer": "甲单位"},
+            {"position_id": "a2", "employer": "甲单位"},
+            {"position_id": "b1", "employer": "乙单位"},
+            {"position_id": "c1", "employer": "丙单位"},
+        ]
+        picked = _pick_diverse(rows, 3)
+        self.assertEqual([row["position_id"] for row in picked], ["a1", "b1", "c1"])
+
+    def test_fills_up_when_single_employer(self):
+        rows = [
+            {"position_id": "a1", "employer": "甲单位"},
+            {"position_id": "a2", "employer": "甲单位"},
+            {"position_id": "a3", "employer": "甲单位"},
+        ]
+        self.assertEqual(len(_pick_diverse(rows, 3)), 3)
+
+    def test_empty_employer_not_deduped(self):
+        rows = [
+            {"position_id": "a1", "employer": ""},
+            {"position_id": "a2", "employer": ""},
+        ]
+        self.assertEqual(len(_pick_diverse(rows, 2)), 2)
+
+
 def _flow_to_done(orchestrator):
     first = orchestrator.handle("", profile_patch={
         "exam_types": ["事业编"], "education": "硕士研究生", "degree": "硕士",
@@ -290,6 +326,20 @@ class FollowupFlowTests(unittest.TestCase):
 
     def _orchestrator(self, llm, rows):
         return ChatOrchestrator(self.repository, llm=llm, service=_StubService(rows))
+
+    def test_rule_mode_top3_covers_distinct_employers(self):
+        rows = [
+            _row("p1", "岗位一"), _row("p2", "岗位二"), _row("p3", "岗位三"), _row("p4", "岗位四"),
+        ]
+        rows[0]["employer"] = "甲学院"
+        rows[1]["employer"] = "甲学院"
+        rows[2]["employer"] = "乙学院"
+        rows[3]["employer"] = "丙学院"
+        orchestrator = self._orchestrator(_DisabledLLM(), rows)
+        done = _flow_to_done(orchestrator)
+        employers = [card["employer"] for card in done["recommendations"]["cards"]]
+        self.assertEqual(len(employers), 3)
+        self.assertEqual(len(set(employers)), 3)
 
     def test_detail_by_ordinal_in_rule_mode(self):
         orchestrator = self._orchestrator(_DisabledLLM(), _rows())
