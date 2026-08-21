@@ -24,6 +24,10 @@ class LLMClient:
         self.model = os.getenv("LLM_MODEL_NAME", "").strip()
         self.timeout = int(os.getenv("LLM_TIMEOUT_SECONDS", "30"))
         self.max_evidence_chars = int(os.getenv("LLM_MAX_EVIDENCE_CHARS", "12000"))
+        try:
+            self.extra_body = json.loads(os.getenv("LLM_EXTRA_BODY", "") or "{}")
+        except json.JSONDecodeError:
+            self.extra_body = {}
 
     @property
     def enabled(self) -> bool:
@@ -110,18 +114,17 @@ class LLMClient:
         """单轮 JSON 模式对话（结构化输出）。"""
         if not self.enabled:
             return LLMResult({}, False, self.model, "LLM 尚未配置")
-        body = json.dumps(
-            {
-                "model": self.model,
-                "messages": [
-                    {"role": "system", "content": system},
-                    {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False)},
-                ],
-                "temperature": temperature,
-                "response_format": {"type": "json_object"},
-            },
-            ensure_ascii=False,
-        ).encode("utf-8")
+        payload = {
+            "model": self.model,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False)},
+            ],
+            "temperature": temperature,
+            "response_format": {"type": "json_object"},
+        }
+        payload.update(self.extra_body)
+        body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
         return self._post(body)
 
     def chat_with_tools(self, system: str, user_payload: dict, tools: list[dict], tool_executor, max_rounds: int = 4) -> LLMResult:
@@ -137,16 +140,15 @@ class LLMClient:
             {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False)},
         ]
         for _ in range(max_rounds):
-            body = json.dumps(
-                {
-                    "model": self.model,
-                    "messages": messages,
-                    "tools": tools,
-                    "tool_choice": "auto",
-                    "temperature": 0.1,
-                },
-                ensure_ascii=False,
-            ).encode("utf-8")
+            payload = {
+                "model": self.model,
+                "messages": messages,
+                "tools": tools,
+                "tool_choice": "auto",
+                "temperature": 0.1,
+            }
+            payload.update(self.extra_body)
+            body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
             result = self._post(body)
             if not result.used:
                 return result

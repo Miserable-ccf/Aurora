@@ -252,7 +252,7 @@ class ChatOrchestrator:
         if top_pool and self.llm.enabled:
             # P4：LLM 从前 8 名中选 3 个并写理由（可调用岗位详情/资格核验工具）
             llm_selection = self._llm_select_top3(profile, top_pool)
-            if llm_selection.data:
+            if llm_selection.used and llm_selection.data:
                 selected = [item for item in llm_selection.data.get("selected", []) if isinstance(item, dict)]
                 selection_meta = {"llm_used": True, "error": ""}
             else:
@@ -287,6 +287,10 @@ class ChatOrchestrator:
     # ---------- 追问意图处理 ----------
 
     def _classify_followup(self, context: dict[str, Any], message: str) -> dict[str, Any]:
+        # 规则优先：序数/关键词能明确意图时直接返回，省一次 LLM 调用（约 5-8s）
+        rule = self._rule_classify_followup(message)
+        if rule["intent"] != "general":
+            return rule
         if self.llm.enabled:
             result = self.llm.chat(
                 SYSTEM_PROMPT,
@@ -306,7 +310,7 @@ class ChatOrchestrator:
                 intent = parsed.get("intent") if isinstance(parsed, dict) else None
                 if intent in {"position_detail", "more_positions", "modify_profile", "general"}:
                     return {"intent": intent, "position_ref": _to_ordinal(parsed.get("position_ref")), "source": "llm"}
-        return self._rule_classify_followup(message)
+        return rule
 
     @staticmethod
     def _rule_classify_followup(message: str) -> dict[str, Any]:
@@ -459,24 +463,20 @@ class ChatOrchestrator:
         return {}
 
     def _llm_select_top3(self, profile: UserProfile, pool: list[dict[str, Any]]):
+        # 单轮调用（不带工具）：候选数据已含核验结论与全部关键字段，
+        # Reflection 终检保证选择有效，省掉多轮 tools 往返以降低延迟。
         payload = {
             "task": (
-                "以下是按资格核验与匹配分排序的候选岗位（verdict=eligible 表示硬条件初步符合）。"
+                "以下是按资格核验与匹配分排序的候选岗位（verdict=eligible 表示硬条件初步符合），"
+                "所需信息已全部给出，无需调用任何工具。"
                 "请为用户选出 3 个最合适的岗位并写推荐理由（每条不超过 60 字，必须引用候选数据中的字段）。"
-                "如需核实岗位细节可调用工具。只输出一个合法 JSON 对象（不要 Markdown 代码块或多余文字，"
+                "只输出一个合法 JSON 对象（不要 Markdown 代码块或多余文字，"
                 "reason/checks 文本内避免使用英文双引号）：{\"selected\":[{\"position_id\":..., \"reason\":..., \"checks\":[报名前需核对的问题]}]}"
             ),
             "profile": profile.model_dump(exclude={"user_id"}),
             "candidates": pool,
         }
-
-        def executor(name: str, arguments: dict[str, Any]) -> dict[str, Any]:
-            return self.toolbox.execute(name, arguments, profile)
-
-        from .chat_tools import tool_schemas
-
-        detail_tools = [schema for schema in tool_schemas() if schema["function"]["name"] in {"get_position_detail", "check_eligibility"}]
-        return self.llm.chat_with_tools(SYSTEM_PROMPT, payload, detail_tools, executor, max_rounds=4)
+        return self.llm.chat(SYSTEM_PROMPT, payload, temperature=0.1)
 
     def _detect_intent(self, message: str) -> str:
         text = message.strip().lower()

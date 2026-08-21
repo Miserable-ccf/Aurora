@@ -42,6 +42,10 @@ class _FakeLLM:
     def chat(self, system, payload, temperature=0.1):
         self.calls.append(("chat", payload.get("task", "")[:12]))
         task = payload.get("task", "")
+        if task.startswith("以下是按资格核验"):
+            if self.selection is None:
+                return LLMResult({}, False, self.model, "no selection configured")
+            return LLMResult(self.selection, True, self.model)
         if task.startswith("判断用户在岗位推荐完成后"):
             if self.followups:
                 content = json.dumps(self.followups.pop(0), ensure_ascii=False)
